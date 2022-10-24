@@ -2,5 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 format: jb-book
 root: index
-chapters:
-- file: notebooks/example_notebook/example_notebook.ipynb
+parts:
+  - caption: NICMOS
+    chapters:
+    - file: notebooks/nicmos_unit_conversion/nicmos_unit_conversion.ipynb
