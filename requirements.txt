@@ -1,2 +1,4 @@
 astropy
+crds
+numpy
 synphot
