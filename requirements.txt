@@ -1,4 +1,2 @@
 astropy
-astroquery
-matplotlib
-numpy
+synphot
