@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Programmatic Replacements for NICMOS Units Conversion Form &#8212; Notebook repository template (CHANGE THIS)</title>
+    <title>Programmatic Replacements for NICMOS Units Conversion Form &#8212; STScI Notebooks</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,6 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="../../../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -89,9 +90,14 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
       
       
-      <h1 class="site-logo" id="site-title">Notebook repository template (CHANGE THIS)</h1>
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">STScI Notebooks</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
@@ -107,7 +113,19 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  NICMOS
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Programmatic Replacements for NICMOS Units Conversion Form
+  </a>
+ </li>
+</ul>
+
     </div>
 </nav></div>
         <div class="bd-sidebar__bottom">
@@ -179,7 +197,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="(CHANGE THIS)"
+        <a href="github.com/dulude/notebooks_migration"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -196,7 +214,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="(CHANGE THIS)/issues/new?title=Issue%20on%20page%20%2Fnotebooks/NICMOS/nicmos_unit_conversion/nicmos_unit_conversion.html&body=Your%20issue%20content%20here."
+        <a href="github.com/dulude/notebooks_migration/issues/new?title=Issue%20on%20page%20%2Fnotebooks/NICMOS/nicmos_unit_conversion/nicmos_unit_conversion.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -374,19 +392,6 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">synphot</span> <span class="kn">import</span> <span class="n">SourceSpectrum</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">synphot</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">syn_u</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">synphot.models</span> <span class="kn">import</span> <span class="n">BlackBodyNorm1D</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;synphot&#39;
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="example-1-simple-jy-to-ab-mag">
@@ -408,6 +413,11 @@ title="Print to PDF"
 <span class="n">input_wave_ex1</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">micron</span>
 <span class="n">abmag_ex1</span> <span class="o">=</span> <span class="n">input_flux_ex1</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">ABmag</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">spectral_density</span><span class="p">(</span><span class="n">input_wave_ex1</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">abmag_ex1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>41.40 mag(AB)
 </pre></div>
 </div>
 </div>
@@ -458,6 +468,11 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">output_wave_ex2</span> <span class="o">=</span> <span class="mf">0.6</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">micron</span>
 <span class="n">flux_ex2</span> <span class="o">=</span> <span class="n">input_ex2</span><span class="p">(</span><span class="n">output_wave_ex2</span><span class="p">,</span> <span class="n">flux_unit</span><span class="o">=</span><span class="n">syn_u</span><span class="o">.</span><span class="n">FNU</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:.2e}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">flux_ex2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.62e-23 FNU
 </pre></div>
 </div>
 </div>
@@ -519,6 +534,11 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.85
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -527,7 +547,7 @@ title="Print to PDF"
     {
         requestKernel: true,
         binderOptions: {
-            repo: "None/None",
+            repo: "dulude/notebooks_migration",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -550,6 +570,13 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../../../index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">&lt;no title&gt;</p>
+        </div>
+    </a>
 </div>
             </footer>
         </div>
@@ -557,7 +584,7 @@ title="Print to PDF"
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By STScI (CHANGE AS NEEDED)<br/>
+    By STScI<br/>
   
       &copy; Copyright 2022.<br/>
 </p>
