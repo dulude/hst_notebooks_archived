@@ -5,4 +5,4 @@ root: index
 parts:
   - caption: NICMOS
     chapters:
-    - file: notebooks/nicmos_unit_conversion/nicmos_unit_conversion.ipynb
+    - file: notebooks/NICMOS/nicmos_unit_conversion/nicmos_unit_conversion.ipynb
