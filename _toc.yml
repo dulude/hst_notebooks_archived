@@ -3,6 +3,9 @@
 format: jb-book
 root: index
 parts:
+  - caption: DrizzlePac
+    chapters:
+      - file: notebooks/DrizzlePac/Initialization/Initialization.ipynb
   - caption: NICMOS
     chapters:
     - file: notebooks/NICMOS/nicmos_unit_conversion/nicmos_unit_conversion.ipynb
