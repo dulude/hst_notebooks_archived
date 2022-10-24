@@ -1,4 +1,8 @@
-astropy
+astroquery
+ccdproc
 crds
+drizzlepac
 numpy
-synphot
+pyregion
+regions
+stwcs
