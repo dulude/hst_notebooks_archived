@@ -1,0 +1,2 @@
+acstools
+pyregion==2.0
