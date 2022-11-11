@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Programmatic Replacements for NICMOS Units Conversion Form &#8212; STScI Notebooks</title>
+    <title>Programmatic Replacements for NICMOS Units Conversion Form &#8212; HST Notebooks</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="prev" title="DrizzlePac Initialization" href="../../DrizzlePac/Initialization/Initialization.html" />
+    <link rel="prev" title="Draft: Notebook title" href="../../COS/example_notebook/example_notebook.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -94,10 +94,10 @@ const thebe_selector_output = ".output, .cell_output"
         
       
       
-      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      <img src="../../../_static/stsci_logo2.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">STScI Notebooks</h1>
+      <h1 class="site-logo" id="site-title">HST Notebooks</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
@@ -115,13 +115,74 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  DrizzlePac
+  COS
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../DrizzlePac/Initialization/Initialization.html">
-   DrizzlePac Initialization
+  <a class="reference internal" href="../../COS/README.html">
+   COS Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../COS/Setup/Setup.html">
+   Setting up your computer environment for working with COS data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../COS/DataDl/DataDl.html">
+   Downloading COS Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../COS/ViewData/ViewData.html">
+   Viewing COS Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../COS/AsnFile/AsnFile.html">
+   Modifying or Creating an Association File
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../COS/CalCOS/CalCOS.html">
+   Running the COS Data Pipeline (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     CalCOS
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../COS/SplitTag/SplitTag.html">
+   Splitting COS Exposures into sub-exposures with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     splittag
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../COS/DayNight/DayNight.html">
+   Filtering out COS Data taken during the Day or Night
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../COS/LSF/LSF.html">
+   Working with the COS Line Spread Function (LSF)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../COS/Extract/Extract.html">
+   Editing the extraction boxes in a spectral extraction file (XTRACTAB)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../COS/example_notebook/example_notebook.html">
+   Draft: Notebook title
   </a>
  </li>
 </ul>
@@ -209,7 +270,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="github.com/dulude/notebooks_migration"
+        <a href="github.com/dulude/hst_notebooks"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -226,7 +287,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="github.com/dulude/notebooks_migration/issues/new?title=Issue%20on%20page%20%2Fnotebooks/NICMOS/nicmos_unit_conversion/nicmos_unit_conversion.html&body=Your%20issue%20content%20here."
+        <a href="github.com/dulude/hst_notebooks/issues/new?title=Issue%20on%20page%20%2Fnotebooks/NICMOS/nicmos_unit_conversion/nicmos_unit_conversion.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -557,7 +618,7 @@ title="Print to PDF"
     {
         requestKernel: true,
         binderOptions: {
-            repo: "dulude/notebooks_migration",
+            repo: "dulude/hst_notebooks",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -580,11 +641,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../../DrizzlePac/Initialization/Initialization.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../../COS/example_notebook/example_notebook.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">DrizzlePac Initialization</p>
+            <p class="prev-next-title">Draft: Notebook title</p>
         </div>
     </a>
 </div>

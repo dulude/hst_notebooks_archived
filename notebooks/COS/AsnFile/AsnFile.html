@@ -1,0 +1,1298 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Modifying or Creating an Association File &#8212; HST Notebooks</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Running the COS Data Pipeline (CalCOS)" href="../CalCOS/CalCOS.html" />
+    <link rel="prev" title="Viewing COS Data" href="../ViewData/ViewData.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/stsci_logo2.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">HST Notebooks</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../index.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  COS
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   COS Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Setup/Setup.html">
+   Setting up your computer environment for working with COS data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../DataDl/DataDl.html">
+   Downloading COS Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ViewData/ViewData.html">
+   Viewing COS Data
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Modifying or Creating an Association File
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CalCOS/CalCOS.html">
+   Running the COS Data Pipeline (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     CalCOS
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../SplitTag/SplitTag.html">
+   Splitting COS Exposures into sub-exposures with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     splittag
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../DayNight/DayNight.html">
+   Filtering out COS Data taken during the Day or Night
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LSF/LSF.html">
+   Working with the COS Line Spread Function (LSF)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Extract/Extract.html">
+   Editing the extraction boxes in a spectral extraction file (XTRACTAB)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../example_notebook/example_notebook.html">
+   Draft: Notebook title
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  NICMOS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../NICMOS/nicmos_unit_conversion/nicmos_unit_conversion.html">
+   Programmatic Replacements for NICMOS Units Conversion Form
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="github.com/dulude/hst_notebooks"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="github.com/dulude/hst_notebooks/issues/new?title=Issue%20on%20page%20%2Fnotebooks/COS/AsnFile/AsnFile.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/notebooks/COS/AsnFile/AsnFile.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Modifying or Creating an Association File
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-goals">
+   Learning Goals
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   0. Introduction
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#we-will-import-the-following-packages">
+     We will import the following packages:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#we-will-also-define-a-few-directories-we-will-need">
+     We will also define a few directories we will need:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#and-we-will-need-to-download-the-data-we-wish-to-filter-and-analyze">
+     And we will need to download the data we wish to filter and analyze
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examining-an-association-file">
+   1. Examining an association file
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#editing-an-existing-association-file">
+   2. Editing an existing association file
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#removing-an-exposure">
+     2.1. Removing an exposure
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-an-exposure">
+     2.2. Adding an exposure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-an-entirely-new-association-file">
+   3. Creating an entirely new association file
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simplest-method">
+     3.1. Simplest method
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#with-fits-header-metadata">
+     3.2. With fits header metadata
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#congratulations-you-finished-this-notebook">
+     Congratulations! You finished this Notebook!
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#about-this-notebook">
+     About this Notebook
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#citations">
+     Citations
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Modifying or Creating an Association File</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Modifying or Creating an Association File
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-goals">
+   Learning Goals
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   0. Introduction
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#we-will-import-the-following-packages">
+     We will import the following packages:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#we-will-also-define-a-few-directories-we-will-need">
+     We will also define a few directories we will need:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#and-we-will-need-to-download-the-data-we-wish-to-filter-and-analyze">
+     And we will need to download the data we wish to filter and analyze
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examining-an-association-file">
+   1. Examining an association file
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#editing-an-existing-association-file">
+   2. Editing an existing association file
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#removing-an-exposure">
+     2.1. Removing an exposure
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-an-exposure">
+     2.2. Adding an exposure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-an-entirely-new-association-file">
+   3. Creating an entirely new association file
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simplest-method">
+     3.1. Simplest method
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#with-fits-header-metadata">
+     3.2. With fits header metadata
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#congratulations-you-finished-this-notebook">
+     Congratulations! You finished this Notebook!
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#about-this-notebook">
+     About this Notebook
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#citations">
+     Citations
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p><a id="topAF"></a></p>
+<section class="tex2jax_ignore mathjax_ignore" id="modifying-or-creating-an-association-file">
+<h1>Modifying or Creating an Association File<a class="headerlink" href="#modifying-or-creating-an-association-file" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="learning-goals">
+<h1>Learning Goals<a class="headerlink" href="#learning-goals" title="Permalink to this headline">#</a></h1>
+<p><font size="4"> This Notebook is designed to walk the user (<em>you</em>) through: <b>Creating or altering the association (<tt>asn</tt>) file used by the Cosmic Origins Spectrograph (<em>COS</em>) pipeline to determine which data to process:</b> </font><br></p>
+<p><strong>1. <a class="reference external" href="#examAF">Examining an association file</a></strong></p>
+<p><strong>2. <a class="reference external" href="#editAF">Editing an existing association file</a></strong></p>
+<p>- 2.1. <a class="reference external" href="#subAF">Removing an exposure</a></p>
+<p>- 2.2. <a class="reference external" href="#addAF">Adding an exposure</a></p>
+<p><strong>3. <a class="reference external" href="#newAF">Creating an entirely new association file</a></strong></p>
+<p>- 3.1. <a class="reference external" href="#simpleAF">Simplest method</a></p>
+<p>- 3.2. <a class="reference external" href="#metaAF">With fits header metadata</a></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>0. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h1>
+<p><strong>The Cosmic Origins Spectrograph (<a class="reference external" href="https://www.nasa.gov/content/hubble-space-telescope-cosmic-origins-spectrograph"><em>COS</em></a>) is an ultraviolet spectrograph on-board the Hubble Space Telescope (<a class="reference external" href="https://www.stsci.edu/hst/about"><em>HST</em></a>) with capabilities in the near ultraviolet (<em>NUV</em>) and far ultraviolet (<em>FUV</em>).</strong></p>
+<p><strong>This tutorial aims to prepare you to alter the association file used by the <code class="docutils literal notranslate"><span class="pre">CalCOS</span></code> pipeline.</strong> Association files are <code class="docutils literal notranslate"><span class="pre">fits</span></code> files containing a binary table extension, which lists science and calibration exposures which the pipeline will process together.</p>
+<ul class="simple">
+<li><p>For an in-depth manual to working with COS data and a discussion of caveats and user tips, see the <a class="reference external" href="https://hst-docs.stsci.edu/display/COSDHB/">COS Data Handbook</a>.</p></li>
+<li><p>For a detailed overview of the COS instrument, see the <a class="reference external" href="https://hst-docs.stsci.edu/display/COSIHB/">COS Instrument Handbook</a>.</p></li>
+</ul>
+<p><font size="4">We’ll demonstrate creating an <tt>asn</tt> file in two ways: First, we’ll demonstrate <b>editing an existing <tt>asn</tt> file</b> to add or remove an exposure. Second, we’ll show how to <b>create an entirely new <tt>asn</tt> file</b>.</font></p>
+<section id="we-will-import-the-following-packages">
+<h2>We will import the following packages:<a class="headerlink" href="#we-will-import-the-following-packages" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> to handle array functions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">astropy.io</span> <span class="pre">fits</span></code> and <code class="docutils literal notranslate"><span class="pre">astropy.table</span> <span class="pre">Table</span></code> for accessing FITS files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">glob</span></code>, <code class="docutils literal notranslate"><span class="pre">os</span></code>, and <code class="docutils literal notranslate"><span class="pre">shutil</span></code> for working with system files</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">glob</span></code> helps us search for filenames</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code> and <code class="docutils literal notranslate"><span class="pre">shutil</span></code> for moving files and deleting folders, respectively</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">astroquery.mast</span> <span class="pre">Mast</span></code> and <code class="docutils literal notranslate"><span class="pre">Observations</span></code> for finding and downloading data from the <a class="reference external" href="https://mast.stsci.edu/portal/Mashup/Clients/Mast/Portal.html">MAST</a> archive</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code> for updating fits headers with today’s date</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathlib</span> <span class="pre">Path</span></code> for managing system paths</p></li>
+</ul>
+<p>If you have an existing astroconda environment, it may or may not already have the necessary packages to run this Notebook. To create a Python environment capable of running all the data analyses in these COS Notebooks, please see Section 1 of our Notebook tutorial on <a class="reference external" href="https://github.com/spacetelescope/notebooks/blob/master/notebooks/COS/Setup/Setup.ipynb">setting up an environment</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import for: array manipulation</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Import for: reading fits files</span>
+<span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>                                            
+<span class="kn">from</span> <span class="nn">astropy.table</span> <span class="kn">import</span> <span class="n">Table</span>
+
+<span class="c1"># Import for: system files</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+
+<span class="c1"># Import for: downloading the data</span>
+<span class="kn">from</span> <span class="nn">astroquery.mast</span> <span class="kn">import</span> <span class="n">Observations</span>
+
+<span class="c1"># Import for: changing modification date in a fits header</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="c1">#Import for: working with system paths</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="we-will-also-define-a-few-directories-we-will-need">
+<h2>We will also define a few directories we will need:<a class="headerlink" href="#we-will-also-define-a-few-directories-we-will-need" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># These will be important directories for the Notebook</span>
+
+<span class="n">datadir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;./data/&#39;</span><span class="p">)</span>
+<span class="n">outputdir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">)</span>
+<span class="n">plotsdir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;./output/plots/&#39;</span><span class="p">)</span>
+
+<span class="c1"># Make the directories if they don&#39;t already exist</span>
+<span class="n">datadir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">outputdir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">plotsdir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(None, None, None)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="and-we-will-need-to-download-the-data-we-wish-to-filter-and-analyze">
+<h2>And we will need to download the data we wish to filter and analyze<a class="headerlink" href="#and-we-will-need-to-download-the-data-we-wish-to-filter-and-analyze" title="Permalink to this headline">#</a></h2>
+<p>We choose the exposures with the association obs_ids: <code class="docutils literal notranslate"><span class="pre">ldif01010</span></code> and <code class="docutils literal notranslate"><span class="pre">ldif02010</span></code> because we happen to know that some of the exposures in these groups failed, which gives us a real-world use case for editing an association file. Both <code class="docutils literal notranslate"><span class="pre">ldif01010</span></code> and <code class="docutils literal notranslate"><span class="pre">ldif02010</span></code> are far-ultraviolet (FUV) datasets on the quasi-stellar object (QSO) <a class="reference external" href="https://doi.org/10.1051/0004-6361/201935524">PDS 456</a>.</p>
+<p>For more information on downloading COS data, see our <a class="reference external" href="https://github.com/spacetelescope/notebooks/blob/master/notebooks/COS/DataDl/DataDl.ipynb">Notebook tutorial on downloading COS data</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pl</span> <span class="o">=</span> <span class="n">Observations</span><span class="o">.</span><span class="n">get_product_list</span><span class="p">(</span><span class="n">Observations</span><span class="o">.</span><span class="n">query_criteria</span><span class="p">(</span><span class="n">obs_id</span><span class="o">=</span><span class="s1">&#39;ldif0*10&#39;</span><span class="p">))</span> <span class="c1"># search for the correct obs_ids and get the product list </span>
+<span class="n">fpl</span> <span class="o">=</span> <span class="n">Observations</span><span class="o">.</span><span class="n">filter_products</span><span class="p">(</span><span class="n">pl</span><span class="p">,</span>
+                                   <span class="n">productSubGroupDescription</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;RAWTAG_A&#39;</span><span class="p">,</span> <span class="s1">&#39;RAWTAG_B&#39;</span><span class="p">,</span><span class="s1">&#39;ASN&#39;</span><span class="p">])</span> <span class="c1"># filter to rawtag and asn files in the product list</span>
+
+<span class="n">Observations</span><span class="o">.</span><span class="n">download_products</span><span class="p">(</span><span class="n">fpl</span><span class="p">,</span> <span class="n">download_dir</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">datadir</span><span class="p">))</span> <span class="c1"># Download these chosen products</span>
+<span class="k">for</span> <span class="n">gfile</span> <span class="ow">in</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;**/ldif*/*.fits&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span> <span class="c1"># Move all fits files in this set to the base data directory</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">gfile</span><span class="p">,</span><span class="n">datadir</span> <span class="o">/</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">gfile</span><span class="p">))</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">datadir</span> <span class="o">/</span> <span class="s1">&#39;mastDownload&#39;</span><span class="p">)</span> <span class="c1"># Delete the now-empty, nested mastDownload directory</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif01010_asn.fits to data/mastDownload/HST/ldif01010/ldif01010_asn.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif01tyq_rawtag_a.fits to data/mastDownload/HST/ldif01tyq/ldif01tyq_rawtag_a.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif01tyq_rawtag_b.fits to data/mastDownload/HST/ldif01tyq/ldif01tyq_rawtag_b.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif01u0q_rawtag_a.fits to data/mastDownload/HST/ldif01u0q/ldif01u0q_rawtag_a.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif01u0q_rawtag_b.fits to data/mastDownload/HST/ldif01u0q/ldif01u0q_rawtag_b.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif01u2q_rawtag_a.fits to data/mastDownload/HST/ldif01u2q/ldif01u2q_rawtag_a.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif01u2q_rawtag_b.fits to data/mastDownload/HST/ldif01u2q/ldif01u2q_rawtag_b.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif01u4q_rawtag_a.fits to data/mastDownload/HST/ldif01u4q/ldif01u4q_rawtag_a.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif01u4q_rawtag_b.fits to data/mastDownload/HST/ldif01u4q/ldif01u4q_rawtag_b.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif02010_asn.fits to data/mastDownload/HST/ldif02010/ldif02010_asn.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif02nmq_rawtag_a.fits to data/mastDownload/HST/ldif02nmq/ldif02nmq_rawtag_a.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif02nmq_rawtag_b.fits to data/mastDownload/HST/ldif02nmq/ldif02nmq_rawtag_b.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif02nsq_rawtag_a.fits to data/mastDownload/HST/ldif02nsq/ldif02nsq_rawtag_a.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif02nsq_rawtag_b.fits to data/mastDownload/HST/ldif02nsq/ldif02nsq_rawtag_b.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif02nuq_rawtag_a.fits to data/mastDownload/HST/ldif02nuq/ldif02nuq_rawtag_a.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif02nuq_rawtag_b.fits to data/mastDownload/HST/ldif02nuq/ldif02nuq_rawtag_b.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif02nwq_rawtag_a.fits to data/mastDownload/HST/ldif02nwq/ldif02nwq_rawtag_a.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/ldif02nwq_rawtag_b.fits to data/mastDownload/HST/ldif02nwq/ldif02nwq_rawtag_b.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+</div>
+</div>
+<p><a id = examAF></a></p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="examining-an-association-file">
+<h1>1. Examining an association file<a class="headerlink" href="#examining-an-association-file" title="Permalink to this headline">#</a></h1>
+<p>Above, we downloaded two association files and their rawtag data files. We will begin by searching for the association files and reading one of them (<code class="docutils literal notranslate"><span class="pre">LDIF01010</span></code>). We could just as easily pick <code class="docutils literal notranslate"><span class="pre">ldif02010</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">asnfiles</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;**/*ldif*asn*&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># There will be two (ldif01010_asn.fits and ldif02010_asn.fits)</span>
+<span class="n">asnfile</span> <span class="o">=</span> <span class="n">asnfiles</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># We want to work primarily with ldif01010_asn.fits</span>
+
+<span class="n">asn_contents</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">asnfile</span><span class="p">)</span> <span class="c1"># Gets the contents of the asn file</span>
+<span class="n">asn_contents</span> <span class="c1"># Display these contents</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><i>Table length=5</i>
+<table id="table140066557853552" class="table-striped table-bordered table-condensed">
+<thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
+<thead><tr><th>bytes40</th><th>bytes14</th><th>bool</th></tr></thead>
+<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIF01U0Q</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIF02NUQ</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIF01U4Q</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIFCOMBO</td><td>PROD-FP</td><td>True</td></tr>
+</table></div></div></div>
+</div>
+<p>We see that the association file has five rows: four exposures denoted with the <code class="docutils literal notranslate"><span class="pre">MEMTYPE</span></code> = <code class="docutils literal notranslate"><span class="pre">EXP-FP</span></code>, and a product with <code class="docutils literal notranslate"><span class="pre">MEMTYPE</span></code> = <code class="docutils literal notranslate"><span class="pre">PROD-FP</span></code>.</p>
+<p>In the cell below, we examine a bit about each of the exposures as a diagnostic:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">memname</span><span class="p">,</span> <span class="n">memtype</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">asn_contents</span><span class="p">[</span><span class="s1">&#39;MEMNAME&#39;</span><span class="p">],</span> <span class="n">asn_contents</span><span class="p">[</span><span class="s2">&quot;MEMTYPE&quot;</span><span class="p">]):</span> <span class="c1"># Cycles through each file in asn table</span>
+    <span class="n">memname</span> <span class="o">=</span> <span class="n">memname</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1"># Find file names in lower case letters</span>
+    <span class="k">if</span> <span class="n">memtype</span> <span class="o">==</span> <span class="s1">&#39;EXP-FP&#39;</span><span class="p">:</span> <span class="c1"># We only want to look at the exposure files</span>
+        <span class="n">rt_a</span> <span class="o">=</span> <span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;**/*</span><span class="si">{</span><span class="n">memname</span><span class="si">}</span><span class="s2">*rawtag_a*&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Find the actual filepath of the memname for rawtag_a and rawtag_b</span>
+        <span class="n">rt_b</span> <span class="o">=</span> <span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;**/*</span><span class="si">{</span><span class="n">memname</span><span class="si">}</span><span class="s2">*rawtag_b*&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1"># Now print all these diagnostics:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Association </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">))[</span><span class="s1">&#39;ASN_ID&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> has </span><span class="si">{</span><span class="n">memtype</span><span class="si">}</span><span class="s2"> exposure </span><span class="si">{</span><span class="n">memname</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s2"> with </span><span class="se">\</span>
+<span class="s2">exposure time </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">1</span><span class="p">))[</span><span class="s1">&#39;EXPTIME&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> seconds at cenwave </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">0</span><span class="p">))[</span><span class="s1">&#39;CENWAVE&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="se">\</span>
+<span class="s2">Å and FP-POS </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">0</span><span class="p">))[</span><span class="s1">&#39;FPPOS&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Association LDIF02010 has EXP-FP exposure LDIF02NMQ with exposure time 1653.0 seconds at cenwave 1280 Å and FP-POS 1.
+Association LDIF01010 has EXP-FP exposure LDIF01U0Q with exposure time 1404.0 seconds at cenwave 1280 Å and FP-POS 2.
+Association LDIF02010 has EXP-FP exposure LDIF02NUQ with exposure time 1334.0 seconds at cenwave 1280 Å and FP-POS 3.
+Association LDIF01010 has EXP-FP exposure LDIF01U4Q with exposure time 2923.0 seconds at cenwave 1280 Å and FP-POS 4.
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>We notice that something seems amiss with exposure LDIF01TYQ</strong>:
+This file has an exposure time of 0.0 seconds - something has gone wrong. In this case, there was a guide star acquisition failure as described on the <a class="reference external" href="http://archive.stsci.edu/cgi-bin/mastpreview?mission=hst&amp;dataid=LDIF01010">data preview page</a>.</p>
+<p>In the next section, we will correct this lack of data by replacing the bad exposure with an exposure from the other association group.</p>
+<p><a id = editAF></a></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="editing-an-existing-association-file">
+<h1>2. Editing an existing association file<a class="headerlink" href="#editing-an-existing-association-file" title="Permalink to this headline">#</a></h1>
+<p><a id = subAF></a></p>
+<section id="removing-an-exposure">
+<h2>2.1. Removing an exposure<a class="headerlink" href="#removing-an-exposure" title="Permalink to this headline">#</a></h2>
+<p>We know that at least one of our exposures - <code class="docutils literal notranslate"><span class="pre">ldif01tyq</span></code> - is not suited for combination into the final product. It has an exposure time of 0.0 seconds, in this case from a guide star acquisition failure. This is a generalizable issue, as you may often know an exposure is “<em>bad</em>” for many reasons: perhaps it was taken with the shutter closed, or with anomolously high background noise, or any number of reasons we may wish to exclude an exposure from our data. To do this, we will need to alter our existing association file before we re-run <code class="docutils literal notranslate"><span class="pre">CalCOS</span></code>.</p>
+<p>We again see the contents of our main association file below. Note that <code class="docutils literal notranslate"><span class="pre">True/False</span></code> and <code class="docutils literal notranslate"><span class="pre">1/0</span></code> are essentially interchangable in the <code class="docutils literal notranslate"><span class="pre">MEMPRSNT</span></code> column.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">asnfiles</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><i>Table length=5</i>
+<table id="table140067281858416" class="table-striped table-bordered table-condensed">
+<thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
+<thead><tr><th>bytes40</th><th>bytes14</th><th>bool</th></tr></thead>
+<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIF01U0Q</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIF02NUQ</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIF01U4Q</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIFCOMBO</td><td>PROD-FP</td><td>True</td></tr>
+</table></div></div></div>
+</div>
+<p>We can set the <code class="docutils literal notranslate"><span class="pre">MEMPRSNT</span></code> value to <code class="docutils literal notranslate"><span class="pre">False</span></code> or <code class="docutils literal notranslate"><span class="pre">0</span></code> for our bad exposure:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">asnfile</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;update&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">hdulist</span><span class="p">:</span> <span class="c1"># We need to change values with the asnfile opened and in &#39;update&#39; mode</span>
+    <span class="n">tbdata</span> <span class="o">=</span> <span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span> <span class="c1"># This is where the table data is read into</span>
+    <span class="k">for</span> <span class="n">expfile</span> <span class="ow">in</span> <span class="n">tbdata</span><span class="p">:</span> <span class="c1"># Check if each file is one of the bad ones</span>
+        <span class="k">if</span> <span class="n">expfile</span><span class="p">[</span><span class="s1">&#39;MEMNAME&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;LDIF01TYQ&#39;</span><span class="p">]:</span>
+            <span class="n">expfile</span><span class="p">[</span><span class="s1">&#39;MEMPRSNT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># If so, set MEMPRSNT to False AKA 0</span>
+            
+<span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">asnfile</span><span class="p">)</span> <span class="c1"># Re-read the table to see the change</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><i>Table length=5</i>
+<table id="table140066557911872" class="table-striped table-bordered table-condensed">
+<thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
+<thead><tr><th>bytes40</th><th>bytes14</th><th>bool</th></tr></thead>
+<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIF01U0Q</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIF02NUQ</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIF01U4Q</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIFCOMBO</td><td>PROD-FP</td><td>True</td></tr>
+</table></div></div></div>
+</div>
+<p><a id = addAF></a></p>
+</section>
+<section id="adding-an-exposure">
+<h2>2.2. Adding an exposure<a class="headerlink" href="#adding-an-exposure" title="Permalink to this headline">#</a></h2>
+<p>We removed the failed exposure taken with <code class="docutils literal notranslate"><span class="pre">FP-POS</span> <span class="pre">=</span> <span class="pre">1</span></code>. Usually we want to combine one of each of the four <a class="reference external" href="https://hst-docs.stsci.edu/cosdhb/chapter-1-cos-overview/1-1-instrument-capabilities-and-design"><em>fixed-pattern noise positions</em> (<code class="docutils literal notranslate"><span class="pre">FP-POS</span></code>)</a>, so let’s add the <code class="docutils literal notranslate"><span class="pre">FP-POS</span> <span class="pre">=</span> <span class="pre">1</span></code> exposure from the other association group.</p>
+<p>In the cell below, we determine which exposure from <code class="docutils literal notranslate"><span class="pre">LDIF02010</span></code> was taken with <code class="docutils literal notranslate"><span class="pre">FP-POS</span> <span class="pre">=</span> <span class="pre">1</span></code>.</p>
+<ul class="simple">
+<li><p><em>It does this by looping through the files listed in <code class="docutils literal notranslate"><span class="pre">LDIF02010</span></code>’s association file, and then reading in that file’s header to check if its <code class="docutils literal notranslate"><span class="pre">FPPOS</span></code> value equals 1.</em></p></li>
+<li><p><em>It also prints some diagnostic information about all of the esxposure files.</em></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">asn_contents_2</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">asnfiles</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># Reads the contents of the 2nd asn file</span>
+
+<span class="k">for</span> <span class="n">memname</span><span class="p">,</span> <span class="n">memtype</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">asn_contents_2</span><span class="p">[</span><span class="s1">&#39;MEMNAME&#39;</span><span class="p">],</span> <span class="n">asn_contents_2</span><span class="p">[</span><span class="s2">&quot;MEMTYPE&quot;</span><span class="p">]):</span> <span class="c1"># Loops through each file in asn table for `LDIF02010`</span>
+    <span class="n">memname</span> <span class="o">=</span> <span class="n">memname</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1"># Convert file names to lower case letters, as in actual filenames</span>
+    <span class="k">if</span> <span class="n">memtype</span> <span class="o">==</span> <span class="s1">&#39;EXP-FP&#39;</span><span class="p">:</span> <span class="c1"># We only want to look at the exposure files</span>
+        <span class="n">rt_a</span> <span class="o">=</span> <span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;**/*</span><span class="si">{</span><span class="n">memname</span><span class="si">}</span><span class="s2">*rawtag_a*&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Search for the actual filepath of the memname for rawtag_a </span>
+        <span class="n">rt_b</span> <span class="o">=</span> <span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;**/*</span><span class="si">{</span><span class="n">memname</span><span class="si">}</span><span class="s2">*rawtag_b*&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Search for the actual filepath of the memname for rawtag_b </span>
+        <span class="c1"># Now print all these diagnostics:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Association </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">))[</span><span class="s1">&#39;ASN_ID&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> has </span><span class="si">{</span><span class="n">memtype</span><span class="si">}</span><span class="s2"> exposure </span><span class="si">{</span><span class="n">memname</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s2"> with </span><span class="se">\</span>
+<span class="s2">exptime </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">1</span><span class="p">))[</span><span class="s1">&#39;EXPTIME&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> seconds at cenwave </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">0</span><span class="p">))[</span><span class="s1">&#39;CENWAVE&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> Å and FP-POS </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">0</span><span class="p">))[</span><span class="s1">&#39;FPPOS&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">0</span><span class="p">))[</span><span class="s1">&#39;FPPOS&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;^^^ The one above this has the FP-POS we are looking for (</span><span class="si">{</span><span class="n">memname</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s2">)^^^</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">asn2_fppos1_name</span> <span class="o">=</span> <span class="n">memname</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="c1"># Save the right file basename in a variable</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Association LDIF02010 has EXP-FP exposure LDIF02NMQ with exptime 1653.0 seconds at cenwave 1280 Å and FP-POS 1.
+^^^ The one above this has the FP-POS we are looking for (LDIF02NMQ)^^^
+
+Association LDIF01010 has EXP-FP exposure LDIF01U0Q with exptime 1404.0 seconds at cenwave 1280 Å and FP-POS 2.
+Association LDIF02010 has EXP-FP exposure LDIF02NUQ with exptime 1334.0 seconds at cenwave 1280 Å and FP-POS 3.
+Association LDIF01010 has EXP-FP exposure LDIF01U4Q with exptime 2923.0 seconds at cenwave 1280 Å and FP-POS 4.
+</pre></div>
+</div>
+</div>
+</div>
+<p>It’s a slightly different procedure to add a new exposure to the list rather than remove one.</p>
+<p>Here we want to read the table in the fits association file into an <code class="docutils literal notranslate"><span class="pre">astropy</span></code> Table. We can then add a row into the right spot, filling it with the new file’s <code class="docutils literal notranslate"><span class="pre">MEMNAME</span></code>, <code class="docutils literal notranslate"><span class="pre">MEMTYPE</span></code>, and <code class="docutils literal notranslate"><span class="pre">MEMPRSNT</span></code>. Finally, we have to save this table into the existing fits association file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">asn_orig_table</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">asnfile</span><span class="p">)</span> <span class="c1"># Read in original data from the file</span>
+<span class="n">asn_orig_table</span><span class="o">.</span><span class="n">insert_row</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">asn_orig_table</span><span class="p">)</span><span class="o">-</span> <span class="mi">1</span> <span class="p">,</span> <span class="p">[</span><span class="n">asn2_fppos1_name</span><span class="p">,</span><span class="s1">&#39;EXP-FP&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># Add a row with the right name after all the original EXP-FP&#39;s</span>
+<span class="n">new_table</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">BinTableHDU</span><span class="p">(</span><span class="n">asn_orig_table</span><span class="p">)</span> <span class="c1"># Turn this into a fits Binary Table HDU </span>
+
+<span class="k">with</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">asnfile</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;update&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">hdulist</span><span class="p">:</span> <span class="c1"># We need to change data with the asnfile opened and in &#39;update&#39; mode</span>
+    <span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">new_table</span><span class="o">.</span><span class="n">data</span>  <span class="c1"># Change the orig file&#39;s data to the new table data we made</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, we can see there is a new row with our exposure from the other <code class="docutils literal notranslate"><span class="pre">asn</span></code> file group: <code class="docutils literal notranslate"><span class="pre">LDIF02NMQ</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">asnfile</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><i>Table length=6</i>
+<table id="table140067281857792" class="table-striped table-bordered table-condensed">
+<thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
+<thead><tr><th>bytes40</th><th>bytes14</th><th>bool</th></tr></thead>
+<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIF01U0Q</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIF02NUQ</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIF01U4Q</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIFCOMBO</td><td>PROD-FP</td><td>True</td></tr>
+</table></div></div></div>
+</div>
+<p><font size="4 "><b>Excellent.</b> In the next section we will create a new association file from scratch.</font></p>
+<p><a id = newAF></a></p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="creating-an-entirely-new-association-file">
+<h1>3. Creating an entirely new association file<a class="headerlink" href="#creating-an-entirely-new-association-file" title="Permalink to this headline">#</a></h1>
+<p>For the sake of demonstration, we will generate a new association file with four exposure members: even-numbered <code class="docutils literal notranslate"><span class="pre">FP-POS</span></code> (2,4) from the first original association (<code class="docutils literal notranslate"><span class="pre">LDIF01010</span></code>), and odd-numbered <code class="docutils literal notranslate"><span class="pre">FP-POS</span></code> (1,3) from from the second original association (<code class="docutils literal notranslate"><span class="pre">LDIF02010</span></code>).</p>
+<p>From section 2, we see that this corresponds to :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Original asn</p></th>
+<th class="head"><p>FP-POS</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>LDIF02010</p></td>
+<td><p>LDIF02NMQ</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>LDIF01010</p></td>
+<td><p>LDIF01U0Q</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>LDIF02010</p></td>
+<td><p>LDIF02NUQ</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>LDIF01010</p></td>
+<td><p>LDIF01U4Q</p></td>
+<td><p>4</p></td>
+</tr>
+</tbody>
+</table>
+<p><a id = simpleAF></a></p>
+<section id="simplest-method">
+<h2>3.1. Simplest method<a class="headerlink" href="#simplest-method" title="Permalink to this headline">#</a></h2>
+<p>Below, we manually build up an association file from the three necessary columns:</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MEMNAME</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MEMTYPE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MEMPRSNT</span></code></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Adding the exposure file details to the association table</span>
+<span class="n">new_asn_memnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;LDIF02NMQ&#39;</span><span class="p">,</span><span class="s1">&#39;LDIF01U0Q&#39;</span><span class="p">,</span><span class="s1">&#39;LDIF02NUQ&#39;</span><span class="p">,</span><span class="s1">&#39;LDIF01U4Q&#39;</span><span class="p">]</span> <span class="c1"># MEMNAME</span>
+<span class="n">types</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;EXP-FP&#39;</span><span class="p">,</span> <span class="s1">&#39;EXP-FP&#39;</span><span class="p">,</span> <span class="s1">&#39;EXP-FP&#39;</span><span class="p">,</span> <span class="s1">&#39;EXP-FP&#39;</span><span class="p">]</span> <span class="c1"># MEMTYPE</span>
+<span class="n">included</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span> <span class="c1"># MEMPRSNT</span>
+
+<span class="c1"># Adding the ASN details to the end of the association table</span>
+<span class="n">new_asn_memnames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;ldifcombo&#39;</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span> <span class="c1"># MEMNAME column</span>
+<span class="n">types</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;PROD-FP&#39;</span><span class="p">)</span> <span class="c1"># MEMTYPE column</span>
+<span class="n">included</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># MEMPRSNT column</span>
+
+<span class="c1"># Putting together the fits table</span>
+<span class="c1">#   40 is the number of characters allowed in this field with the MEMNAME format = 40A. </span>
+<span class="c1">#    If your rootname is longer than 40, you will need to increase this</span>
+<span class="n">c1</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;MEMNAME&#39;</span><span class="p">,</span> <span class="n">array</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">new_asn_memnames</span><span class="p">),</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;40A&#39;</span><span class="p">)</span> 
+<span class="n">c2</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;MEMTYPE&#39;</span><span class="p">,</span> <span class="n">array</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">types</span><span class="p">),</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;14A&#39;</span><span class="p">)</span>
+<span class="n">c3</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;MEMPRSNT&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="n">array</span><span class="o">=</span><span class="n">included</span><span class="p">)</span>
+<span class="n">asn_table</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">BinTableHDU</span><span class="o">.</span><span class="n">from_columns</span><span class="p">([</span><span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c3</span><span class="p">])</span>
+
+<span class="c1"># Writing the fits table</span>
+<span class="n">asn_table</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="n">outputdir</span> <span class="o">/</span> <span class="s1">&#39;ldifcombo_asn.fits&#39;</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Saved: &#39;</span><span class="o">+</span> <span class="s1">&#39;ldifcombo_asn.fits&#39;</span><span class="o">+</span> <span class="sa">f</span><span class="s2">&quot; in the output directory: </span><span class="si">{</span><span class="n">outputdir</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved: ldifcombo_asn.fits in the output directory: output
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Examining the file we have created:</strong></p>
+<p>We see that the data looks correct - exactly the table we want!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">outputdir</span> <span class="o">/</span> <span class="s1">&#39;ldifcombo_asn.fits&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><i>Table length=5</i>
+<table id="table140066557004000" class="table-striped table-bordered table-condensed">
+<thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
+<thead><tr><th>bytes40</th><th>bytes14</th><th>bool</th></tr></thead>
+<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIF01U0Q</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIF02NUQ</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIF01U4Q</td><td>EXP-FP</td><td>True</td></tr>
+<tr><td>LDIFCOMBO</td><td>PROD-FP</td><td>True</td></tr>
+</table></div></div></div>
+</div>
+<p><strong>However, the 0th and 1st fits headers no longer contain useful information about the data:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">outputdir</span> <span class="o">/</span> <span class="s1">&#39;ldifcombo_asn.fits&#39;</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SIMPLE  =                    T / conforms to FITS standard                      
+BITPIX  =                    8 / array data type                                
+NAXIS   =                    0 / number of array dimensions                     
+EXTEND  =                    T                                                  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">outputdir</span> <span class="o">/</span> <span class="s1">&#39;ldifcombo_asn.fits&#39;</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>XTENSION= &#39;BINTABLE&#39;           / binary table extension                         
+BITPIX  =                    8 / array data type                                
+NAXIS   =                    2 / number of array dimensions                     
+NAXIS1  =                   55 / length of dimension 1                          
+NAXIS2  =                    5 / length of dimension 2                          
+PCOUNT  =                    0 / number of group parameters                     
+GCOUNT  =                    1 / number of groups                               
+TFIELDS =                    3 / number of table fields                         
+TTYPE1  = &#39;MEMNAME &#39;                                                            
+TFORM1  = &#39;40A     &#39;                                                            
+TTYPE2  = &#39;MEMTYPE &#39;                                                            
+TFORM2  = &#39;14A     &#39;                                                            
+TTYPE3  = &#39;MEMPRSNT&#39;                                                            
+TFORM3  = &#39;L       &#39;                                                            
+</pre></div>
+</div>
+</div>
+</div>
+<p><a id = metaAF></a></p>
+</section>
+<section id="with-fits-header-metadata">
+<h2>3.2. With fits header metadata<a class="headerlink" href="#with-fits-header-metadata" title="Permalink to this headline">#</a></h2>
+<p><strong>We can instead build up a new file with our old file’s fits header, and alter it to reflect our changes.</strong></p>
+<p>We first build a new association file, a piecewise combination of our original file’s headers and our new table:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">asnfile</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;readonly&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">hdulist</span><span class="p">:</span> <span class="c1"># Open up the old asn file</span>
+    <span class="n">hdulist</span><span class="o">.</span><span class="n">info</span><span class="p">()</span> <span class="c1"># Shows the first hdu is empty except for the header we want</span>
+    <span class="n">hdu0</span> <span class="o">=</span> <span class="n">hdulist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># We want to directly copy over the old 0th header/data-unit AKA &quot;hdu&quot;:</span>
+                        <span class="c1"># essentially a section of data and its associated metadata, called a &quot;header&quot;</span>
+                        <span class="c1"># see https://fits.gsfc.nasa.gov/fits_primer.html for info on fits structures</span>
+    <span class="n">d0</span> <span class="o">=</span> <span class="n">hdulist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span> <span class="c1"># gather the data from the header/data unit to allow the readout</span>
+    <span class="n">h1</span> <span class="o">=</span> <span class="n">hdulist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">header</span> <span class="c1"># gather the header from the 1st header/data unit to copy to our new file</span>
+    
+<span class="n">hdu1</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">BinTableHDU</span><span class="o">.</span><span class="n">from_columns</span><span class="p">([</span><span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c3</span><span class="p">],</span> <span class="n">header</span><span class="o">=</span><span class="n">h1</span><span class="p">)</span> <span class="c1"># Put together new 1st hdu from old header and new data</span>
+
+<span class="n">new_HDUlist</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">HDUList</span><span class="p">([</span><span class="n">hdu0</span><span class="p">,</span><span class="n">hdu1</span><span class="p">])</span> <span class="c1"># New HDUList from old HDU 0 and new combined HDU 1</span>
+<span class="n">new_HDUlist</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="n">outputdir</span> <span class="o">/</span> <span class="s1">&#39;ldifcombo_2_asn.fits&#39;</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Write this out to a new file</span>
+<span class="n">new_asnfile</span> <span class="o">=</span> <span class="n">outputdir</span> <span class="o">/</span> <span class="s1">&#39;ldifcombo_2_asn.fits&#39;</span> <span class="c1"># Path to this new file</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Saved: &#39;</span><span class="o">+</span> <span class="s1">&#39;ldifcombo_2_asn.fits&#39;</span><span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;in the output directory: </span><span class="si">{</span><span class="n">outputdir</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Filename: output/ldifcombo_asn.fits
+No.    Name      Ver    Type      Cards   Dimensions   Format
+  0  PRIMARY       1 PrimaryHDU       4   ()      
+  1                1 BinTableHDU     14   5R x 3C   [40A, 14A, L]   
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved: ldifcombo_2_asn.fitsin the output directory: output
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Now we edit the relevant values in our fits headers that are different from the original.</strong></p>
+<p><em>Note: It is possible that a generic fits file may have different values you may wish to change. It is highly recommended to examine your fits headers.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span> <span class="c1"># Find today&#39;s date</span>
+<span class="c1"># Below, make a dict of what header values we want to change, corresponding to [new value, extension the value lives in, 2nd extension if applies]</span>
+<span class="n">keys_to_change</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DATE&#39;</span><span class="p">:[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">date</span><span class="o">.</span><span class="n">month</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">date</span><span class="o">.</span><span class="n">day</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;FILENAME&#39;</span><span class="p">:[</span><span class="s1">&#39;ldifcombo_2_asn.fits&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                      <span class="s1">&#39;ROOTNAME&#39;</span><span class="p">:[</span><span class="s1">&#39;ldifcombo_2&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;ASN_ID&#39;</span><span class="p">:[</span><span class="s1">&#39;ldifcombo_2&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;ASN_TAB&#39;</span><span class="p">:[</span><span class="s1">&#39;ldifcombo_2_asn.fits&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;ASN_PROD&#39;</span><span class="p">:[</span><span class="s1">&#39;False&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                     <span class="s1">&#39;EXTVER&#39;</span><span class="p">:[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;EXPNAME&#39;</span><span class="p">:[</span><span class="s1">&#39;ldifcombo_2&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">]}</span>
+<span class="c1"># Actually change the values below (verbosely):</span>
+<span class="k">for</span> <span class="n">keyval</span> <span class="ow">in</span> <span class="n">keys_to_change</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Editing </span><span class="si">{</span><span class="n">keyval</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> in Extension </span><span class="si">{</span><span class="n">keyval</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">fits</span><span class="o">.</span><span class="n">setval</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">new_asnfile</span><span class="p">,</span> <span class="n">keyword</span><span class="o">=</span><span class="n">keyval</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="n">keyval</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">ext</span><span class="o">=</span><span class="n">keyval</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+    <span class="c1"># Below is necessary as some keys are repeated in both headers (&#39;ROOTNAME&#39;)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">keyval</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Editing </span><span class="si">{</span><span class="n">keyval</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> in Extension </span><span class="si">{</span><span class="n">keyval</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">fits</span><span class="o">.</span><span class="n">setval</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">new_asnfile</span><span class="p">,</span> <span class="n">keyword</span><span class="o">=</span><span class="n">keyval</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span> <span class="n">keyval</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">ext</span><span class="o">=</span><span class="n">keyval</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Editing DATE in Extension 0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Editing FILENAME in Extension 0
+Editing ROOTNAME in Extension 0
+Editing ROOTNAME in Extension 1
+Editing ASN_ID in Extension 0
+Editing ASN_TAB in Extension 0
+Editing ASN_PROD in Extension 0
+Editing EXTVER in Extension 1
+Editing EXPNAME in Extension 1
+</pre></div>
+</div>
+</div>
+</div>
+<p><font size="4 "><b>And now we have created our new association file.</b> The file is now ready to be used in the <code>CalCOS</code> pipeline!</font></p>
+<p>If you’re interested in testing your file by running it through the <code class="docutils literal notranslate"><span class="pre">CalCOS</span></code> pipeline, you may wish to run the <code class="docutils literal notranslate"><span class="pre">test_asn.py</span> <span class="pre">file</span></code> included in this subdirectory of the GitHub repository. i.e. from the command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python test_asn.py
+</pre></div>
+</div>
+<p><em>Note</em> that you must first…</p>
+<ol class="simple">
+<li><p>Have created the file by running this Notebook</p></li>
+<li><p>Alter line 21 of <code class="docutils literal notranslate"><span class="pre">test_asn.py</span></code> to set the lref directory to wherever you have your cache of CRDS reference files (see our <a class="reference external" href="https://github.com/spacetelescope/notebooks/blob/master/notebooks/COS/Setup/Setup.ipynb">Setup Notebook</a>).</p></li>
+</ol>
+<p>If the test runs successfully, it will create a plot in the subdirectory <code class="docutils literal notranslate"><span class="pre">./output/plots/</span></code> .</p>
+</section>
+<section id="congratulations-you-finished-this-notebook">
+<h2>Congratulations! You finished this Notebook!<a class="headerlink" href="#congratulations-you-finished-this-notebook" title="Permalink to this headline">#</a></h2>
+<p><font size="5">There are more COS data walkthrough Notebooks on different topics. You can find them <a href="https://spacetelescope.github.io/COS-Notebooks/">here</a>.</font></p>
+</section>
+<hr class="docutils" />
+<section id="about-this-notebook">
+<h2>About this Notebook<a class="headerlink" href="#about-this-notebook" title="Permalink to this headline">#</a></h2>
+<p><strong>Author:</strong> Nat Kerman: <a class="reference external" href="mailto:nkerman&#37;&#52;&#48;stsci&#46;edu">mailto:nkerman<span>&#64;</span>stsci<span>&#46;</span>edu</a></p>
+<p><strong>Contributors:</strong> Elaine Mae Frazer</p>
+<p><strong>Updated On:</strong> 2021-7-06</p>
+<blockquote>
+<div><p><em>This tutorial was generated to be in compliance with the <a class="reference external" href="https://github.com/spacetelescope/style-guides">STScI style guides</a> and would like to cite the <a class="reference external" href="https://github.com/spacetelescope/style-guides/blob/master/templates/example_notebook.ipynb">Jupyter guide</a> in particular.</em></p>
+</div></blockquote>
+</section>
+<section id="citations">
+<h2>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">#</a></h2>
+<p>If you use <code class="docutils literal notranslate"><span class="pre">astropy</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">astroquery</span></code>, or <code class="docutils literal notranslate"><span class="pre">numpy</span></code> for published research, please cite the
+authors. Follow these links for more information about citations:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.scipy.org/citing.html">Citing <code class="docutils literal notranslate"><span class="pre">astropy</span></code>/<code class="docutils literal notranslate"><span class="pre">numpy</span></code>/<code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></p></li>
+<li><p><a class="reference external" href="https://astroquery.readthedocs.io/en/latest/">Citing <code class="docutils literal notranslate"><span class="pre">astroquery</span></code></a></p></li>
+</ul>
+<hr class="docutils" />
+<p><a class="reference external" href="#topAF">Top of Page</a>
+<img style="float: right;" src="https://raw.githubusercontent.com/spacetelescope/notebooks/master/assets/stsci_pri_combo_mark_horizonal_white_bkgd.png" alt="Space Telescope Logo" width="200px"/></p>
+<p><br></br>
+<br></br>
+<br></br></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "dulude/hst_notebooks",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/COS/AsnFile"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../ViewData/ViewData.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Viewing COS Data</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../CalCOS/CalCOS.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Running the COS Data Pipeline (<code class="docutils literal notranslate"><span class="pre">CalCOS</span></code>)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By STScI<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
