@@ -1,12 +1,13 @@
 # requires python3.6 or higher
 astropy
 astroquery
-ccdproc
 calcos
+ccdproc
 costools
 crds
 drizzlepac
 ipython
+jsonschema<4.10.0,>=4.0.1
 jupyterlab
 matplotlib
 numpy
