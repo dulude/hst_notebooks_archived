@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: STScI Notebooks
+title: HST Notebooks
 author: STScI
 copyright: "2022"  # Copyright year to be placed in the footer
 logo: stsci_logo2.png  # A path to the book logo
@@ -31,7 +31,7 @@ launch_buttons:
 
 # Information about where the book exists on the web
 repository:
-  url: github.com/dulude/notebooks_migration # Online location of your book
+  url: github.com/dulude/hst_notebooks # Online location of your book
   # path_to_book:  Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
