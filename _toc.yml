@@ -5,6 +5,7 @@ root: index
 parts:
   - caption: COS
     chapters:
+    - file: notebooks/COS/README.md
     - file: notebooks/COS/Setup/Setup.ipynb
     - file: notebooks/COS/DataDl/DataDl.ipynb
     - file: notebooks/COS/ViewData/ViewData.ipynb
