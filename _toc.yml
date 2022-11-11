@@ -3,6 +3,19 @@
 format: jb-book
 root: index
 parts:
+  - caption: COS
+    chapters:
+    - file: notebooks/COS/README.md
+    - file: notebooks/COS/Setup/Setup.ipynb
+    - file: notebooks/COS/DataDl/DataDl.ipynb
+    - file: notebooks/COS/ViewData/ViewData.ipynb
+    - file: notebooks/COS/AsnFile/AsnFile.ipynb
+    - file: notebooks/COS/CalCOS/CalCOS.ipynb
+    - file: notebooks/COS/SplitTag/SplitTag.ipynb
+    - file: notebooks/COS/DayNight/DayNight.ipynb
+    - file: notebooks/COS/LSF/LSF.ipynb
+    - file: notebooks/COS/Extract/Extract.ipynb
+    - file: notebooks/COS/example_notebook/example_notebook.ipynb
   - caption: DrizzlePac
     chapters:
       - file: notebooks/DrizzlePac/README.md
