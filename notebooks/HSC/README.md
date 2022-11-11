@@ -1,4 +1,4 @@
-# HSC Motebooks
+# HSC Notebooks
 - As per [Jira ASB-16934: Convert existing HST notebooks for inclusion in MAST repository][1], this repository contains updates to the existing HSC use case notebooks from [HLA/hsc/help][2].
 - Notebooks will be in compliance with the following policies:
   - [DMD Notebook Submission Policy and Contributor guide][4]
