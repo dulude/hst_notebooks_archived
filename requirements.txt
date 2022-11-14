@@ -10,6 +10,7 @@ fastkde
 ipython
 jsonschema<4.10.0,>=4.0.1
 jupyterlab
+mastcasjobs>0.0.2
 matplotlib
 numpy
 pandas
