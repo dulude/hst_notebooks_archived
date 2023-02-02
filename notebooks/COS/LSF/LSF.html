@@ -27,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/table.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -186,6 +187,58 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../example_notebook/example_notebook.html">
    Draft: Notebook title
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DrizzlePac
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/README.html">
+   DrizzlePac Jupyter Notebook Tutorials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/Initialization/Initialization.html">
+   DrizzlePac Initialization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/align_to_catalogs/align_to_catalogs.html">
+   Aligning HST images to an absolute reference catalog
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/align_multiple_visits/align_multiple_visits.html">
+   Optimizing Image Alignment for Multiple HST Visits
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/align_sparse_fields/align_sparse_fields.html">
+   Aligning Deep Exposures of Sparse Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/drizzle_wfpc2/drizzle_wfpc2.html">
+   Drizzling WFPC2 Images to use a Single Zeropoint
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/mask_satellite/mask_satellite.html">
+   Satellite Trail Masking Techniques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/optimize_image_sampling/optimize_image_sampling.html">
+   Optimizing the Image Sampling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/using_updated_astrometry_solutions/using_updated_astrometry_solutions.html">
+   Using updated astrometry solutions
   </a>
  </li>
 </ul>
@@ -1044,7 +1097,7 @@ The COS team maintains up-to-date LSF files on the <a class="reference external"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fetch_files</span><span class="p">(</span><span class="n">det</span><span class="p">,</span> <span class="n">grating</span><span class="p">,</span> <span class="n">lpPos</span><span class="p">,</span> <span class="n">cenwave</span><span class="p">,</span> <span class="n">disptab</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Given all the inputs: (detector, grating, LP-POS, cenwave, dispersion table,) this will download both</span>
 <span class="sd">    the LSF file and Disptab file you should use in the convolution and return their paths.</span>
 <span class="sd">    Returns:</span>
@@ -1064,7 +1117,7 @@ The COS team maintains up-to-date LSF files on the <a class="reference external"
     <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span>
         <span class="n">LSF_file_webpath</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">datadir</span> <span class="o">/</span> <span class="n">LSF_file_name</span><span class="p">)</span>
     <span class="p">)</span>  <span class="c1"># Where to save file to locally</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Downloaded LSF file to </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">datadir</span><span class="o">/</span> <span class="n">LSF_file_name</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Downloaded LSF file to </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">datadir</span><span class="o">/</span><span class="w"> </span><span class="n">LSF_file_name</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
     <span class="c1"># And we&#39;ll need to get the DISPTAB file as well</span>
     <span class="n">disptab_path</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">datadir</span> <span class="o">/</span> <span class="n">disptab</span><span class="p">)</span>
@@ -1141,7 +1194,7 @@ Downloaded DISPTAB file to data/5b919205l_disp.fits
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=321</i>
-<table id="table139928302030608" class="table-striped table-bordered table-condensed">
+<table id="table140082534635536" class="table-striped table-bordered table-condensed">
 <thead><tr><th>1134</th><th>1139</th><th>1144</th><th>1149</th><th>1154</th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th></tr></thead>
 <tr><td>4.885797114010963e-06</td><td>4.787755984607906e-06</td><td>4.713489842513227e-06</td><td>4.735199692705489e-06</td><td>4.7784485923017495e-06</td></tr>
@@ -1393,7 +1446,7 @@ If provided with a range of pixel values, it will apply the dispersion relations
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_disp_params</span><span class="p">(</span><span class="n">disptab</span><span class="p">,</span> <span class="n">cenwave</span><span class="p">,</span> <span class="n">segment</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="p">[]):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Helper function to redefine_lsf(). Reads through a DISPTAB file and gives relevant\</span>
 <span class="sd">    dispersion relationship/wavelength solution over input pixels.</span>
 <span class="sd">    Parameters:</span>
@@ -1435,7 +1488,7 @@ This effectively converts an LSF kernel from a function of pixel to a function o
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">redefine_lsf</span><span class="p">(</span><span class="n">lsf_file</span><span class="p">,</span> <span class="n">cenwave</span><span class="p">,</span> <span class="n">disptab</span><span class="p">,</span> <span class="n">detector</span><span class="o">=</span><span class="s2">&quot;FUV&quot;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Helper function to convolve_lsf(). Converts the LSF kernels in the LSF file from a fn(pixel) -&gt; fn(λ)\</span>
 <span class="sd">    which can then be used by convolve_lsf() and re-bins the kernels.</span>
 <span class="sd">    Parameters:</span>
@@ -1582,7 +1635,7 @@ This effectively converts an LSF kernel from a function of pixel to a function o
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convolve_lsf</span><span class="p">(</span><span class="n">wavelength</span><span class="p">,</span> <span class="n">spec</span><span class="p">,</span> <span class="n">cenwave</span><span class="p">,</span> <span class="n">lsf_file</span><span class="p">,</span> <span class="n">disptab</span><span class="p">,</span> <span class="n">detector</span><span class="o">=</span><span class="s2">&quot;FUV&quot;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Main function; Convolves an input spectrum - i.e. template or STIS spectrum - with the COS LSF.</span>
 <span class="sd">    Parameters:</span>
 <span class="sd">    wavelength (list or array): Wavelengths of the spectrum to convolve.</span>
@@ -1714,7 +1767,7 @@ This effectively converts an LSF kernel from a function of pixel to a function o
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integral1</span><span class="p">,</span> <span class="n">integral2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">wvln_in</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">spec_in</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">wvln_out</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">spec_out</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The integrated fluxes are within </span><span class="si">{</span><span class="mi">100</span><span class="o">*</span> <span class="p">(</span><span class="n">integral1</span><span class="o">-</span><span class="n">integral2</span><span class="p">)</span><span class="o">/</span><span class="n">integral2</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> % of eachother&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The integrated fluxes are within </span><span class="si">{</span><span class="mi">100</span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">integral1</span><span class="o">-</span><span class="n">integral2</span><span class="p">)</span><span class="o">/</span><span class="n">integral2</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> % of eachother&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1731,7 +1784,7 @@ We do this by creating a <a class="reference external" href="https://en.wikipedi
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">emit2abs</span><span class="p">(</span><span class="n">emitspec</span><span class="p">,</span> <span class="n">continuum</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Takes an emission spectrum and &quot;reverses&quot; it, that is it:</span>
 <span class="sd">    Makes a default flat continuum of 1 and subtracts exp(line)</span>
 <span class="sd">    Inputs:</span>
@@ -1891,7 +1944,7 @@ We do this by creating a <a class="reference external" href="https://en.wikipedi
 
 <span class="c1"># Give the user a heads-up that the integrated fluxes should agree:</span>
 <span class="n">integral1</span><span class="p">,</span> <span class="n">integral2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">wvln_in</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">spec_in</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">wvln_out</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">spec_out</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The integrated fluxes are within </span><span class="si">{</span><span class="mi">100</span><span class="o">*</span> <span class="p">(</span><span class="n">integral1</span><span class="o">-</span><span class="n">integral2</span><span class="p">)</span><span class="o">/</span><span class="n">integral2</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> % of eachother&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The integrated fluxes are within </span><span class="si">{</span><span class="mi">100</span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">integral1</span><span class="o">-</span><span class="n">integral2</span><span class="p">)</span><span class="o">/</span><span class="n">integral2</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> % of eachother&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2199,10 +2252,65 @@ We’ll first plot the entire spectrum:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file ./mastDownload/HST/lby615010/lby615010_asn.fits with expected size 11520. [astroquery.query]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file ./mastDownload/HST/lby615010/lby615010_x1dsum.fits with expected size 244800. [astroquery.query]
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">HTTPError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">34</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># First STIS, but through the ULLYSES database - non-standard</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">readfile</span><span class="p">,</span> <span class="n">__</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="s2">&quot;https://ullyses.stsci.edu/files/bi173.tar.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;./ul_zip.tar.gz&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="p">)</span>  <span class="c1"># Where to save file to locally</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">tar</span> <span class="o">=</span> <span class="n">tarfile</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">readfile</span><span class="p">,</span> <span class="s2">&quot;r:gz&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">tar</span><span class="o">.</span><span class="n">extractall</span><span class="p">()</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/urllib/request.py:241,</span> in <span class="ni">urlretrieve</span><span class="nt">(url, filename, reporthook, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">225</span><span class="sd"> Retrieve a URL into a temporary location on disk.</span>
+<span class="g g-Whitespace">    </span><span class="mi">226</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">237</span><span class="sd"> data file as well as the resulting HTTPMessage object.</span>
+<span class="g g-Whitespace">    </span><span class="mi">238</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">239</span> <span class="n">url_type</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">_splittype</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">241</span> <span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">closing</span><span class="p">(</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">))</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="n">headers</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">244</span>     <span class="c1"># Just return the local path and the &quot;headers&quot; for file://</span>
+<span class="g g-Whitespace">    </span><span class="mi">245</span>     <span class="c1"># URLs. No sense in performing a copy unless requested.</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/urllib/request.py:216,</span> in <span class="ni">urlopen</span><span class="nt">(url, data, timeout, cafile, capath, cadefault, context)</span>
+<span class="g g-Whitespace">    </span><span class="mi">214</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">215</span>     <span class="n">opener</span> <span class="o">=</span> <span class="n">_opener</span>
+<span class="ne">--&gt; </span><span class="mi">216</span> <span class="k">return</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/urllib/request.py:525,</span> in <span class="ni">OpenerDirector.open</span><span class="nt">(self, fullurl, data, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">523</span> <span class="k">for</span> <span class="n">processor</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">protocol</span><span class="p">,</span> <span class="p">[]):</span>
+<span class="g g-Whitespace">    </span><span class="mi">524</span>     <span class="n">meth</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">processor</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">525</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">meth</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">527</span> <span class="k">return</span> <span class="n">response</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/urllib/request.py:634,</span> in <span class="ni">HTTPErrorProcessor.http_response</span><span class="nt">(self, request, response)</span>
+<span class="g g-Whitespace">    </span><span class="mi">631</span> <span class="c1"># According to RFC 2616, &quot;2xx&quot; code indicates that the client&#39;s</span>
+<span class="g g-Whitespace">    </span><span class="mi">632</span> <span class="c1"># request was successfully received, understood, and accepted.</span>
+<span class="g g-Whitespace">    </span><span class="mi">633</span> <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">200</span> <span class="o">&lt;=</span> <span class="n">code</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">634</span>     <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">635</span>         <span class="s1">&#39;http&#39;</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">637</span> <span class="k">return</span> <span class="n">response</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/urllib/request.py:563,</span> in <span class="ni">OpenerDirector.error</span><span class="nt">(self, proto, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">561</span> <span class="k">if</span> <span class="n">http_err</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">562</span>     <span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;http_error_default&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">orig_args</span>
+<span class="ne">--&gt; </span><span class="mi">563</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_chain</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/urllib/request.py:496,</span> in <span class="ni">OpenerDirector._call_chain</span><span class="nt">(self, chain, kind, meth_name, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">494</span> <span class="k">for</span> <span class="n">handler</span> <span class="ow">in</span> <span class="n">handlers</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">495</span>     <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">handler</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">496</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">497</span>     <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">498</span>         <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/urllib/request.py:643,</span> in <span class="ni">HTTPDefaultErrorHandler.http_error_default</span><span class="nt">(self, req, fp, code, msg, hdrs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">642</span> <span class="k">def</span> <span class="nf">http_error_default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">643</span>     <span class="k">raise</span> <span class="n">HTTPError</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">full_url</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">,</span> <span class="n">fp</span><span class="p">)</span>
+
+<span class="ne">HTTPError</span>: HTTP Error 404: Not Found
 </pre></div>
 </div>
 </div>
@@ -2233,13 +2341,6 @@ We’ll first plot the entire spectrum:</p>
     <span class="n">nuv_disptab_path</span><span class="p">,</span>
     <span class="n">detector</span><span class="o">=</span><span class="s2">&quot;NUV&quot;</span><span class="p">,</span>
 <span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: UnitsWarning: &#39;erg /s /cm**2 /angstrom&#39; contains multiple slashes, which is discouraged by the FITS standard [astropy.units.format.generic]
-WARNING: hdu= was not specified but multiple tables are present, reading in first available table (hdu=1) [astropy.io.fits.connect]
-WARNING: UnitsWarning: &#39;erg /s /cm**2 /Angstrom&#39; contains multiple slashes, which is discouraged by the FITS standard [astropy.units.format.generic]
 </pre></div>
 </div>
 </div>
@@ -2296,9 +2397,6 @@ WARNING: UnitsWarning: &#39;erg /s /cm**2 /Angstrom&#39; contains multiple slash
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">plotsdir</span> <span class="o">/</span> <span class="s2">&quot;COS_STIS_compare_nuv.png&quot;</span><span class="p">),</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/LSF_76_0.png" src="../../../_images/LSF_76_0.png" />
 </div>
 </div>
 </section>

@@ -27,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/table.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -186,6 +187,58 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../example_notebook/example_notebook.html">
    Draft: Notebook title
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DrizzlePac
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/README.html">
+   DrizzlePac Jupyter Notebook Tutorials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/Initialization/Initialization.html">
+   DrizzlePac Initialization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/align_to_catalogs/align_to_catalogs.html">
+   Aligning HST images to an absolute reference catalog
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/align_multiple_visits/align_multiple_visits.html">
+   Optimizing Image Alignment for Multiple HST Visits
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/align_sparse_fields/align_sparse_fields.html">
+   Aligning Deep Exposures of Sparse Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/drizzle_wfpc2/drizzle_wfpc2.html">
+   Drizzling WFPC2 Images to use a Single Zeropoint
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/mask_satellite/mask_satellite.html">
+   Satellite Trail Masking Techniques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/optimize_image_sampling/optimize_image_sampling.html">
+   Optimizing the Image Sampling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/using_updated_astrometry_solutions/using_updated_astrometry_solutions.html">
+   Using updated astrometry solutions
   </a>
  </li>
 </ul>
@@ -746,7 +799,7 @@ This type of data separation is possible with the <a class="reference external" 
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_time_tag</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Function which yields descriptive errors if the input file is not a COS TIME-TAG file.</span>
 <span class="sd">    Inputs: </span>
 <span class="sd">      filepath (str): path to your data</span>
@@ -856,10 +909,10 @@ This type of data separation is possible with the <a class="reference external" 
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># If the files already exist, delete them so you may run the filter again:</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">intermediate_dir</span> <span class="o">/</span> <span class="s2">&quot;filtered_corrtag_a.fits&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span> <span class="c1"># Check if you have created a filtered FUVA file</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;File exists; deleting </span><span class="si">{</span><span class="n">intermediate_dir</span> <span class="o">/</span> <span class="s1">&#39;filtered_corrtag_a.fits&#39;</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;File exists; deleting </span><span class="si">{</span><span class="n">intermediate_dir</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="s1">&#39;filtered_corrtag_a.fits&#39;</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="p">(</span><span class="n">intermediate_dir</span> <span class="o">/</span> <span class="s2">&quot;filtered_corrtag_a.fits&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span> <span class="c1"># if so, delete the file so we can re-create it with TimelineFilter</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">intermediate_dir</span> <span class="o">/</span> <span class="s2">&quot;filtered_corrtag_b.fits&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span> <span class="c1"># Repeat the check-delete process above with FUVB file</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;File exists; deleting </span><span class="si">{</span><span class="n">intermediate_dir</span> <span class="o">/</span> <span class="s1">&#39;filtered_corrtag_b.fits&#39;</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;File exists; deleting </span><span class="si">{</span><span class="n">intermediate_dir</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="s1">&#39;filtered_corrtag_b.fits&#39;</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="p">(</span><span class="n">intermediate_dir</span> <span class="o">/</span> <span class="s2">&quot;filtered_corrtag_b.fits&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
 
 <span class="c1"># Filter the files based on your criteria:</span>
@@ -952,7 +1005,7 @@ Writing to /home/runner/work/hst_notebooks/hst_notebooks/notebooks/COS/DayNight/
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=2</i>
-<table id="table139913271576176" class="table-striped table-bordered table-condensed">
+<table id="table139997020731280" class="table-striped table-bordered table-condensed">
 <thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
 <thead><tr><th>bytes40</th><th>bytes14</th><th>bool</th></tr></thead>
 <tr><td>intermediate/filtered_corrtag_a.fits</td><td>EXP-FP</td><td>True</td></tr>
@@ -1005,7 +1058,7 @@ Writing to /home/runner/work/hst_notebooks/hst_notebooks/notebooks/COS/DayNight/
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=2</i>
-<table id="table139912211931248" class="table-striped table-bordered table-condensed">
+<table id="table139997020729216" class="table-striped table-bordered table-condensed">
 <thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
 <thead><tr><th>bytes40</th><th>bytes14</th><th>bool</th></tr></thead>
 <tr><td>./data/lbry01i6q_corrtag_a.fits</td><td>EXP-FP</td><td>True</td></tr>

@@ -27,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/table.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -184,6 +185,58 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="example_notebook/example_notebook.html">
    Draft: Notebook title
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DrizzlePac
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../DrizzlePac/README.html">
+   DrizzlePac Jupyter Notebook Tutorials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../DrizzlePac/Initialization/Initialization.html">
+   DrizzlePac Initialization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../DrizzlePac/align_to_catalogs/align_to_catalogs.html">
+   Aligning HST images to an absolute reference catalog
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../DrizzlePac/align_multiple_visits/align_multiple_visits.html">
+   Optimizing Image Alignment for Multiple HST Visits
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../DrizzlePac/align_sparse_fields/align_sparse_fields.html">
+   Aligning Deep Exposures of Sparse Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../DrizzlePac/drizzle_wfpc2/drizzle_wfpc2.html">
+   Drizzling WFPC2 Images to use a Single Zeropoint
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../DrizzlePac/mask_satellite/mask_satellite.html">
+   Satellite Trail Masking Techniques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../DrizzlePac/optimize_image_sampling/optimize_image_sampling.html">
+   Optimizing the Image Sampling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../DrizzlePac/using_updated_astrometry_solutions/using_updated_astrometry_solutions.html">
+   Using updated astrometry solutions
   </a>
  </li>
 </ul>
@@ -713,7 +766,7 @@ This is a repository of interactive walkthrough guides to common COS data proced
 <section id="downloading-the-notebooks">
 <h3>Downloading the Notebooks<a class="headerlink" href="#downloading-the-notebooks" title="Permalink to this headline">#</a></h3>
 <p>While you <em>can</em> run most of the Notebooks with only the <code class="docutils literal notranslate"><span class="pre">ipynb</span></code> file downloaded, it is <strong>highly recommended that you clone this entire repository</strong>. Specifically, <code class="docutils literal notranslate"><span class="pre">ViewData.ipynb</span></code> cannot run at present without both the file <code class="docutils literal notranslate"><span class="pre">cos_functions.py</span></code> and <code class="docutils literal notranslate"><span class="pre">ViewData</span></code> installed side-by-side in the same directory. To clone (which means download, in the language of <code class="docutils literal notranslate"><span class="pre">git</span></code>,) the repository with all the COS Notebooks, run the following command from a terminal in the directory where you would like to download the Notebook repository.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/spacetelescope/notebooks
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/spacetelescope/notebooks
 </pre></div>
 </div>
 <p>The git cloning process is also shown in <a class="reference external" href="https://vimeo.com/548158095">this video walkthrough</a>.</p>
@@ -758,7 +811,7 @@ This is a repository of interactive walkthrough guides to common COS data proced
 </tbody>
 </table>
 <p>These will install the conda command line tool, allowing you to run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge jupyterlab
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>jupyterlab
 </pre></div>
 </div>
 </section>

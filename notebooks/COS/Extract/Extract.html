@@ -27,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/table.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -184,6 +185,58 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../example_notebook/example_notebook.html">
    Draft: Notebook title
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DrizzlePac
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/README.html">
+   DrizzlePac Jupyter Notebook Tutorials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/Initialization/Initialization.html">
+   DrizzlePac Initialization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/align_to_catalogs/align_to_catalogs.html">
+   Aligning HST images to an absolute reference catalog
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/align_multiple_visits/align_multiple_visits.html">
+   Optimizing Image Alignment for Multiple HST Visits
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/align_sparse_fields/align_sparse_fields.html">
+   Aligning Deep Exposures of Sparse Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/drizzle_wfpc2/drizzle_wfpc2.html">
+   Drizzling WFPC2 Images to use a Single Zeropoint
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/mask_satellite/mask_satellite.html">
+   Satellite Trail Masking Techniques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/optimize_image_sampling/optimize_image_sampling.html">
+   Optimizing the Image Sampling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/using_updated_astrometry_solutions/using_updated_astrometry_solutions.html">
+   Using updated astrometry solutions
   </a>
  </li>
 </ul>
@@ -737,6 +790,24 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">30</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="c1"># We will also suppress a warning that won&#39;t affect our data processing:</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="n">np</span><span class="o">.</span><span class="n">seterr</span><span class="p">(</span><span class="n">divide</span> <span class="o">=</span> <span class="s1">&#39;ignore&#39;</span><span class="p">)</span> 
+<span class="ne">---&gt; </span><span class="mi">30</span> <span class="n">np</span><span class="o">.</span><span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">VisibleDeprecationWarning</span><span class="p">)</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/numpy/__init__.py:284,</span> in <span class="ni">__getattr__</span><span class="nt">(attr)</span>
+<span class="g g-Whitespace">    </span><span class="mi">281</span>     <span class="kn">from</span> <span class="nn">.testing</span> <span class="kn">import</span> <span class="n">Tester</span>
+<span class="g g-Whitespace">    </span><span class="mi">282</span>     <span class="k">return</span> <span class="n">Tester</span>
+<span class="ne">--&gt; </span><span class="mi">284</span> <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s2">&quot;module </span><span class="si">{!r}</span><span class="s2"> has no attribute &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">285</span>                      <span class="s2">&quot;</span><span class="si">{!r}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">attr</span><span class="p">))</span>
+
+<span class="ne">AttributeError</span>: module &#39;numpy&#39; has no attribute &#39;warnings&#39;
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="we-will-also-define-a-few-directories-we-will-need">
@@ -750,11 +821,6 @@ title="Print to PDF"
 
 <span class="c1"># Make the directories if they don&#39;t exist</span>
 <span class="n">datadir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">outputdir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">plotsdir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(None, None, None)
 </pre></div>
 </div>
 </div>
@@ -774,54 +840,6 @@ For more information on downloading COS data, see our <a class="reference extern
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/le4b04010_asn.fits to ./mastDownload/HST/le4b04010/le4b04010_asn.fits ...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/le4b04010_x1dsum.fits to ./mastDownload/HST/le4b04010/le4b04010_x1dsum.fits ...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/le4b04zfq_rawtag.fits to ./mastDownload/HST/le4b04zfq/le4b04zfq_rawtag.fits ...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/le4b04zkq_rawtag.fits to ./mastDownload/HST/le4b04zkq/le4b04zkq_rawtag.fits ...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/le4b04zoq_rawtag.fits to ./mastDownload/HST/le4b04zoq/le4b04zoq_rawtag.fits ...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/le4b04zqq_rawtag.fits to ./mastDownload/HST/le4b04zqq/le4b04zqq_rawtag.fits ...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
-</pre></div>
-</div>
-<div class="output text_html"><div><i>Table length=6</i>
-<table id="table139978919288896" class="table-striped table-bordered table-condensed">
-<thead><tr><th>Local Path</th><th>Status</th><th>Message</th><th>URL</th></tr></thead>
-<thead><tr><th>str50</th><th>str8</th><th>object</th><th>object</th></tr></thead>
-<tr><td>./mastDownload/HST/le4b04010/le4b04010_asn.fits</td><td>COMPLETE</td><td>None</td><td>None</td></tr>
-<tr><td>./mastDownload/HST/le4b04010/le4b04010_x1dsum.fits</td><td>COMPLETE</td><td>None</td><td>None</td></tr>
-<tr><td>./mastDownload/HST/le4b04zfq/le4b04zfq_rawtag.fits</td><td>COMPLETE</td><td>None</td><td>None</td></tr>
-<tr><td>./mastDownload/HST/le4b04zkq/le4b04zkq_rawtag.fits</td><td>COMPLETE</td><td>None</td><td>None</td></tr>
-<tr><td>./mastDownload/HST/le4b04zoq/le4b04zoq_rawtag.fits</td><td>COMPLETE</td><td>None</td><td>None</td></tr>
-<tr><td>./mastDownload/HST/le4b04zqq/le4b04zqq_rawtag.fits</td><td>COMPLETE</td><td>None</td><td>None</td></tr>
-</table></div></div></div>
 </div>
 <p>We gather a list of all the <code class="docutils literal notranslate"><span class="pre">_rawtag</span></code> files we have downloaded, as well as the <code class="docutils literal notranslate"><span class="pre">_asnfile</span></code> and <code class="docutils literal notranslate"><span class="pre">_x1dsum</span></code> file:</p>
 <div class="cell docutils container">
@@ -877,13 +895,6 @@ To begin, we select and plot the raw counts data from the 0th rawtag file:</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: UnitsWarning: &#39;seconds&#39; did not parse as fits unit: At col 0, Unit &#39;seconds&#39; not supported by the FITS standard.  If this is meant to be a custom unit, define it with &#39;u.def_unit&#39;. To have it recognized inside a file reader or other code, enable it with &#39;u.add_enabled_units&#39;. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-WARNING: UnitsWarning: &#39;pixels&#39; did not parse as fits unit: At col 0, Unit &#39;pixels&#39; not supported by the FITS standard. Did you mean pixel? If this is meant to be a custom unit, define it with &#39;u.def_unit&#39;. To have it recognized inside a file reader or other code, enable it with &#39;u.add_enabled_units&#39;. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html [astropy.units.core]
-</pre></div>
-</div>
-<img alt="../../../_images/Extract_12_1.png" src="../../../_images/Extract_12_1.png" />
-</div>
 </div>
 <p><strong>The dense stripes in the lower half of Fig 1.1 (<em>highlighted by the dotted lines</em>) are the actual science data raw counts, while the <em>patched</em> stripes towards the top of the plot are the wavelength calibration counts.</strong> For a diagram of a NUV 2D spectrum, see COS Data Handbook <a class="reference external" href="https://hst-docs.stsci.edu/cosdhb/chapter-1-cos-overview/1-2-cos-physical-configuration#id-1.2COSPhysicalConfiguration-Figure1.10">Figure 1.10</a>.</p>
 <p>Now we’ll need to see where the original <code class="docutils literal notranslate"><span class="pre">XTRACTAB</span></code> places its extraction boxes:</p>
@@ -918,28 +929,9 @@ Give the system the <code class="docutils literal notranslate"><span class="pre"
 <span class="o">%</span><span class="k">env</span> CRDS_SERVER_URL https://hst-crds.stsci.edu
 <span class="o">%</span><span class="k">env</span> lref ./data/references/hst/cos/
 <span class="n">lref</span> <span class="o">=</span> <span class="s1">&#39;./data/references/hst/cos/&#39;</span>
-<span class="o">!</span> crds sync --files<span class="o">=</span>w5g1439sl_1dx.fits
+<span class="o">!</span><span class="w"> </span>crds<span class="w"> </span>sync<span class="w"> </span>--files<span class="o">=</span>w5g1439sl_1dx.fits
 
 <span class="n">orig_xtractab</span> <span class="o">=</span> <span class="n">lref</span> <span class="o">+</span> <span class="n">orig_xtractab</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;$&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># This is the full path</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>env: CRDS_PATH=./data
-env: CRDS_SERVER_URL=https://hst-crds.stsci.edu
-env: lref=./data/references/hst/cos/
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CRDS - INFO -  Symbolic context &#39;hst-operational&#39; resolves to &#39;hst_1047.pmap&#39;
-CRDS - INFO -  Syncing explicitly listed files.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CRDS - INFO -  Fetching  ./data/references/hst/cos/w5g1439sl_1dx.fits              54.7 K bytes  (1 / 1 files) (0 / 54.7 K bytes)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CRDS - INFO -  0 errors
-CRDS - INFO -  0 warnings
-CRDS - INFO -  3 infos
 </pre></div>
 </div>
 </div>
@@ -962,7 +954,7 @@ CRDS - INFO -  3 infos
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">readxtractab</span><span class="p">(</span><span class="n">xtractab</span><span class="p">,</span> <span class="n">grat</span><span class="p">,</span> <span class="n">cw</span><span class="p">,</span> <span class="n">aper</span><span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Reads in an XTRACTAB row of a particular COS mode and\</span>
 <span class="sd">    returns extraction box sizes and locations.</span>
 <span class="sd">    Inputs:</span>
@@ -1064,7 +1056,7 @@ CRDS - INFO -  3 infos
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">makeims</span><span class="p">(</span><span class="n">xarr</span><span class="p">,</span> <span class="n">yarr</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Helper function for collapsey(): converts list of counts to image.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">new_img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1024</span><span class="p">,</span> <span class="mi">1024</span><span class="p">))</span>
@@ -1086,7 +1078,7 @@ CRDS - INFO -  3 infos
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># collapsey() assumes corrtag, but will work with rawtag if raw=True</span>
 <span class="k">def</span> <span class="nf">collapsey</span><span class="p">(</span><span class="n">tagfiles</span><span class="p">,</span> <span class="n">xtractab</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">save</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">savename</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fignum</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Takes a corrtag (default) or rawtag and makes a plot of the 2D spectrum collapsed to the y axis\</span>
 <span class="sd">    i.e. summed over rows of pixels along the dispersion direction\</span>
 <span class="sd">    then it overplots the extraction regions from a provided xtractab.</span>
@@ -1211,79 +1203,6 @@ CRDS - INFO -  3 infos
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">read_bounds</span> <span class="o">=</span> <span class="n">readxtractab</span><span class="p">(</span><span class="n">orig_xtractab</span><span class="p">,</span> <span class="c1"># bounds of all boxes...</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>                            <span class="n">grat</span><span class="o">=</span><span class="s1">&#39;G185M&#39;</span><span class="p">,</span> <span class="n">cw</span><span class="o">=</span><span class="mi">1786</span><span class="p">,</span> <span class="n">aper</span><span class="o">=</span><span class="s1">&#39;PSA&#39;</span><span class="p">)</span> <span class="c1"># ...for these conditions</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span> <span class="c1"># Set up figure</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">rtd</span><span class="p">[</span><span class="s1">&#39;RAWX&#39;</span><span class="p">],</span><span class="n">rtd</span><span class="p">[</span><span class="s1">&#39;RAWY&#39;</span><span class="p">],</span> <span class="c1"># image of the raw counts</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>             <span class="n">s</span><span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span> <span class="s1">&#39;C0&#39;</span><span class="p">)</span>
-
-<span class="nn">Cell In [9], line 17,</span> in <span class="ni">readxtractab</span><span class="nt">(xtractab, grat, cw, aper)</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">readxtractab</span><span class="p">(</span><span class="n">xtractab</span><span class="p">,</span> <span class="n">grat</span><span class="p">,</span> <span class="n">cw</span><span class="p">,</span> <span class="n">aper</span><span class="p">):</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span><span class="sd">     Reads in an XTRACTAB row of a particular COS mode and\</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span><span class="sd">     returns extraction box sizes and locations.</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span><span class="sd">         elif FUV: FUVA/B, and 2 background boxes for each FUVA/B.</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">17</span>     <span class="k">with</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">xtractab</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span>         <span class="n">xtrdata</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span> <span class="c1"># Read the fits data</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="n">isFUV</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">xtractab</span><span class="p">)[</span><span class="s1">&#39;DETECTOR&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;FUV&#39;</span>
-
-<span class="nn">File /usr/share/miniconda/lib/python3.9/site-packages/astropy/io/fits/hdu/hdulist.py:175,</span> in <span class="ni">fitsopen</span><span class="nt">(name, mode, memmap, save_backup, cache, lazy_load_hdus, ignore_missing_simple, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">172</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">173</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Empty filename: </span><span class="si">{</span><span class="n">name</span><span class="si">!r}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">175</span> <span class="k">return</span> <span class="n">HDUList</span><span class="o">.</span><span class="n">fromfile</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">memmap</span><span class="p">,</span> <span class="n">save_backup</span><span class="p">,</span> <span class="n">cache</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">176</span>                         <span class="n">lazy_load_hdus</span><span class="p">,</span> <span class="n">ignore_missing_simple</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File /usr/share/miniconda/lib/python3.9/site-packages/astropy/io/fits/hdu/hdulist.py:410,</span> in <span class="ni">HDUList.fromfile</span><span class="nt">(cls, fileobj, mode, memmap, save_backup, cache, lazy_load_hdus, ignore_missing_simple, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">398</span> <span class="nd">@classmethod</span>
-<span class="g g-Whitespace">    </span><span class="mi">399</span> <span class="k">def</span> <span class="nf">fromfile</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">fileobj</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">memmap</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">400</span>              <span class="n">save_backup</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">lazy_load_hdus</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">401</span>              <span class="n">ignore_missing_simple</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">402</span>     <span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">403</span><span class="sd">     Creates an `HDUList` instance from a file-like object.</span>
-<span class="g g-Whitespace">    </span><span class="mi">404</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">407</span><span class="sd">     documentation for details of the parameters accepted by this method).</span>
-<span class="g g-Whitespace">    </span><span class="mi">408</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">410</span>     <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_readfrom</span><span class="p">(</span><span class="n">fileobj</span><span class="o">=</span><span class="n">fileobj</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">memmap</span><span class="o">=</span><span class="n">memmap</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">411</span>                          <span class="n">save_backup</span><span class="o">=</span><span class="n">save_backup</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="n">cache</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">412</span>                          <span class="n">ignore_missing_simple</span><span class="o">=</span><span class="n">ignore_missing_simple</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">413</span>                          <span class="n">lazy_load_hdus</span><span class="o">=</span><span class="n">lazy_load_hdus</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File /usr/share/miniconda/lib/python3.9/site-packages/astropy/io/fits/hdu/hdulist.py:1062,</span> in <span class="ni">HDUList._readfrom</span><span class="nt">(cls, fileobj, data, mode, memmap, cache, lazy_load_hdus, ignore_missing_simple, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1059</span> <span class="k">if</span> <span class="n">fileobj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1060</span>     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fileobj</span><span class="p">,</span> <span class="n">_File</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1061</span>         <span class="c1"># instantiate a FITS file object (ffo)</span>
-<span class="ne">-&gt; </span><span class="mi">1062</span>         <span class="n">fileobj</span> <span class="o">=</span> <span class="n">_File</span><span class="p">(</span><span class="n">fileobj</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">memmap</span><span class="o">=</span><span class="n">memmap</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="n">cache</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1063</span>     <span class="c1"># The Astropy mode is determined by the _File initializer if the</span>
-<span class="g g-Whitespace">   </span><span class="mi">1064</span>     <span class="c1"># supplied mode was None</span>
-<span class="g g-Whitespace">   </span><span class="mi">1065</span>     <span class="n">mode</span> <span class="o">=</span> <span class="n">fileobj</span><span class="o">.</span><span class="n">mode</span>
-
-<span class="nn">File /usr/share/miniconda/lib/python3.9/site-packages/astropy/io/fits/file.py:170,</span> in <span class="ni">_File.__init__</span><span class="nt">(self, fileobj, mode, memmap, overwrite, cache)</span>
-<span class="g g-Whitespace">    </span><span class="mi">168</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_open_fileobj</span><span class="p">(</span><span class="n">fileobj</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">overwrite</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">169</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fileobj</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">)):</span>
-<span class="ne">--&gt; </span><span class="mi">170</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_open_filename</span><span class="p">(</span><span class="n">fileobj</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">overwrite</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">171</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">172</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_open_filelike</span><span class="p">(</span><span class="n">fileobj</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">overwrite</span><span class="p">)</span>
-
-<span class="nn">File /usr/share/miniconda/lib/python3.9/site-packages/astropy/io/fits/file.py:562,</span> in <span class="ni">_File._open_filename</span><span class="nt">(self, filename, mode, overwrite)</span>
-<span class="g g-Whitespace">    </span><span class="mi">559</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">561</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_try_read_compressed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">magic</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="n">ext</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">562</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">IO_FITS_MODES</span><span class="p">[</span><span class="n">mode</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">563</span>     <span class="bp">self</span><span class="o">.</span><span class="n">close_on_error</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="g g-Whitespace">    </span><span class="mi">565</span> <span class="c1"># Make certain we&#39;re back at the beginning of the file</span>
-<span class="g g-Whitespace">    </span><span class="mi">566</span> <span class="c1"># BZ2File does not support seek when the file is open for writing, but</span>
-<span class="g g-Whitespace">    </span><span class="mi">567</span> <span class="c1"># when opening a file for write, bz2.BZ2File always truncates anyway.</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./data/references/hst/cos/69f1919fl_1dx.fits&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1308,7 +1227,7 @@ CRDS - INFO -  3 infos
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">edit_xtractab</span><span class="p">(</span><span class="n">xtractab</span><span class="p">,</span> <span class="n">gratlist</span><span class="p">,</span> <span class="n">cwlist</span><span class="p">,</span> <span class="n">h_dict</span><span class="p">,</span> <span class="n">b_dict</span><span class="p">,</span> <span class="n">new_filename</span><span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Function to actually edit the XTRACTAB itself\</span>
 <span class="sd">    Change the height and y-intercepts of the extraction boxes,\</span>
 <span class="sd">    and save to new XTRACTAB (1dx) file.</span>
@@ -1590,7 +1509,7 @@ CRDS - INFO -  3 infos
 
     <span class="c1"># Print max difference to user:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Stripe </span><span class="si">{</span><span class="n">seg</span><span class="si">}</span><span class="s2"> differs by up to: </span><span class="se">\</span>
-<span class="s2">    </span><span class="si">{</span><span class="mi">100</span> <span class="o">*</span> <span class="nb">max</span><span class="p">(</span><span class="n">new_flux</span> <span class="o">-</span> <span class="n">old_flux</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">old_flux</span><span class="p">))</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+<span class="s2">    </span><span class="si">{</span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="n">new_flux</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">old_flux</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">old_flux</span><span class="p">))</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
 
     <span class="c1"># Plotting - upper panel</span>
     <span class="n">ax0</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">new_wvln</span><span class="p">,</span><span class="n">new_flux</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$New$ extracted spectrum&#39;</span><span class="p">)</span>
@@ -1709,7 +1628,7 @@ We select and plot the raw counts data from the 0th <code class="docutils litera
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> crds sync --files<span class="o">=</span>2bj2256il_1dx.fits
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="w"> </span>crds<span class="w"> </span>sync<span class="w"> </span>--files<span class="o">=</span>2bj2256il_1dx.fits
 </pre></div>
 </div>
 </div>
@@ -1921,7 +1840,7 @@ We select and plot the raw counts data from the 0th <code class="docutils litera
 
     <span class="c1"># Print max difference:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Stripe </span><span class="si">{</span><span class="n">seg</span><span class="si">}</span><span class="s2"> differs by up to: </span><span class="se">\</span>
-<span class="s2">    </span><span class="si">{</span><span class="nb">max</span><span class="p">(</span><span class="n">new_flux</span> <span class="o">-</span> <span class="n">old_flux</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">old_flux</span><span class="p">))</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+<span class="s2">    </span><span class="si">{</span><span class="nb">max</span><span class="p">(</span><span class="n">new_flux</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">old_flux</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">old_flux</span><span class="p">))</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
 
     <span class="c1"># Plotting - upper panel</span>
     <span class="n">ax0</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">new_wvln</span><span class="p">,</span><span class="n">new_flux</span><span class="p">,</span>

@@ -27,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/table.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -184,6 +185,58 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../example_notebook/example_notebook.html">
    Draft: Notebook title
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DrizzlePac
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/README.html">
+   DrizzlePac Jupyter Notebook Tutorials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/Initialization/Initialization.html">
+   DrizzlePac Initialization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/align_to_catalogs/align_to_catalogs.html">
+   Aligning HST images to an absolute reference catalog
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/align_multiple_visits/align_multiple_visits.html">
+   Optimizing Image Alignment for Multiple HST Visits
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/align_sparse_fields/align_sparse_fields.html">
+   Aligning Deep Exposures of Sparse Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/drizzle_wfpc2/drizzle_wfpc2.html">
+   Drizzling WFPC2 Images to use a Single Zeropoint
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/mask_satellite/mask_satellite.html">
+   Satellite Trail Masking Techniques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/optimize_image_sampling/optimize_image_sampling.html">
+   Optimizing the Image Sampling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/using_updated_astrometry_solutions/using_updated_astrometry_solutions.html">
+   Using updated astrometry solutions
   </a>
  </li>
 </ul>
@@ -1042,18 +1095,12 @@ You may read through all three, or you may wish to focus on a particular method 
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found 266 data products
 INFO: Found cached file ./mastDownload/HST/ldm701010/ldm701010_asn.fits with expected size 11520. [astroquery.query]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file ./mastDownload/HST/ldm701010/ldm701010_x1dsum.fits with expected size 1811520. [astroquery.query]
+INFO: Found cached file ./mastDownload/HST/ldm701010/ldm701010_x1dsum.fits with expected size 1811520. [astroquery.query]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file ./mastDownload/HST/ldm701020/ldm701020_asn.fits with expected size 11520. [astroquery.query]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file ./mastDownload/HST/ldm701020/ldm701020_x1dsum.fits with expected size 1811520. [astroquery.query]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file ./mastDownload/HST/ldm701030/ldm701030_asn.fits with expected size 11520. [astroquery.query]
+INFO: Found cached file ./mastDownload/HST/ldm701020/ldm701020_x1dsum.fits with expected size 1811520. [astroquery.query]
+INFO: Found cached file ./mastDownload/HST/ldm701030/ldm701030_asn.fits with expected size 11520. [astroquery.query]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file ./mastDownload/HST/ldm701030/ldm701030_x1dsum.fits with expected size 1811520. [astroquery.query]
@@ -1182,7 +1229,7 @@ You will be prompted for a password. Type in the email address you used, then pr
 
 
 <span class="k">def</span> <span class="nf">download_anonymous_staged_data</span><span class="p">(</span><span class="n">email_used</span><span class="p">,</span> <span class="n">directory_number</span><span class="p">,</span> <span class="n">outdir</span><span class="o">=</span><span class="s2">&quot;./data/ftps_download/&quot;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A direct implementation of the MAST FTP Service webpage&#39;s ftplib example code.</span>
 <span class="sd">    Downloads anonymously staged data from the MAST servers via ftps.</span>
 <span class="sd">    Inputs:</span>
@@ -1432,7 +1479,7 @@ If you need help uncompressing the <code class="docutils literal notranslate"><s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>We have table information on 892 observations in the following categories/columns:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>We have table information on 899 observations in the following categories/columns:
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;intentType&#39;,
@@ -1504,38 +1551,38 @@ The parameter limits we add to the search are:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> obsid     obs_id  target_name ... filters wavelength_region     t_exptime    
--------- --------- ----------- ... ------- ----------------- -----------------
-26242800 ldyr52030  WD1057+719 ...   G160M                UV               0.0
-24843807 lbn133010  WD1057+719 ...   G160M                UV               0.0
-24140064 lbe702iqs  WD1057+719 ...   G160M                UV               1.0
-24139534 lbb917k7q  WD1057+719 ...   G160M                UV               1.0
-24134176 la9r02dfq WD-1057+719 ...   G160M                UV               1.0
-24139526 lbb916lbq  WD1057+719 ...   G160M                UV               1.0
-24139587 lbb9x3ckq  WD1057+719 ...   G160M                UV               1.0
-24139542 lbb918scq  WD1057+719 ...   G160M                UV               1.0
-24134175 la9r02deq WD-1057+719 ...   G160M                UV             108.0
-24139525 lbb916laq  WD1057+719 ...   G160M                UV             108.0
-     ...       ...         ... ...     ...               ...               ...
-24843895 lbnm03030  WD1057+719 ...   G160M                UV          2800.832
-24843884 lbnm01020 WD-1057+719 ...   G160M                UV          2850.208
-24843894 lbnm03020  WD1057+719 ...   G160M                UV          2900.608
-24843896 lbnm03040  WD1057+719 ...   G160M                UV           3000.64
-24140062 lbe702ios  WD1057+719 ...   G160M                UV            3179.0
-24843893 lbnm03010  WD1057+719 ...   G160M                UV          3200.768
-24839998 la9r02010 WD-1057+719 ...   G160M                UV          3280.128
-24843887 lbnm01050 WD-1057+719 ...   G160M                UV          3350.368
-24843897 lbnm03050  WD1057+719 ...   G160M                UV            3700.8
-24842491 lbek02010  WD1057+719 ...   G160M                UV            4252.0
-24842492 lbek02020  WD1057+719 ...   G160M                UV 5401.599999999999
-Length = 159 rows
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> obsid     obs_id  target_name ... filters wavelength_region     t_exptime     
+-------- --------- ----------- ... ------- ----------------- ------------------
+26242800 ldyr52030  WD1057+719 ...   G160M                UV                0.0
+24843807 lbn133010  WD1057+719 ...   G160M                UV                0.0
+24139534 lbb917k7q  WD1057+719 ...   G160M                UV                1.0
+24139587 lbb9x3ckq  WD1057+719 ...   G160M                UV                1.0
+24139542 lbb918scq  WD1057+719 ...   G160M                UV                1.0
+24140064 lbe702iqs  WD1057+719 ...   G160M                UV                1.0
+24134176 la9r02dfq WD-1057+719 ...   G160M                UV                1.0
+24139526 lbb916lbq  WD1057+719 ...   G160M                UV                1.0
+24139525 lbb916laq  WD1057+719 ...   G160M                UV              108.0
+24139533 lbb917k6q  WD1057+719 ...   G160M                UV              108.0
+     ...       ...         ... ...     ...               ...                ...
+24843893 lbnm03010  WD1057+719 ...   G160M                UV           3200.768
+24839998 la9r02010 WD-1057+719 ...   G160M                UV           3280.128
+24843897 lbnm03050  WD1057+719 ...   G160M                UV             3700.8
+24842491 lbek02010  WD1057+719 ...   G160M                UV           4250.848
+24844775 lbxm02010  WD1057+719 ...   G160M                UV 4526.1759999999995
+24843886 lbnm01040 WD-1057+719 ...   G160M                UV             4900.0
+24842492 lbek02020  WD1057+719 ...   G160M                UV  5401.599999999999
+24844776 lbxm02020  WD1057+719 ...   G160M                UV            6168.24
+24843887 lbnm01050 WD-1057+719 ...   G160M                UV           6450.368
+24843883 lbnm01010 WD-1057+719 ...   G160M                UV          11200.768
+24843884 lbnm01020 WD-1057+719 ...   G160M                UV          12100.832
+Length = 161 rows
 
 
 The longest COS/FUV exposure with the G160M filter is:
 
- obsid     obs_id  target_name dataproduct_type instrument_name project filters wavelength_region     t_exptime    
--------- --------- ----------- ---------------- --------------- ------- ------- ----------------- -----------------
-24842492 lbek02020  WD1057+719         spectrum         COS/FUV     HST   G160M                UV 5401.599999999999
+ obsid     obs_id  target_name dataproduct_type instrument_name project filters wavelength_region t_exptime
+-------- --------- ----------- ---------------- --------------- ------- ------- ----------------- ---------
+24843884 lbnm01020 WD-1057+719         spectrum         COS/FUV     HST   G160M                UV 12100.832
 </pre></div>
 </div>
 </div>
@@ -1585,19 +1632,19 @@ which is NOT what we&#39;re looking for!
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table masked=True length=10</i>
-<table id="table140065351774112" class="table-striped table-bordered table-condensed">
+<table id="table139857500408704" class="table-striped table-bordered table-condensed">
 <thead><tr><th>obsID</th><th>obs_collection</th><th>dataproduct_type</th><th>obs_id</th><th>description</th><th>type</th><th>dataURI</th><th>productType</th><th>productGroupDescription</th><th>productSubGroupDescription</th><th>productDocumentationURL</th><th>project</th><th>prvversion</th><th>proposal_id</th><th>productFilename</th><th>size</th><th>parent_obsid</th><th>dataRights</th><th>calib_level</th></tr></thead>
 <thead><tr><th>str8</th><th>str3</th><th>str8</th><th>str9</th><th>str62</th><th>str1</th><th>str44</th><th>str9</th><th>str28</th><th>str12</th><th>str1</th><th>str6</th><th>str5</th><th>str5</th><th>str27</th><th>int64</th><th>str8</th><th>str6</th><th>int64</th></tr></thead>
-<tr><td>24842492</td><td>HST</td><td>spectrum</td><td>lbek02020</td><td>DADS JIF file</td><td>D</td><td>mast:HST/product/lbek02020_jif.fits</td><td>AUXILIARY</td><td>--</td><td>JIF</td><td>--</td><td>CALCOS</td><td>--</td><td>12086</td><td>lbek02020_jif.fits</td><td>216000</td><td>24842492</td><td>PUBLIC</td><td>1</td></tr>
-<tr><td>24842492</td><td>HST</td><td>spectrum</td><td>lbek02020</td><td>DADS JIT file</td><td>D</td><td>mast:HST/product/lbek02020_jit.fits</td><td>AUXILIARY</td><td>--</td><td>JIT</td><td>--</td><td>CALCOS</td><td>--</td><td>12086</td><td>lbek02020_jit.fits</td><td>279360</td><td>24842492</td><td>PUBLIC</td><td>1</td></tr>
-<tr><td>24842492</td><td>HST</td><td>spectrum</td><td>lbek02020</td><td>DADS TRL file - Processing log</td><td>D</td><td>mast:HST/product/lbek02020_trl.fits</td><td>AUXILIARY</td><td>--</td><td>TRL</td><td>--</td><td>CALCOS</td><td>--</td><td>12086</td><td>lbek02020_trl.fits</td><td>8640</td><td>24842492</td><td>PUBLIC</td><td>1</td></tr>
-<tr><td>24842492</td><td>HST</td><td>spectrum</td><td>lbek02020</td><td>DADS X1S file - Summed 1D spectrum COS</td><td>D</td><td>mast:HST/product/lbek02020_x1dsum1.fits</td><td>AUXILIARY</td><td>--</td><td>X1DSUM1</td><td>--</td><td>CALCOS</td><td>3.4.3</td><td>12086</td><td>lbek02020_x1dsum1.fits</td><td>1811520</td><td>24842492</td><td>PUBLIC</td><td>2</td></tr>
-<tr><td>24842492</td><td>HST</td><td>spectrum</td><td>lbek02020</td><td>DADS X2S file - Summed 1D spectrum COS</td><td>D</td><td>mast:HST/product/lbek02020_x1dsum2.fits</td><td>AUXILIARY</td><td>--</td><td>X1DSUM2</td><td>--</td><td>CALCOS</td><td>3.4.3</td><td>12086</td><td>lbek02020_x1dsum2.fits</td><td>1811520</td><td>24842492</td><td>PUBLIC</td><td>2</td></tr>
-<tr><td>24842492</td><td>HST</td><td>spectrum</td><td>lbek02020</td><td>DADS X3S file - Summed 1D spectrum COS</td><td>D</td><td>mast:HST/product/lbek02020_x1dsum3.fits</td><td>AUXILIARY</td><td>--</td><td>X1DSUM3</td><td>--</td><td>CALCOS</td><td>3.4.3</td><td>12086</td><td>lbek02020_x1dsum3.fits</td><td>1811520</td><td>24842492</td><td>PUBLIC</td><td>2</td></tr>
-<tr><td>24842492</td><td>HST</td><td>spectrum</td><td>lbek02020</td><td>DADS X4S file - Summed 1D spectrum COS</td><td>D</td><td>mast:HST/product/lbek02020_x1dsum4.fits</td><td>AUXILIARY</td><td>--</td><td>X1DSUM4</td><td>--</td><td>CALCOS</td><td>3.4.3</td><td>12086</td><td>lbek02020_x1dsum4.fits</td><td>1811520</td><td>24842492</td><td>PUBLIC</td><td>2</td></tr>
-<tr><td>24842492</td><td>HST</td><td>spectrum</td><td>lbek02020</td><td>DADS ASN file - Association ACS/WFC3/STIS</td><td>D</td><td>mast:HST/product/lbek02020_asn.fits</td><td>AUXILIARY</td><td>Minimum Recommended Products</td><td>ASN</td><td>--</td><td>CALCOS</td><td>3.4.3</td><td>12086</td><td>lbek02020_asn.fits</td><td>11520</td><td>24842492</td><td>PUBLIC</td><td>3</td></tr>
-<tr><td>24842492</td><td>HST</td><td>spectrum</td><td>lbek02020</td><td>DADS LOG file</td><td>D</td><td>mast:HST/product/lbek02020_log.txt</td><td>INFO</td><td>--</td><td>LOG</td><td>--</td><td>CALCOS</td><td>--</td><td>12086</td><td>lbek02020_log.txt</td><td>1145</td><td>24842492</td><td>PUBLIC</td><td>1</td></tr>
-<tr><td>24842492</td><td>HST</td><td>spectrum</td><td>lbek02020</td><td>Preview-Full</td><td>D</td><td>mast:HST/product/lbek02020_x1dsum.png</td><td>PREVIEW</td><td>--</td><td>--</td><td>--</td><td>CALCOS</td><td>3.4.3</td><td>12086</td><td>lbek02020_x1dsum.png</td><td>111658</td><td>24842492</td><td>PUBLIC</td><td>3</td></tr>
+<tr><td>24843884</td><td>HST</td><td>spectrum</td><td>lbnm01020</td><td>DADS JIF file</td><td>D</td><td>mast:HST/product/lbnm01020_jif.fits</td><td>AUXILIARY</td><td>--</td><td>JIF</td><td>--</td><td>CALCOS</td><td>--</td><td>12426</td><td>lbnm01020_jif.fits</td><td>138240</td><td>24843884</td><td>PUBLIC</td><td>1</td></tr>
+<tr><td>24843884</td><td>HST</td><td>spectrum</td><td>lbnm01020</td><td>DADS JIT file</td><td>D</td><td>mast:HST/product/lbnm01020_jit.fits</td><td>AUXILIARY</td><td>--</td><td>JIT</td><td>--</td><td>CALCOS</td><td>--</td><td>12426</td><td>lbnm01020_jit.fits</td><td>164160</td><td>24843884</td><td>PUBLIC</td><td>1</td></tr>
+<tr><td>24843884</td><td>HST</td><td>spectrum</td><td>lbnm01020</td><td>DADS TRL file - Processing log</td><td>D</td><td>mast:HST/product/lbnm01020_trl.fits</td><td>AUXILIARY</td><td>--</td><td>TRL</td><td>--</td><td>CALCOS</td><td>--</td><td>12426</td><td>lbnm01020_trl.fits</td><td>8640</td><td>24843884</td><td>PUBLIC</td><td>1</td></tr>
+<tr><td>24843884</td><td>HST</td><td>spectrum</td><td>lbnm01020</td><td>DADS X1S file - Summed 1D spectrum COS</td><td>D</td><td>mast:HST/product/lbnm01020_x1dsum1.fits</td><td>AUXILIARY</td><td>--</td><td>X1DSUM1</td><td>--</td><td>CALCOS</td><td>3.4.3</td><td>12426</td><td>lbnm01020_x1dsum1.fits</td><td>1941120</td><td>24843884</td><td>PUBLIC</td><td>2</td></tr>
+<tr><td>24843884</td><td>HST</td><td>spectrum</td><td>lbnm01020</td><td>DADS X2S file - Summed 1D spectrum COS</td><td>D</td><td>mast:HST/product/lbnm01020_x1dsum2.fits</td><td>AUXILIARY</td><td>--</td><td>X1DSUM2</td><td>--</td><td>CALCOS</td><td>3.4.3</td><td>12426</td><td>lbnm01020_x1dsum2.fits</td><td>1941120</td><td>24843884</td><td>PUBLIC</td><td>2</td></tr>
+<tr><td>24843884</td><td>HST</td><td>spectrum</td><td>lbnm01020</td><td>DADS X3S file - Summed 1D spectrum COS</td><td>D</td><td>mast:HST/product/lbnm01020_x1dsum3.fits</td><td>AUXILIARY</td><td>--</td><td>X1DSUM3</td><td>--</td><td>CALCOS</td><td>3.4.3</td><td>12426</td><td>lbnm01020_x1dsum3.fits</td><td>1811520</td><td>24843884</td><td>PUBLIC</td><td>2</td></tr>
+<tr><td>24843884</td><td>HST</td><td>spectrum</td><td>lbnm01020</td><td>DADS X4S file - Summed 1D spectrum COS</td><td>D</td><td>mast:HST/product/lbnm01020_x1dsum4.fits</td><td>AUXILIARY</td><td>--</td><td>X1DSUM4</td><td>--</td><td>CALCOS</td><td>3.4.3</td><td>12426</td><td>lbnm01020_x1dsum4.fits</td><td>1941120</td><td>24843884</td><td>PUBLIC</td><td>2</td></tr>
+<tr><td>24843884</td><td>HST</td><td>spectrum</td><td>lbnm01020</td><td>DADS ASN file - Association ACS/WFC3/STIS</td><td>D</td><td>mast:HST/product/lbnm01020_asn.fits</td><td>AUXILIARY</td><td>Minimum Recommended Products</td><td>ASN</td><td>--</td><td>CALCOS</td><td>3.4.3</td><td>12426</td><td>lbnm01020_asn.fits</td><td>11520</td><td>24843884</td><td>PUBLIC</td><td>3</td></tr>
+<tr><td>24843884</td><td>HST</td><td>spectrum</td><td>lbnm01020</td><td>DADS LOG file</td><td>D</td><td>mast:HST/product/lbnm01020_log.txt</td><td>INFO</td><td>--</td><td>LOG</td><td>--</td><td>CALCOS</td><td>--</td><td>12426</td><td>lbnm01020_log.txt</td><td>1145</td><td>24843884</td><td>PUBLIC</td><td>1</td></tr>
+<tr><td>24843884</td><td>HST</td><td>spectrum</td><td>lbnm01020</td><td>Preview-Full</td><td>D</td><td>mast:HST/product/lbnm01020_x1dsum.png</td><td>PREVIEW</td><td>--</td><td>--</td><td>--</td><td>CALCOS</td><td>3.4.3</td><td>12426</td><td>lbnm01020_x1dsum.png</td><td>184759</td><td>24843884</td><td>PUBLIC</td><td>3</td></tr>
 </table></div></div></div>
 </div>
 <p>Now, we will download <em>just the</em> <strong>minimum recommended products</strong> (<em>mrp</em>) which are the fully calibrated spectrum (denoted by the suffix <code class="docutils literal notranslate"><span class="pre">_x1d</span></code> or here <code class="docutils literal notranslate"><span class="pre">x1dsum</span></code>) and the association file (denoted by the suffix <code class="docutils literal notranslate"><span class="pre">_asn</span></code>). We do this by setting the parameter <code class="docutils literal notranslate"><span class="pre">mrp_only</span></code> to True. The association file contains no data, but rather the metadata explaining which exposures produced the <code class="docutils literal notranslate"><span class="pre">x1dsum</span></code> dataset. The <code class="docutils literal notranslate"><span class="pre">x1dsum</span></code> file is the final product summed across all of the <a class="reference external" href="https://hst-docs.stsci.edu/cosdhb/chapter-1-cos-overview/1-1-instrument-capabilities-and-design#id-1.1InstrumentCapabilitiesandDesign-GratingOffset(FP-POS)GratingOffsetPositions(FP-POS)">fixed pattern noise positions</a> (<code class="docutils literal notranslate"><span class="pre">FP-POS</span></code>). The <code class="docutils literal notranslate"><span class="pre">x1d</span></code> and <code class="docutils literal notranslate"><span class="pre">x1dsum&lt;n&gt;</span></code> files are intermediate spectra. Much more information can be found in the <a class="reference external" href="https://hst-docs.stsci.edu/display/COSIHB/">COS Instrument Handbook</a>.</p>
@@ -1616,13 +1663,13 @@ which is NOT what we&#39;re looking for!
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/lbek02020_asn.fits to data/mastDownload/HST/lbek02020/lbek02020_asn.fits ...
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/lbnm01020_asn.fits to data/mastDownload/HST/lbnm01020/lbnm01020_asn.fits ...
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/lbek02020_x1dsum.fits to data/mastDownload/HST/lbek02020/lbek02020_x1dsum.fits ...
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/lbnm01020_x1dsum.fits to data/mastDownload/HST/lbnm01020/lbnm01020_x1dsum.fits ...
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
@@ -1704,61 +1751,61 @@ which is NOT what we&#39;re looking for!
  dataproduct_type calib_level obs_collection ...   objID1       distance     
        str8          int64         str3      ...    str9        float64      
  ---------------- ----------- -------------- ... --------- ------------------
-            image           2            HST ... 144543939  77.89320992323788
-            image           2            HST ... 144543950  80.41849226238708
-         spectrum           2            HST ... 177284801  80.41849226238708
-         spectrum           2            HST ... 177838558 291.39123589625325
-         spectrum           2            HST ... 177840638 299.47504397003155
-         spectrum           2            HST ... 177855861 299.47504397003155
-         spectrum           1            HST ... 179212475  99.20836639570895
-         spectrum           1            HST ... 179215457  99.20836639570895
-         spectrum           1            HST ... 179215777  99.20836639570895
-            image           2            HST ... 179382432  297.9572710685813
-         spectrum           3            HST ... 179568536  80.41849226238708
-         spectrum           3            HST ... 179568638  99.20836639570895
-         spectrum           3            HST ... 179569117  99.20836639570895
-         spectrum           3            HST ... 179570250  77.89320992323788
-         spectrum           3            HST ... 179570407  77.89320992323788
-         spectrum           3            HST ... 179571274  80.41849226238708,
+            image           2            HST ... 144543939  94.47272986343471
+            image           2            HST ... 144543950  97.04717859213693
+            image           2            HST ... 144544756 295.35269365022396
+         spectrum           2            HST ... 177284801  97.04717859213693
+         spectrum           2            HST ... 177838558  293.3788021390314
+         spectrum           1            HST ... 204896774  87.65983662909147
+         spectrum           1            HST ... 204900475  87.65983662909147
+         spectrum           1            HST ... 204900989  87.65983662909147
+            image           2            HST ... 205093913  294.8382904103309
+            image           2            HST ... 205549840 293.85414993790886
+         spectrum           3            HST ... 206711808  87.65983662909147
+         spectrum           3            HST ... 206717385  87.65983662909147
+         spectrum           3            HST ... 206719898  94.47272986343471
+         spectrum           3            HST ... 206721891  94.47272986343471
+         spectrum           3            HST ... 206724204  97.04717859213693
+         spectrum           3            HST ... 206724223  97.04717859213693,
  &#39;M5&#39;: &lt;Table masked=True length=5&gt;
  dataproduct_type calib_level obs_collection ...   objID1       distance    
        str8          int64         str3      ...    str9        float64     
  ---------------- ----------- -------------- ... --------- -----------------
-         spectrum           1            HST ... 179176381 51.62395577766772
-         spectrum           1            HST ... 179177469 51.62395577766772
-         spectrum           1            HST ... 179199206 51.62395577766772
-         spectrum           3            HST ... 179559959 51.62395577766772
-         spectrum           3            HST ... 179633331 51.62395577766772,
+         spectrum           1            HST ... 204744107 51.62395577766772
+         spectrum           1            HST ... 204744297 51.62395577766772
+         spectrum           1            HST ... 204748569 51.62395577766772
+         spectrum           3            HST ... 206672625 51.62395577766772
+         spectrum           3            HST ... 206674021 51.62395577766772,
  &#39;M13&#39;: &lt;Table masked=True length=5&gt;
  dataproduct_type calib_level obs_collection ...   objID1       distance     
        str8          int64         str3      ...    str9        float64      
  ---------------- ----------- -------------- ... --------- ------------------
-         spectrum           1            HST ... 179153790 130.64769900000118
-         spectrum           1            HST ... 179155728 130.64769900000118
-         spectrum           1            HST ... 179255408 130.64769900000118
-         spectrum           3            HST ... 179557936 130.64769900053992
-         spectrum           3            HST ... 179559443 130.64769900053992,
+         spectrum           1            HST ... 204692350 130.64769900000118
+         spectrum           1            HST ... 204696866 130.64769900000118
+         spectrum           1            HST ... 204717941 130.64769900000118
+         spectrum           3            HST ... 206654544 130.64769900053992
+         spectrum           3            HST ... 206654674 130.64769900053992,
  &#39;M15&#39;: &lt;Table masked=True length=10&gt;
  dataproduct_type calib_level obs_collection ...   objID1       distance     
        str8          int64         str3      ...    str9        float64      
  ---------------- ----------- -------------- ... --------- ------------------
-         spectrum           1            HST ... 179153791  99.67537720410724
-         spectrum           1            HST ... 179159685  99.67537720410724
-         spectrum           1            HST ... 179161012  99.67537720410724
-         spectrum           1            HST ... 179197970 27.096650306913773
-         spectrum           1            HST ... 179198184 27.096650306913773
-         spectrum           1            HST ... 179252064 27.096650306913773
-         spectrum           3            HST ... 179558387  27.09665030692082
-         spectrum           3            HST ... 179558684  27.09665030692082
-         spectrum           3            HST ... 179559930  99.67537720435718
-         spectrum           3            HST ... 179584186  99.67537720435718,
+         spectrum           1            HST ... 204691370 27.096650306913773
+         spectrum           1            HST ... 204709158 27.096650306913773
+         spectrum           1            HST ... 204709884  99.67537720410724
+         spectrum           1            HST ... 204718326  99.67537720410724
+         spectrum           1            HST ... 204721425 27.096650306913773
+         spectrum           1            HST ... 204721524  99.67537720410724
+         spectrum           3            HST ... 206658336  99.67537720435718
+         spectrum           3            HST ... 206661180  99.67537720435718
+         spectrum           3            HST ... 206661828  27.09665030692082
+         spectrum           3            HST ... 206661898  27.09665030692082,
  &#39;M53&#39;: &lt;Table masked=True length=3&gt;
  dataproduct_type calib_level obs_collection ...   objID1       distance    
        str8          int64         str3      ...    str9        float64     
  ---------------- ----------- -------------- ... --------- -----------------
             image           2            HST ... 144560171  263.628661035198
-         spectrum           3            HST ... 179648878 261.1902814694652
-         spectrum           3            HST ... 179648880 261.1902814694652}
+         spectrum           3            HST ... 206963561 261.1902814694652
+         spectrum           3            HST ... 206963566 261.1902814694652}
 </pre></div>
 </div>
 </div>
@@ -1839,7 +1886,7 @@ authors. Follow these links for more information about citations:</p>
 <span class="n">rawRowsA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">product_list2</span><span class="p">[</span><span class="s1">&#39;productSubGroupDescription&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;RAWTAG_A&quot;</span><span class="p">)</span>
 <span class="n">rawRowsB</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">product_list2</span><span class="p">[</span><span class="s1">&#39;productSubGroupDescription&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;RAWTAG_B&quot;</span><span class="p">)</span>
 <span class="n">rawRows</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rawRowsA</span><span class="p">,</span> <span class="n">rawRowsB</span><span class="p">)</span>
-<span class="o">!</span>mkdir ./data/Ex2/
+<span class="o">!</span>mkdir<span class="w"> </span>./data/Ex2/
 <span class="n">downloads2</span> <span class="o">=</span> <span class="n">Observations</span><span class="o">.</span><span class="n">download_products</span><span class="p">(</span><span class="n">product_list2</span><span class="p">[</span><span class="n">rawRows</span><span class="p">],</span> <span class="n">download_dir</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span>
     <span class="n">data_dir</span><span class="o">/</span><span class="s1">&#39;Ex2/&#39;</span><span class="p">),</span> <span class="n">extension</span><span class="o">=</span><span class="s1">&#39;fits&#39;</span><span class="p">,</span> <span class="n">mrp_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">downloads3</span> <span class="o">=</span> <span class="n">Observations</span><span class="o">.</span><span class="n">download_products</span><span class="p">(</span><span class="n">product_list2</span><span class="p">,</span> <span class="n">download_dir</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span>
@@ -1859,36 +1906,28 @@ authors. Follow these links for more information about citations:</p>
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file data/Ex2/mastDownload/HST/ldlm40axq/ldlm40axq_rawtag_a.fits with expected size 950400. [astroquery.query]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file data/Ex2/mastDownload/HST/ldlm40blq/ldlm40blq_rawtag_a.fits with expected size 953280. [astroquery.query]
+INFO: Found cached file data/Ex2/mastDownload/HST/ldlm40blq/ldlm40blq_rawtag_a.fits with expected size 953280. [astroquery.query]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file data/Ex2/mastDownload/HST/ldlm40c2q/ldlm40c2q_rawtag_a.fits with expected size 961920. [astroquery.query]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file data/Ex2/mastDownload/HST/ldlm40d2q/ldlm40d2q_rawtag_a.fits with expected size 970560. [astroquery.query]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file data/Ex2/mastDownload/HST/ldlm40alq/ldlm40alq_rawtag_b.fits with expected size 1509120. [astroquery.query]
+INFO: Found cached file data/Ex2/mastDownload/HST/ldlm40alq/ldlm40alq_rawtag_b.fits with expected size 1509120. [astroquery.query]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file data/Ex2/mastDownload/HST/ldlm40axq/ldlm40axq_rawtag_b.fits with expected size 6278400. [astroquery.query]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file data/Ex2/mastDownload/HST/ldlm40blq/ldlm40blq_rawtag_b.fits with expected size 6304320. [astroquery.query]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file data/Ex2/mastDownload/HST/ldlm40c2q/ldlm40c2q_rawtag_b.fits with expected size 6382080. [astroquery.query]
+INFO: Found cached file data/Ex2/mastDownload/HST/ldlm40c2q/ldlm40c2q_rawtag_b.fits with expected size 6382080. [astroquery.query]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file data/Ex2/mastDownload/HST/ldlm40d2q/ldlm40d2q_rawtag_b.fits with expected size 6356160. [astroquery.query]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file data/Ex2/mastDownload/HST/ldlm40010/ldlm40010_asn.fits with expected size 11520. [astroquery.query]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: Found cached file data/Ex2/mastDownload/HST/ldlm40010/ldlm40010_x1dsum.fits with expected size 1817280. [astroquery.query]
+INFO: Found cached file data/Ex2/mastDownload/HST/ldlm40010/ldlm40010_x1dsum.fits with expected size 1817280. [astroquery.query]
    MEMNAME        MEMTYPE     MEMPRSNT
 -------------- -------------- --------
      LDLM40ALQ         EXP-FP        1

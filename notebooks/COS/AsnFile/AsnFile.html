@@ -27,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/table.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -184,6 +185,58 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../example_notebook/example_notebook.html">
    Draft: Notebook title
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DrizzlePac
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/README.html">
+   DrizzlePac Jupyter Notebook Tutorials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/Initialization/Initialization.html">
+   DrizzlePac Initialization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/align_to_catalogs/align_to_catalogs.html">
+   Aligning HST images to an absolute reference catalog
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/align_multiple_visits/align_multiple_visits.html">
+   Optimizing Image Alignment for Multiple HST Visits
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/align_sparse_fields/align_sparse_fields.html">
+   Aligning Deep Exposures of Sparse Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/drizzle_wfpc2/drizzle_wfpc2.html">
+   Drizzling WFPC2 Images to use a Single Zeropoint
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/mask_satellite/mask_satellite.html">
+   Satellite Trail Masking Techniques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/optimize_image_sampling/optimize_image_sampling.html">
+   Optimizing the Image Sampling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/using_updated_astrometry_solutions/using_updated_astrometry_solutions.html">
+   Using updated astrometry solutions
   </a>
  </li>
 </ul>
@@ -811,14 +864,14 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=5</i>
-<table id="table140066557853552" class="table-striped table-bordered table-condensed">
+<table id="table140404437116256" class="table-striped table-bordered table-condensed">
 <thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
-<thead><tr><th>bytes40</th><th>bytes14</th><th>bool</th></tr></thead>
-<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>True</td></tr>
-<tr><td>LDIF01U0Q</td><td>EXP-FP</td><td>True</td></tr>
-<tr><td>LDIF02NUQ</td><td>EXP-FP</td><td>True</td></tr>
-<tr><td>LDIF01U4Q</td><td>EXP-FP</td><td>True</td></tr>
-<tr><td>LDIFCOMBO</td><td>PROD-FP</td><td>True</td></tr>
+<thead><tr><th>bytes14</th><th>bytes14</th><th>bool</th></tr></thead>
+<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF02NSQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF02NUQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF02NWQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF02010</td><td>PROD-FP</td><td>1</td></tr>
 </table></div></div></div>
 </div>
 <p>We see that the association file has five rows: four exposures denoted with the <code class="docutils literal notranslate"><span class="pre">MEMTYPE</span></code> = <code class="docutils literal notranslate"><span class="pre">EXP-FP</span></code>, and a product with <code class="docutils literal notranslate"><span class="pre">MEMTYPE</span></code> = <code class="docutils literal notranslate"><span class="pre">PROD-FP</span></code>.</p>
@@ -833,16 +886,16 @@ title="Print to PDF"
 
         <span class="c1"># Now print all these diagnostics:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Association </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">))[</span><span class="s1">&#39;ASN_ID&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> has </span><span class="si">{</span><span class="n">memtype</span><span class="si">}</span><span class="s2"> exposure </span><span class="si">{</span><span class="n">memname</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s2"> with </span><span class="se">\</span>
-<span class="s2">exposure time </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">1</span><span class="p">))[</span><span class="s1">&#39;EXPTIME&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> seconds at cenwave </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">0</span><span class="p">))[</span><span class="s1">&#39;CENWAVE&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="se">\</span>
-<span class="s2">Å and FP-POS </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">0</span><span class="p">))[</span><span class="s1">&#39;FPPOS&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="s2">exposure time </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span><span class="w"> </span><span class="n">ext</span><span class="o">=</span><span class="mi">1</span><span class="p">))[</span><span class="s1">&#39;EXPTIME&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> seconds at cenwave </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span><span class="w"> </span><span class="n">ext</span><span class="o">=</span><span class="mi">0</span><span class="p">))[</span><span class="s1">&#39;CENWAVE&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="se">\</span>
+<span class="s2">Å and FP-POS </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span><span class="w"> </span><span class="n">ext</span><span class="o">=</span><span class="mi">0</span><span class="p">))[</span><span class="s1">&#39;FPPOS&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Association LDIF02010 has EXP-FP exposure LDIF02NMQ with exposure time 1653.0 seconds at cenwave 1280 Å and FP-POS 1.
-Association LDIF01010 has EXP-FP exposure LDIF01U0Q with exposure time 1404.0 seconds at cenwave 1280 Å and FP-POS 2.
+Association LDIF02010 has EXP-FP exposure LDIF02NSQ with exposure time 1334.0 seconds at cenwave 1280 Å and FP-POS 2.
 Association LDIF02010 has EXP-FP exposure LDIF02NUQ with exposure time 1334.0 seconds at cenwave 1280 Å and FP-POS 3.
-Association LDIF01010 has EXP-FP exposure LDIF01U4Q with exposure time 2923.0 seconds at cenwave 1280 Å and FP-POS 4.
+Association LDIF02010 has EXP-FP exposure LDIF02NWQ with exposure time 2783.0 seconds at cenwave 1280 Å and FP-POS 4.
 </pre></div>
 </div>
 </div>
@@ -867,14 +920,14 @@ This file has an exposure time of 0.0 seconds - something has gone wrong. In thi
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=5</i>
-<table id="table140067281858416" class="table-striped table-bordered table-condensed">
+<table id="table140404420060368" class="table-striped table-bordered table-condensed">
 <thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
-<thead><tr><th>bytes40</th><th>bytes14</th><th>bool</th></tr></thead>
-<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>True</td></tr>
-<tr><td>LDIF01U0Q</td><td>EXP-FP</td><td>True</td></tr>
-<tr><td>LDIF02NUQ</td><td>EXP-FP</td><td>True</td></tr>
-<tr><td>LDIF01U4Q</td><td>EXP-FP</td><td>True</td></tr>
-<tr><td>LDIFCOMBO</td><td>PROD-FP</td><td>True</td></tr>
+<thead><tr><th>bytes14</th><th>bytes14</th><th>bool</th></tr></thead>
+<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF02NSQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF02NUQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF02NWQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF02010</td><td>PROD-FP</td><td>1</td></tr>
 </table></div></div></div>
 </div>
 <p>We can set the <code class="docutils literal notranslate"><span class="pre">MEMPRSNT</span></code> value to <code class="docutils literal notranslate"><span class="pre">False</span></code> or <code class="docutils literal notranslate"><span class="pre">0</span></code> for our bad exposure:</p>
@@ -892,14 +945,14 @@ This file has an exposure time of 0.0 seconds - something has gone wrong. In thi
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=5</i>
-<table id="table140066557911872" class="table-striped table-bordered table-condensed">
+<table id="table140404418707520" class="table-striped table-bordered table-condensed">
 <thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
-<thead><tr><th>bytes40</th><th>bytes14</th><th>bool</th></tr></thead>
-<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>True</td></tr>
-<tr><td>LDIF01U0Q</td><td>EXP-FP</td><td>True</td></tr>
-<tr><td>LDIF02NUQ</td><td>EXP-FP</td><td>True</td></tr>
-<tr><td>LDIF01U4Q</td><td>EXP-FP</td><td>True</td></tr>
-<tr><td>LDIFCOMBO</td><td>PROD-FP</td><td>True</td></tr>
+<thead><tr><th>bytes14</th><th>bytes14</th><th>bool</th></tr></thead>
+<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF02NSQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF02NUQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF02NWQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF02010</td><td>PROD-FP</td><td>1</td></tr>
 </table></div></div></div>
 </div>
 <p><a id = addAF></a></p>
@@ -923,7 +976,7 @@ This file has an exposure time of 0.0 seconds - something has gone wrong. In thi
         <span class="n">rt_b</span> <span class="o">=</span> <span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;**/*</span><span class="si">{</span><span class="n">memname</span><span class="si">}</span><span class="s2">*rawtag_b*&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Search for the actual filepath of the memname for rawtag_b </span>
         <span class="c1"># Now print all these diagnostics:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Association </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">))[</span><span class="s1">&#39;ASN_ID&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> has </span><span class="si">{</span><span class="n">memtype</span><span class="si">}</span><span class="s2"> exposure </span><span class="si">{</span><span class="n">memname</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s2"> with </span><span class="se">\</span>
-<span class="s2">exptime </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">1</span><span class="p">))[</span><span class="s1">&#39;EXPTIME&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> seconds at cenwave </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">0</span><span class="p">))[</span><span class="s1">&#39;CENWAVE&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> Å and FP-POS </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">0</span><span class="p">))[</span><span class="s1">&#39;FPPOS&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="s2">exptime </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span><span class="w"> </span><span class="n">ext</span><span class="o">=</span><span class="mi">1</span><span class="p">))[</span><span class="s1">&#39;EXPTIME&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> seconds at cenwave </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span><span class="w"> </span><span class="n">ext</span><span class="o">=</span><span class="mi">0</span><span class="p">))[</span><span class="s1">&#39;CENWAVE&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> Å and FP-POS </span><span class="si">{</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span><span class="w"> </span><span class="n">ext</span><span class="o">=</span><span class="mi">0</span><span class="p">))[</span><span class="s1">&#39;FPPOS&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="n">rt_a</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="mi">0</span><span class="p">))[</span><span class="s1">&#39;FPPOS&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;^^^ The one above this has the FP-POS we are looking for (</span><span class="si">{</span><span class="n">memname</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s2">)^^^</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -932,11 +985,11 @@ This file has an exposure time of 0.0 seconds - something has gone wrong. In thi
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Association LDIF02010 has EXP-FP exposure LDIF02NMQ with exptime 1653.0 seconds at cenwave 1280 Å and FP-POS 1.
-^^^ The one above this has the FP-POS we are looking for (LDIF02NMQ)^^^
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Association LDIF01010 has EXP-FP exposure LDIF01TYQ with exptime 0.0 seconds at cenwave 1280 Å and FP-POS 1.
+^^^ The one above this has the FP-POS we are looking for (LDIF01TYQ)^^^
 
 Association LDIF01010 has EXP-FP exposure LDIF01U0Q with exptime 1404.0 seconds at cenwave 1280 Å and FP-POS 2.
-Association LDIF02010 has EXP-FP exposure LDIF02NUQ with exptime 1334.0 seconds at cenwave 1280 Å and FP-POS 3.
+Association LDIF01010 has EXP-FP exposure LDIF01U2Q with exptime 1404.0 seconds at cenwave 1280 Å and FP-POS 3.
 Association LDIF01010 has EXP-FP exposure LDIF01U4Q with exptime 2923.0 seconds at cenwave 1280 Å and FP-POS 4.
 </pre></div>
 </div>
@@ -965,15 +1018,15 @@ Association LDIF01010 has EXP-FP exposure LDIF01U4Q with exptime 2923.0 seconds 
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=6</i>
-<table id="table140067281857792" class="table-striped table-bordered table-condensed">
+<table id="table140404437116016" class="table-striped table-bordered table-condensed">
 <thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
-<thead><tr><th>bytes40</th><th>bytes14</th><th>bool</th></tr></thead>
-<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>True</td></tr>
-<tr><td>LDIF01U0Q</td><td>EXP-FP</td><td>True</td></tr>
-<tr><td>LDIF02NUQ</td><td>EXP-FP</td><td>True</td></tr>
-<tr><td>LDIF01U4Q</td><td>EXP-FP</td><td>True</td></tr>
-<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>True</td></tr>
-<tr><td>LDIFCOMBO</td><td>PROD-FP</td><td>True</td></tr>
+<thead><tr><th>bytes14</th><th>bytes14</th><th>bool</th></tr></thead>
+<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF02NSQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF02NUQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF02NWQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF01TYQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF02010</td><td>PROD-FP</td><td>1</td></tr>
 </table></div></div></div>
 </div>
 <p><font size="4 "><b>Excellent.</b> In the next section we will create a new association file from scratch.</font></p>
@@ -1062,7 +1115,7 @@ Association LDIF01010 has EXP-FP exposure LDIF01U4Q with exptime 2923.0 seconds 
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=5</i>
-<table id="table140066557004000" class="table-striped table-bordered table-condensed">
+<table id="table140404420061088" class="table-striped table-bordered table-condensed">
 <thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
 <thead><tr><th>bytes40</th><th>bytes14</th><th>bool</th></tr></thead>
 <tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>True</td></tr>
@@ -1139,10 +1192,10 @@ TFORM3  = &#39;L       &#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Filename: output/ldifcombo_asn.fits
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Filename: data/ldif02010_asn.fits
 No.    Name      Ver    Type      Cards   Dimensions   Format
-  0  PRIMARY       1 PrimaryHDU       4   ()      
-  1                1 BinTableHDU     14   5R x 3C   [40A, 14A, L]   
+  0  PRIMARY       1 PrimaryHDU      43   ()      
+  1  ASN           1 BinTableHDU     24   6R x 3C   [14A, 14A, L]   
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved: ldifcombo_2_asn.fitsin the output directory: output
@@ -1172,9 +1225,7 @@ No.    Name      Ver    Type      Cards   Dimensions   Format
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Editing DATE in Extension 0
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Editing FILENAME in Extension 0
+Editing FILENAME in Extension 0
 Editing ROOTNAME in Extension 0
 Editing ROOTNAME in Extension 1
 Editing ASN_ID in Extension 0
@@ -1188,7 +1239,7 @@ Editing EXPNAME in Extension 1
 </div>
 <p><font size="4 "><b>And now we have created our new association file.</b> The file is now ready to be used in the <code>CalCOS</code> pipeline!</font></p>
 <p>If you’re interested in testing your file by running it through the <code class="docutils literal notranslate"><span class="pre">CalCOS</span></code> pipeline, you may wish to run the <code class="docutils literal notranslate"><span class="pre">test_asn.py</span> <span class="pre">file</span></code> included in this subdirectory of the GitHub repository. i.e. from the command line:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python test_asn.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>python<span class="w"> </span>test_asn.py
 </pre></div>
 </div>
 <p><em>Note</em> that you must first…</p>
