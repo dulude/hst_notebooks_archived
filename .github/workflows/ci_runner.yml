@@ -23,4 +23,3 @@ env:
 jobs:
   NotebookExecutionValidation:
    uses: TheRealZoidberg/reusableTest/.github/workflows/ci_runner.yml@main
-
