@@ -3,7 +3,6 @@ List of Jupyter Notebook content curators.
 
 NOTE: This information has not been finalized yet.
 
-https://github.com/spacetelescope/
 - /hstnotebooks
   - /cos Marc Rafelski 
   - /stis Joleen Carlberg 
