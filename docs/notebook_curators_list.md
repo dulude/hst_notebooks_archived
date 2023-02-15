@@ -1,6 +1,4 @@
-# List of Jupyter Notebook Curators
-List of Jupyter Notebook content curators.
-
+# List of Jupyter Notebook Content Curators
 NOTE: This information has not been finalized yet.
 
 - /hstnotebooks
