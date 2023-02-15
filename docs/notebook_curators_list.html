@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>What does this CI system do? &#8212; HST Notebooks</title>
+    <title>List of HST Jupyter Notebook Content Curators &#8212; HST Notebooks</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -282,7 +282,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="github.com/dulude/hst_notebooks/issues/new?title=Issue%20on%20page%20%2Fdocs/about.html&body=Your%20issue%20content%20here."
+        <a href="github.com/dulude/hst_notebooks/issues/new?title=Issue%20on%20page%20%2Fdocs/notebook_curators_list.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -310,7 +310,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/docs/about.md"
+        <a href="../_sources/docs/notebook_curators_list.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -347,74 +347,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#getting-started">
-   Getting started
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#configuration">
-     Configuration
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What does this CI system do?</h1>
+                <h1>List of HST Jupyter Notebook Content Curators</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#getting-started">
-   Getting started
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#configuration">
-     Configuration
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -422,92 +371,20 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="what-does-this-ci-system-do">
-<h1>What does this CI system do?<a class="headerlink" href="#what-does-this-ci-system-do" title="Permalink to this headline">#</a></h1>
-<p>There are a few different actions that provide different CI functionalty.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="list-of-hst-jupyter-notebook-content-curators">
+<h1>List of HST Jupyter Notebook Content Curators<a class="headerlink" href="#list-of-hst-jupyter-notebook-content-curators" title="Permalink to this headline">#</a></h1>
+<p>NOTE: This information has not been finalized yet.</p>
 <ul class="simple">
-<li><p>Validation/Execution - ci_validation.yml</p>
+<li><p>/hstnotebooks</p>
 <ul>
-<li><p>This workflow exercises the notebook to validate that it properly executes without failure, and validates the output.</p></li>
-<li><p>Execution of the notebook is accomplished through the use of the jupyter utility ‘nbconvert’</p>
-<ul>
-<li><p><a class="reference external" href="https://nbconvert.readthedocs.io/en/latest/">https://nbconvert.readthedocs.io/en/latest/</a></p></li>
-</ul>
-</li>
-<li><p>Validation is performed using pytest and a pytest plugin ‘nbval’</p>
-<ul>
-<li><p><a class="reference external" href="https://nbval.readthedocs.io/en/latest/">https://nbval.readthedocs.io/en/latest/</a></p></li>
+<li><p>/acs Norman A Grogin</p></li>
+<li><p>/cos Marc Rafelski</p></li>
+<li><p>/stis Joleen Carlberg</p></li>
+<li><p>/wfc3 Sylvia Baggett</p></li>
+<li><p>/DrizzlePac TBD</p></li>
 </ul>
 </li>
 </ul>
-</li>
-<li><p>HTML Builder/Deployment</p>
-<ul>
-<li><p>Static HTML pages of rendered/executed notebooks are deployed to Github pages.</p></li>
-<li><p>The workflow uses “Jupyter-Book” as a backend to perform the rendering, the page inclusion as well as the overall look and feel.</p>
-<ul>
-<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">https://jupyterbook.org/en/stable/intro.html</a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Nightly/Weekly Builds</p></li>
-<li><p>Notebooks are exercised on a scheduled cycle that can be defined in the workflow. The nightly build performs the validation and execution steps as the validation workflow, but does not regenerate HTML.</p></li>
-<li><p>The workflow breaks up notebooks into a matrix and executes each individually on its own worker node, errors are reported in a summary under the actions tab of the repository as well as emailed to the watchers.</p></li>
-<li><p>The intent is to capture issues regarding updates to requirements that cause notebook failures or any other transient environmental issues.</p></li>
-</ul>
-<section id="getting-started">
-<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">#</a></h2>
-<p>The easiest method for creating a new repository with the CI build machinery is to use the deployable template.  This will provide the required directory structure support configuration files required to operate the CI system.</p>
-<ul class="simple">
-<li><p>Navigate to <a class="reference external" href="https://github.com/TheRealZoidberg/notebook_ci_template">https://github.com/TheRealZoidberg/notebook_ci_template</a> (This will eventually be moved to STScI repos)</p></li>
-<li><p>On the top right side of the page, select the green button labeled “Use this template”</p></li>
-<li><p>Select the repository ‘owner’ (Your own personal github repo for example) and enter a new repository name.</p></li>
-<li><p>** It is important to select “Include all branches” as github pages requires its own documents branch.</p></li>
-<li><p>Finally select the “Create repository from template” button.  A new repository will be created with all the required files/structure.</p></li>
-</ul>
-<section id="configuration">
-<h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">#</a></h3>
-<p>Now that a new repository has been created, there are a few more steps to finish.</p>
-<ul class="simple">
-<li><p>Jupyter-book configuration: _config.yml</p>
-<ul>
-<li><p>This configuration file contains all of the variables to customize the rendered HTML pages.  The entries that should be edited are marked with ‘(CHANGE THIS)’.</p></li>
-<li><p>General settings:</p></li>
-<li><p>Title: The title of the notebook collection</p></li>
-<li><p>author: STScI or a specific author to the notebook collection</p></li>
-<li><p>logo: log.png - a logo that displays the mission or a special feature that defines the collection.</p></li>
-<li><p>execute:</p>
-<ul>
-<li><p>execute_notebooks: force - defines how and when notebooks are executed during HTML generation - See <a class="reference external" href="https://jupyterbook.org/content/execute.html">https://jupyterbook.org/content/execute.html</a></p></li>
-</ul>
-</li>
-<li><p>html:</p>
-<ul>
-<li><p>google_analytics_id: - applies a google analytics tracking ID to every html page generated</p></li>
-<li><p>use_issues_button: true or false - Adds a button to report an issue directly to github</p></li>
-<li><p>use_repository_button: true or false - Adds a button that allows the user to directly visit the repository for the notebooks</p></li>
-</ul>
-</li>
-<li><p>launch_buttons:</p>
-<ul>
-<li><p>thebe: true or false - Adds a button that implements thebe into the notebook, this uses a mybinder kernel in the background to allow cell execution from the static pages.</p></li>
-<li><p>colab: true or false - Adds a button that opens the notebook in Google colab - allowing the user to fully run the notebook on an active node.</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Notebook Requirements (This section is currently under development, and may change)</p>
-<ul>
-<li><p>Typically when a notebook is added to the repository, it will come with a developer created ‘requirements.txt’ file.  When there is a large collection of notebooks the contents of these files can contain many dupilcates of requirements but potentially all with different versions.</p></li>
-<li><p>When running in a CI environment it is important to keep a consistant environment.</p></li>
-<li><p>To do this there is a script included in the template that scans for notebooks and uses a utility ‘pipreqsnb’ to extract only the needed requirements from each notebook. It then creates a global requirements file in the repository root that contains all of the unique requirements from the collection, unpinned from versions, ensuring that the latest releases are used.</p></li>
-<li><p>To run the script, first ‘pip install pipreqsnb’ - and then execute the script ‘./reqBuilder.sh’</p></li>
-</ul>
-</li>
-</ul>
-</section>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
