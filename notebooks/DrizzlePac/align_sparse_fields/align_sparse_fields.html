@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Drizzling WFPC2 Images to use a Single Zeropoint" href="../drizzle_wfpc2/drizzle_wfpc2.html" />
+    <link rel="next" title="Satellite Trail Masking Techniques" href="../mask_satellite/mask_satellite.html" />
     <link rel="prev" title="Optimizing Image Alignment for Multiple HST Visits" href="../align_multiple_visits/align_multiple_visits.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -147,42 +147,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../COS/CalCOS/CalCOS.html">
-   Running the COS Data Pipeline (
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     CalCOS
-    </span>
-   </code>
-   )
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../COS/SplitTag/SplitTag.html">
-   Splitting COS Exposures into sub-exposures with
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     splittag
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../COS/DayNight/DayNight.html">
-   Filtering out COS Data taken during the Day or Night
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../COS/LSF/LSF.html">
-   Working with the COS Line Spread Function (LSF)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../COS/Extract/Extract.html">
-   Editing the extraction boxes in a spectral extraction file (XTRACTAB)
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../../COS/example_notebook/example_notebook.html">
    Draft: Notebook title
   </a>
@@ -200,16 +164,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Initialization/Initialization.html">
-   DrizzlePac Initialization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../align_to_catalogs/align_to_catalogs.html">
-   Aligning HST images to an absolute reference catalog
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../align_multiple_visits/align_multiple_visits.html">
    Optimizing Image Alignment for Multiple HST Visits
   </a>
@@ -220,11 +174,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../drizzle_wfpc2/drizzle_wfpc2.html">
-   Drizzling WFPC2 Images to use a Single Zeropoint
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../mask_satellite/mask_satellite.html">
    Satellite Trail Masking Techniques
   </a>
@@ -232,11 +181,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../optimize_image_sampling/optimize_image_sampling.html">
    Optimizing the Image Sampling
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../using_updated_astrometry_solutions/using_updated_astrometry_solutions.html">
-   Using updated astrometry solutions
   </a>
  </li>
 </ul>
@@ -742,7 +686,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table masked=True length=8</i>
-<table id="table140520950473936" class="table-striped table-bordered table-condensed">
+<table id="table139910064785392" class="table-striped table-bordered table-condensed">
 <thead><tr><th>file</th><th>asn_id</th><th>detector</th><th>filter2</th><th>exptime</th><th>postarg1</th><th>postarg2</th></tr></thead>
 <thead><tr><th>str44</th><th>str9</th><th>str3</th><th>str5</th><th>float64</th><th>float64</th><th>float64</th></tr></thead>
 <tr><td>hst_10092_0x_acs_wfc_f814w_j8xi0xs0_flc.fits</td><td>J8XI0X010</td><td>WFC</td><td>F814W</td><td>507.0</td><td>0.062</td><td>-3.0518</td></tr>
@@ -777,10 +721,10 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Setting up logfile :  tweakreg.log
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.tweakreg:TweakReg Version 3.5.1 started at: 16:30:16.4 (09/02/2023) 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.tweakreg:TweakReg Version 3.5.1 started at: 16:54:39.440 (15/02/2023) 
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TweakReg Version 3.5.1 started at: 16:30:16.4 (09/02/2023) 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TweakReg Version 3.5.1 started at: 16:54:39.440 (15/02/2023) 
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.tweakreg:
@@ -1023,16 +967,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===  Source finding for image &#39;j8xi0xsaq_flc.fits&#39;:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:16.61 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:54:39.588 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:16.61 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:54:39.588 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.055177
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:17.499 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:54:40.412 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 8467 objects.
@@ -1041,16 +985,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Found 8467 objects.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:17.600 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:54:40.515 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:17.600 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:54:40.515 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 9.991610
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:18.30 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:54:41.223 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 8501 objects.
@@ -1077,16 +1021,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===  Source finding for image &#39;j8xi0xs6q_flc.fits&#39;:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:19.076 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:54:41.991 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:19.076 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:54:41.991 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.078989
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:19.819 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:54:42.752 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 6123 objects.
@@ -1095,16 +1039,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Found 6123 objects.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:19.908 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:54:42.83 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:19.908 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:54:42.83 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 9.974127
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:20.562 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:54:43.520 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 6119 objects.
@@ -1131,16 +1075,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===  Source finding for image &#39;j8xi0xs3q_flc.fits&#39;:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:21.732 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:54:44.69 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:21.732 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:54:44.69 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.041938
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:22.386 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:54:45.349 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 4662 objects.
@@ -1149,16 +1093,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Found 4662 objects.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:22.466 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:54:45.427 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:22.466 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:54:45.427 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.016332
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:23.187 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:54:46.08 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 4709 objects.
@@ -1185,16 +1129,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===  Source finding for image &#39;j8xi0xs0q_flc.fits&#39;:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:24.30 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:54:47.204 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:24.30 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:54:47.204 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.523051
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:24.949 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:54:47.940 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 4919 objects.
@@ -1203,16 +1147,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Found 4919 objects.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:25.028 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:54:48.020 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:25.028 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:54:48.020 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.572939
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:25.671 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:54:48.675 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 5177 objects.
@@ -1889,7 +1833,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=4</i>
-<table id="table140522062672272" class="table-striped table-bordered table-condensed">
+<table id="table139909053232464" class="table-striped table-bordered table-condensed">
 <thead><tr><th>file</th><th>dx</th><th>dy</th><th>rot</th><th>scale</th><th>xrms</th><th>yrms</th></tr></thead>
 <thead><tr><th>str18</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th></tr></thead>
 <tr><td>j8xi0xsaq_flc.fits</td><td>0.00</td><td>0.00</td><td>0.000</td><td>1.00000</td><td>0.00</td><td>0.00</td></tr>
@@ -1918,10 +1862,10 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Setting up logfile :  tweakreg.log
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.tweakreg:TweakReg Version 3.5.1 started at: 16:30:37.318 (09/02/2023) 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.tweakreg:TweakReg Version 3.5.1 started at: 16:55:00.43 (15/02/2023) 
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TweakReg Version 3.5.1 started at: 16:30:37.318 (09/02/2023) 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TweakReg Version 3.5.1 started at: 16:55:00.43 (15/02/2023) 
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.tweakreg:
@@ -2164,16 +2108,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===  Source finding for image &#39;j8xi0xsaq_flc.fits&#39;:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:37.487 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:00.708 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:37.487 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:00.708 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.055177
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:38.352 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:01.56 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 2702 objects.
@@ -2182,16 +2126,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Found 2702 objects.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:38.443 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:01.660 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:38.443 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:01.660 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 9.991610
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:39.306 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:02.515 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 2602 objects.
@@ -2218,16 +2162,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===  Source finding for image &#39;j8xi0xs6q_flc.fits&#39;:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:40.08 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:03.293 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:40.08 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:03.293 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.078989
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:40.932 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:04.125 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 1839 objects.
@@ -2236,16 +2180,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Found 1839 objects.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:41.019 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:04.215 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:41.019 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:04.215 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 9.974127
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:41.864 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:05.048 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 1862 objects.
@@ -2272,16 +2216,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===  Source finding for image &#39;j8xi0xs3q_flc.fits&#39;:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:42.432 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:05.619 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:42.432 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:05.619 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.041938
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:43.261 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:06.438 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 1367 objects.
@@ -2290,16 +2234,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Found 1367 objects.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:43.344 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:06.519 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:43.344 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:06.519 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.016332
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:44.172 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:07.339 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 1396 objects.
@@ -2326,16 +2270,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===  Source finding for image &#39;j8xi0xs0q_flc.fits&#39;:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:44.803 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:07.96 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:44.803 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:07.96 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.523051
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:45.632 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:08.789 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 1486 objects.
@@ -2344,16 +2288,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Found 1486 objects.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:45.713 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:08.872 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:45.713 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:08.872 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.572939
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:46.643 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:09.695 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 1523 objects.
@@ -3027,7 +2971,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=4</i>
-<table id="table140520617252160" class="table-striped table-bordered table-condensed">
+<table id="table139908619561536" class="table-striped table-bordered table-condensed">
 <thead><tr><th>file</th><th>dx</th><th>dy</th><th>rot</th><th>scale</th><th>xrms</th><th>yrms</th></tr></thead>
 <thead><tr><th>str18</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th></tr></thead>
 <tr><td>j8xi0xsaq_flc.fits</td><td>0.00</td><td>0.00</td><td>0.000</td><td>1.00000</td><td>0.00</td><td>0.00</td></tr>
@@ -3057,10 +3001,10 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Setting up logfile :  tweakreg.log
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.tweakreg:TweakReg Version 3.5.1 started at: 16:30:50.421 (09/02/2023) 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.tweakreg:TweakReg Version 3.5.1 started at: 16:55:13.699 (15/02/2023) 
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TweakReg Version 3.5.1 started at: 16:30:50.421 (09/02/2023) 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TweakReg Version 3.5.1 started at: 16:55:13.699 (15/02/2023) 
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.tweakreg:
@@ -3303,16 +3247,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===  Source finding for image &#39;j8xi0xsaq_flc.fits&#39;:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:50.588 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:13.865 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:50.588 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:13.865 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.055177
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:51.430 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:14.699 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 1155 objects.
@@ -3321,16 +3265,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Found 1155 objects.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:51.517 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:14.786 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:51.517 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:14.786 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 9.991610
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:52.346 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:15.608 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 942 objects.
@@ -3357,16 +3301,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===  Source finding for image &#39;j8xi0xs6q_flc.fits&#39;:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:52.910 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:16.176 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:52.910 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:16.176 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.078989
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:53.737 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:17.001 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 759 objects.
@@ -3375,16 +3319,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Found 759 objects.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:53.822 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:17.088 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:53.822 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:17.088 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 9.974127
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:54.646 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:17.903 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 715 objects.
@@ -3411,16 +3355,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===  Source finding for image &#39;j8xi0xs3q_flc.fits&#39;:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:55.180 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:18.439 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:55.180 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:18.439 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.041938
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:56.002 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:19.259 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 630 objects.
@@ -3429,16 +3373,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Found 630 objects.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:56.085 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:19.344 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:56.085 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:19.344 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.016332
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:56.895 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:20.151 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 534 objects.
@@ -3465,16 +3409,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===  Source finding for image &#39;j8xi0xs0q_flc.fits&#39;:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:57.307 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:20.568 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:30:57.307 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:20.568 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.523051
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:58.128 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:21.385 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 623 objects.
@@ -3483,16 +3427,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Found 623 objects.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:58.210 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:21.469 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:30:58.210 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:21.469 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.572939
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:30:59.025 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:22.27 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 628 objects.
@@ -4166,7 +4110,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=4</i>
-<table id="table140520721139024" class="table-striped table-bordered table-condensed">
+<table id="table139908621719856" class="table-striped table-bordered table-condensed">
 <thead><tr><th>file</th><th>dx</th><th>dy</th><th>rot</th><th>scale</th><th>xrms</th><th>yrms</th></tr></thead>
 <thead><tr><th>str18</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th></tr></thead>
 <tr><td>j8xi0xsaq_flc.fits</td><td>0.00</td><td>0.00</td><td>0.000</td><td>1.00000</td><td>0.00</td><td>0.00</td></tr>
@@ -4194,10 +4138,10 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Setting up logfile :  tweakreg.log
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.tweakreg:TweakReg Version 3.5.1 started at: 16:31:02.591 (09/02/2023) 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.tweakreg:TweakReg Version 3.5.1 started at: 16:55:25.763 (15/02/2023) 
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TweakReg Version 3.5.1 started at: 16:31:02.591 (09/02/2023) 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TweakReg Version 3.5.1 started at: 16:55:25.763 (15/02/2023) 
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.tweakreg:
@@ -4440,16 +4384,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===  Source finding for image &#39;j8xi0xsaq_flc.fits&#39;:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:31:02.922 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:26.179 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:31:02.922 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:26.179 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.055177
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:31:03.770 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:27.018 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 1155 objects.
@@ -4458,16 +4402,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Found 1155 objects.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:31:03.848 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:27.096 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:31:03.848 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xsaq_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:27.096 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 9.991610
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:31:04.676 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:27.91 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 942 objects.
@@ -4494,16 +4438,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===  Source finding for image &#39;j8xi0xs6q_flc.fits&#39;:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:31:05.267 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:28.507 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:31:05.267 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:28.507 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.078989
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:31:06.098 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:29.330 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 759 objects.
@@ -4512,16 +4456,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Found 759 objects.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:31:06.17 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:29.404 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:31:06.17 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs6q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:29.404 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 9.974127
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:31:06.997 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:30.219 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 715 objects.
@@ -4548,16 +4492,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===  Source finding for image &#39;j8xi0xs3q_flc.fits&#39;:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:31:07.558 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:30.783 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:31:07.558 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:30.783 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.041938
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:31:08.382 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:31.603 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 630 objects.
@@ -4566,16 +4510,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Found 630 objects.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:31:08.45 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:31.675 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:31:08.45 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs3q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:31.675 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.016332
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:31:09.26 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:32.48 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 534 objects.
@@ -4602,16 +4546,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===  Source finding for image &#39;j8xi0xs0q_flc.fits&#39;:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:31:09.707 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:32.919 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:31:09.707 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 1) started at: 16:55:32.919 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.523051
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:31:10.530 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:33.736 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 623 objects.
@@ -4620,16 +4564,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Found 623 objects.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:31:10.601 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:33.80 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:31:10.601 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  Source finding for &#39;j8xi0xs0q_flc.fits&#39;, EXT=(&#39;SCI&#39;, 2) started at: 16:55:33.80 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:   Finding sources using sky sigma = 10.572939
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:31:11.514 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:###Source finding finished at: 16:55:34.615 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.catalogs:     Found 628 objects.
@@ -5975,10 +5919,10 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AstroDrizzle log file: f814w_driz.log
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.astrodrizzle:AstroDrizzle Version 3.5.1 started at: 16:31:16.649 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.astrodrizzle:AstroDrizzle Version 3.5.1 started at: 16:55:39.930 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AstroDrizzle Version 3.5.1 started at: 16:31:16.649 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AstroDrizzle Version 3.5.1 started at: 16:55:39.930 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.astrodrizzle:
@@ -6008,10 +5952,10 @@ title="Print to PDF"
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.astrodrizzle:photutils Version -&gt; 1.6.0 
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step  Initialization  started at  16:31:16.660 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step  Initialization  started at  16:55:39.935 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Initialization  started at  16:31:16.660 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Initialization  started at  16:55:39.935 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:
@@ -6257,10 +6201,10 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>********************************************************************************
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step Initialization finished at 16:31:20.46 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step Initialization finished at 16:55:46.203 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Initialization finished at 16:31:20.46 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Initialization finished at 16:55:46.203 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.astrodrizzle:USER INPUT PARAMETERS common to all Processing Steps:
@@ -6317,10 +6261,10 @@ title="Print to PDF"
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.astrodrizzle:	wcskey :	
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step  Static Mask  started at  16:31:20.469 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step  Static Mask  started at  16:55:46.214 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Static Mask  started at  16:31:20.469 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Static Mask  started at  16:55:46.214 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:
@@ -6416,16 +6360,16 @@ title="Print to PDF"
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.staticMask:Saving static mask to disk: ./_2048x4096_2_staticMask.fits
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step Static Mask finished at 16:31:24.542 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step Static Mask finished at 16:55:50.265 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Static Mask finished at 16:31:24.542 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Static Mask finished at 16:55:50.265 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step  Subtract Sky  started at  16:31:24.544 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step  Subtract Sky  started at  16:55:50.267 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Subtract Sky  started at  16:31:24.544 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Subtract Sky  started at  16:55:50.267 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:
@@ -6479,10 +6423,10 @@ title="Print to PDF"
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.sky:	use_static :	True
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:stsci.skypac.utils:***** skymatch started on 2023-02-09 16:31:25.564058
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:stsci.skypac.utils:***** skymatch started on 2023-02-15 16:55:51.119735
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>***** skymatch started on 2023-02-09 16:31:25.564058
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>***** skymatch started on 2023-02-15 16:55:51.119735
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:stsci.skypac.utils:      Version 1.0.9
@@ -7517,28 +7461,28 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      - EXT = &#39;SCI&#39;,2   delta(MDRIZSKY) = 50.2785   NEW MDRIZSKY = 50.2785
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:stsci.skypac.utils:***** skymatch ended on 2023-02-09 16:31:33.248594
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:stsci.skypac.utils:***** skymatch ended on 2023-02-15 16:55:58.730518
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>***** skymatch ended on 2023-02-09 16:31:33.248594
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>***** skymatch ended on 2023-02-15 16:55:58.730518
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:stsci.skypac.utils:TOTAL RUN TIME: 0:00:07.684536
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:stsci.skypac.utils:TOTAL RUN TIME: 0:00:07.610783
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TOTAL RUN TIME: 0:00:07.684536
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TOTAL RUN TIME: 0:00:07.610783
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step Subtract Sky finished at 16:31:33.646 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step Subtract Sky finished at 16:55:59.32 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Subtract Sky finished at 16:31:33.646 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Subtract Sky finished at 16:55:59.32 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step  Separate Drizzle  started at  16:31:33.649 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step  Separate Drizzle  started at  16:55:59.322 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Separate Drizzle  started at  16:31:33.649 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Separate Drizzle  started at  16:55:59.322 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:
@@ -7683,10 +7627,10 @@ title="Print to PDF"
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Using WCSLIB-based coordinate transformation...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:stepsize = 10
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Using WCSLIB-based coordinate transformation...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Using WCSLIB-based coordinate transformation...
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:stepsize = 10
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:stepsize = 10
@@ -7805,28 +7749,28 @@ title="Print to PDF"
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:-Drizzle input: hst_10092_0x_acs_wfc_f814w_j8xi0xs6_flc.fits[sci,2]
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:-Drizzle input: hst_10092_0x_acs_wfc_f814w_j8xi0xsa_flc.fits[sci,2]
+</pre></div>
+</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Applying sky value of 50.876938 to hst_10092_0x_acs_wfc_f814w_j8xi0xs6_flc.fits[sci,2]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:-Drizzle input: hst_10092_0x_acs_wfc_f814w_j8xi0xsa_flc.fits[sci,2]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Applying sky value of 50.278542 to hst_10092_0x_acs_wfc_f814w_j8xi0xsa_flc.fits[sci,2]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Using WCSLIB-based coordinate transformation...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Applying sky value of 50.278542 to hst_10092_0x_acs_wfc_f814w_j8xi0xsa_flc.fits[sci,2]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:stepsize = 10
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Using WCSLIB-based coordinate transformation...
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:stepsize = 10
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.cdriz:-Drizzling using kernel = turbo
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Using WCSLIB-based coordinate transformation...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:stepsize = 10
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.cdriz:-Drizzling using kernel = turbo
@@ -7838,14 +7782,14 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_10092_0x_acs_wfc_f814w_j8xi0xs6_single_sci.fits
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
-  warnings.warn(
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.outputimage:-Generating simple FITS output: hst_10092_0x_acs_wfc_f814w_j8xi0xsa_single_sci.fits
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_10092_0x_acs_wfc_f814w_j8xi0xsa_single_sci.fits
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
+  warnings.warn(
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
@@ -7921,10 +7865,10 @@ title="Print to PDF"
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Using WCSLIB-based coordinate transformation...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:stepsize = 10
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Using WCSLIB-based coordinate transformation...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Using WCSLIB-based coordinate transformation...
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:stepsize = 10
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:stepsize = 10
@@ -7939,10 +7883,10 @@ title="Print to PDF"
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.outputimage:-Generating simple FITS output: j8xi0xs0q_single_sci.fits
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: j8xi0xs0q_single_sci.fits
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.outputimage:-Generating simple FITS output: j8xi0xs3q_single_sci.fits
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.outputimage:-Generating simple FITS output: j8xi0xs3q_single_sci.fits
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: j8xi0xs0q_single_sci.fits
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: j8xi0xs3q_single_sci.fits
@@ -7956,16 +7900,16 @@ title="Print to PDF"
   warnings.warn(
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.outputimage:Writing out image to disk: j8xi0xs0q_single_sci.fits
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.outputimage:Writing out image to disk: j8xi0xs3q_single_sci.fits
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing out image to disk: j8xi0xs0q_single_sci.fits
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing out image to disk: j8xi0xs3q_single_sci.fits
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing out image to disk: j8xi0xs3q_single_sci.fits
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.outputimage:Writing out image to disk: j8xi0xs0q_single_sci.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing out image to disk: j8xi0xs0q_single_sci.fits
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.outputimage:Writing out image to disk: j8xi0xs0q_single_wht.fits
@@ -7995,33 +7939,33 @@ title="Print to PDF"
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Using WCSLIB-based coordinate transformation...
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:stepsize = 10
+</pre></div>
+</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Using WCSLIB-based coordinate transformation...
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:stepsize = 10
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:stepsize = 10
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.cdriz:-Drizzling using kernel = turbo
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.cdriz:-Drizzling using kernel = turbo
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:-Drizzle input: j8xi0xs6q_flc.fits[sci,2]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:-Drizzle input: j8xi0xsaq_flc.fits[sci,2]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Applying sky value of 50.876938 to j8xi0xs6q_flc.fits[sci,2]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:-Drizzle input: j8xi0xs6q_flc.fits[sci,2]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Applying sky value of 50.278542 to j8xi0xsaq_flc.fits[sci,2]
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Applying sky value of 50.876938 to j8xi0xs6q_flc.fits[sci,2]
+</pre></div>
+</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.adrizzle:Using WCSLIB-based coordinate transformation...
 </pre></div>
 </div>
@@ -8038,32 +7982,26 @@ title="Print to PDF"
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.cdriz:-Drizzling using kernel = turbo
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.outputimage:-Generating simple FITS output: j8xi0xsaq_single_sci.fits
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.outputimage:-Generating simple FITS output: j8xi0xs6q_single_sci.fits
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: j8xi0xsaq_single_sci.fits
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: j8xi0xs6q_single_sci.fits
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
-  warnings.warn(
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.outputimage:-Generating simple FITS output: j8xi0xsaq_single_sci.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: j8xi0xsaq_single_sci.fits
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
   warnings.warn(
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.outputimage:Writing out image to disk: j8xi0xsaq_single_sci.fits
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing out image to disk: j8xi0xsaq_single_sci.fits
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
+  warnings.warn(
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.outputimage:Writing out image to disk: j8xi0xs6q_single_sci.fits
@@ -8072,10 +8010,10 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing out image to disk: j8xi0xs6q_single_sci.fits
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.outputimage:Writing out image to disk: j8xi0xsaq_single_wht.fits
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.outputimage:Writing out image to disk: j8xi0xsaq_single_sci.fits
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing out image to disk: j8xi0xsaq_single_wht.fits
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing out image to disk: j8xi0xsaq_single_sci.fits
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.outputimage:Writing out image to disk: j8xi0xs6q_single_wht.fits
@@ -8084,16 +8022,22 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing out image to disk: j8xi0xs6q_single_wht.fits
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step Separate Drizzle finished at 16:31:45.618 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.outputimage:Writing out image to disk: j8xi0xsaq_single_wht.fits
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Separate Drizzle finished at 16:31:45.618 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing out image to disk: j8xi0xsaq_single_wht.fits
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step  Create Median  started at  16:31:45.622 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step Separate Drizzle finished at 16:56:11.547 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Create Median  started at  16:31:45.622 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Separate Drizzle finished at 16:56:11.547 (15/02/2023)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step  Create Median  started at  16:56:11.549 (15/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Create Median  started at  16:56:11.549 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:
@@ -8202,16 +8146,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saving output median image to: &#39;f814w_med.fits&#39;
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step Create Median finished at 16:31:53.017 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step Create Median finished at 16:56:19.133 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Create Median finished at 16:31:53.017 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Create Median finished at 16:56:19.133 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step  Blot  started at  16:31:53.021 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step  Blot  started at  16:56:19.135 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Blot  started at  16:31:53.021 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Blot  started at  16:56:19.135 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:
@@ -8702,16 +8646,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing out image to disk: j8xi0xsaq_sci2_blt.fits
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step Blot finished at 16:32:20.541 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step Blot finished at 16:56:45.957 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Blot finished at 16:32:20.541 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Blot finished at 16:56:45.957 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step  Driz_CR  started at  16:32:20.544 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step  Driz_CR  started at  16:56:45.95 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Driz_CR  started at  16:32:20.544 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Driz_CR  started at  16:56:45.95 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:
@@ -8762,19 +8706,22 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xs3_sci1_crmask.fits
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.drizCR:Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xs3_sci2_crmask.fits
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xs3_sci2_crmask.fits
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.drizCR:Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xs0_sci2_crmask.fits
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xs0_sci2_crmask.fits
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.drizCR:Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xs3_sci2_crmask.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xs3_sci2_crmask.fits
+</pre></div>
+</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.drizCR:Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xs6_sci1_crmask.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xs6_sci1_crmask.fits
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.drizCR:Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xsa_sci1_crmask.fits
@@ -8783,19 +8730,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xsa_sci1_crmask.fits
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xs6_sci1_crmask.fits
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.drizCR:Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xs6_sci2_crmask.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xs6_sci2_crmask.fits
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.drizCR:Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xsa_sci2_crmask.fits
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xsa_sci2_crmask.fits
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.drizCR:Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xs6_sci2_crmask.fits
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_10092_0x_acs_wfc_f814w_j8xi0xs6_sci2_crmask.fits
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.drizCR:Creating output: j8xi0xs0q_sci1_crmask.fits
@@ -8822,22 +8766,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: j8xi0xs3q_sci2_crmask.fits
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.drizCR:Creating output: j8xi0xsaq_sci1_crmask.fits
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: j8xi0xsaq_sci1_crmask.fits
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.drizCR:Creating output: j8xi0xs6q_sci1_crmask.fits
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: j8xi0xs6q_sci1_crmask.fits
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.drizCR:Creating output: j8xi0xsaq_sci2_crmask.fits
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.drizCR:Creating output: j8xi0xsaq_sci1_crmask.fits
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: j8xi0xsaq_sci2_crmask.fits
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: j8xi0xsaq_sci1_crmask.fits
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.drizCR:Creating output: j8xi0xs6q_sci2_crmask.fits
@@ -8846,16 +8784,22 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: j8xi0xs6q_sci2_crmask.fits
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step Driz_CR finished at 16:32:35.998 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.drizCR:Creating output: j8xi0xsaq_sci2_crmask.fits
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Driz_CR finished at 16:32:35.998 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: j8xi0xsaq_sci2_crmask.fits
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step  Final Drizzle  started at  16:32:36.013 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step Driz_CR finished at 16:57:01.28 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Final Drizzle  started at  16:32:36.013 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Driz_CR finished at 16:57:01.28 (15/02/2023)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step  Final Drizzle  started at  16:57:01.297 (15/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Final Drizzle  started at  16:57:01.297 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:
@@ -9292,10 +9236,10 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing out image to disk: f814w_drc_wht.fits
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step Final Drizzle finished at 16:33:20.481 (09/02/2023)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:==== Processing Step Final Drizzle finished at 16:57:45.532 (15/02/2023)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Final Drizzle finished at 16:33:20.481 (09/02/2023)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Final Drizzle finished at 16:57:45.532 (15/02/2023)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.astrodrizzle:
@@ -9304,10 +9248,10 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.astrodrizzle:AstroDrizzle Version 3.5.1 is finished processing at 16:33:20.485 (09/02/2023).
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.astrodrizzle:AstroDrizzle Version 3.5.1 is finished processing at 16:57:45.53 (15/02/2023).
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AstroDrizzle Version 3.5.1 is finished processing at 16:33:20.485 (09/02/2023).
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AstroDrizzle Version 3.5.1 is finished processing at 16:57:45.53 (15/02/2023).
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.astrodrizzle:
@@ -9352,52 +9296,52 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:         Initialization          3.8009 sec.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:         Initialization          6.2677 sec.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>         Initialization          3.8009 sec.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>         Initialization          6.2677 sec.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:            Static Mask          4.0729 sec.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:            Static Mask          4.0509 sec.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            Static Mask          4.0729 sec.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            Static Mask          4.0509 sec.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:           Subtract Sky          9.1018 sec.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:           Subtract Sky          9.0539 sec.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>           Subtract Sky          9.1018 sec.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>           Subtract Sky          9.0539 sec.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:       Separate Drizzle          11.9688 sec.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:       Separate Drizzle          12.2244 sec.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       Separate Drizzle          11.9688 sec.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       Separate Drizzle          12.2244 sec.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:          Create Median          7.3948 sec.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:          Create Median          7.5836 sec.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          Create Median          7.3948 sec.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          Create Median          7.5836 sec.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:                   Blot          27.5201 sec.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:                   Blot          26.8218 sec.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                   Blot          27.5201 sec.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                   Blot          26.8218 sec.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:                Driz_CR          15.4537 sec.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:                Driz_CR          15.3256 sec.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                Driz_CR          15.4537 sec.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                Driz_CR          15.3256 sec.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:          Final Drizzle          44.4676 sec.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:          Final Drizzle          44.2350 sec.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          Final Drizzle          44.4676 sec.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          Final Drizzle          44.2350 sec.
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:   ====================          ====================
@@ -9406,10 +9350,10 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ====================          ====================
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:                  Total          123.7806 sec.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:                  Total          125.5630 sec.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  Total          123.7806 sec.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  Total          125.5630 sec.
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:drizzlepac.util:
@@ -9468,7 +9412,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fcd921f6260&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f3f03be21a0&gt;
 </pre></div>
 </div>
 </div>
@@ -9482,7 +9426,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7fcd89ea5d20&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f3f0bf3fac0&gt;
 </pre></div>
 </div>
 </div>
@@ -9534,10 +9478,10 @@ Updated: January 8, 2019
             <p class="prev-next-title">Optimizing Image Alignment for Multiple HST Visits</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../drizzle_wfpc2/drizzle_wfpc2.html" title="next page">
+    <a class='right-next' id="next-link" href="../mask_satellite/mask_satellite.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Drizzling WFPC2 Images to use a Single Zeropoint</p>
+        <p class="prev-next-title">Satellite Trail Masking Techniques</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
