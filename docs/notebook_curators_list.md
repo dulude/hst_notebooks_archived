@@ -6,4 +6,4 @@ NOTE: This information has not been finalized yet.
   - /cos Marc Rafelski 
   - /stis Joleen Carlberg 
   - /wfc3 Sylvia Baggett
-  - /DrizzlePac
+  - /DrizzlePac TBD
