@@ -1,19 +1,20 @@
-# requires python3.6 or higher
+
+acstools
 astropy
 astroquery
 calcos
 ccdproc
 costools
-crds
 drizzlepac
 ipython
-jsonschema<4.10.0,>=4.0.1
-jupyterlab
 matplotlib
 numpy
 pandas
+photutils
 pyregion
 regions
 scipy
 specutils
+stsci.skypac
 stwcs
+synphot
