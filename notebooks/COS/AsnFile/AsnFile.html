@@ -163,6 +163,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/align_to_catalogs/align_to_catalogs.html">
+   Aligning HST images to an absolute reference catalog
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../DrizzlePac/align_multiple_visits/align_multiple_visits.html">
    Optimizing Image Alignment for Multiple HST Visits
   </a>
@@ -807,14 +812,14 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=5</i>
-<table id="table139651281050048" class="table-striped table-bordered table-condensed">
+<table id="table140017412308656" class="table-striped table-bordered table-condensed">
 <thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
 <thead><tr><th>bytes14</th><th>bytes14</th><th>bool</th></tr></thead>
-<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>1</td></tr>
-<tr><td>LDIF02NSQ</td><td>EXP-FP</td><td>1</td></tr>
-<tr><td>LDIF02NUQ</td><td>EXP-FP</td><td>1</td></tr>
-<tr><td>LDIF02NWQ</td><td>EXP-FP</td><td>1</td></tr>
-<tr><td>LDIF02010</td><td>PROD-FP</td><td>1</td></tr>
+<tr><td>LDIF01TYQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF01U0Q</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF01U2Q</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF01U4Q</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF01010</td><td>PROD-FP</td><td>1</td></tr>
 </table></div></div></div>
 </div>
 <p>We see that the association file has five rows: four exposures denoted with the <code class="docutils literal notranslate"><span class="pre">MEMTYPE</span></code> = <code class="docutils literal notranslate"><span class="pre">EXP-FP</span></code>, and a product with <code class="docutils literal notranslate"><span class="pre">MEMTYPE</span></code> = <code class="docutils literal notranslate"><span class="pre">PROD-FP</span></code>.</p>
@@ -835,12 +840,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Association LDIF02010 has EXP-FP exposure LDIF02NMQ with exposure time 1653.0 seconds at cenwave 1280 Å and FP-POS 1.
-Association LDIF02010 has EXP-FP exposure LDIF02NSQ with exposure time 1334.0 seconds at cenwave 1280 Å and FP-POS 2.
-Association LDIF02010 has EXP-FP exposure LDIF02NUQ with exposure time 1334.0 seconds at cenwave 1280 Å and FP-POS 3.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Association LDIF02010 has EXP-FP exposure LDIF02NWQ with exposure time 2783.0 seconds at cenwave 1280 Å and FP-POS 4.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Association LDIF01010 has EXP-FP exposure LDIF01TYQ with exposure time 0.0 seconds at cenwave 1280 Å and FP-POS 1.
+Association LDIF01010 has EXP-FP exposure LDIF01U0Q with exposure time 1404.0 seconds at cenwave 1280 Å and FP-POS 2.
+Association LDIF01010 has EXP-FP exposure LDIF01U2Q with exposure time 1404.0 seconds at cenwave 1280 Å and FP-POS 3.
+Association LDIF01010 has EXP-FP exposure LDIF01U4Q with exposure time 2923.0 seconds at cenwave 1280 Å and FP-POS 4.
 </pre></div>
 </div>
 </div>
@@ -865,14 +868,14 @@ This file has an exposure time of 0.0 seconds - something has gone wrong. In thi
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=5</i>
-<table id="table139650424583456" class="table-striped table-bordered table-condensed">
+<table id="table140017407342480" class="table-striped table-bordered table-condensed">
 <thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
 <thead><tr><th>bytes14</th><th>bytes14</th><th>bool</th></tr></thead>
-<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>1</td></tr>
-<tr><td>LDIF02NSQ</td><td>EXP-FP</td><td>1</td></tr>
-<tr><td>LDIF02NUQ</td><td>EXP-FP</td><td>1</td></tr>
-<tr><td>LDIF02NWQ</td><td>EXP-FP</td><td>1</td></tr>
-<tr><td>LDIF02010</td><td>PROD-FP</td><td>1</td></tr>
+<tr><td>LDIF01TYQ</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF01U0Q</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF01U2Q</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF01U4Q</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF01010</td><td>PROD-FP</td><td>1</td></tr>
 </table></div></div></div>
 </div>
 <p>We can set the <code class="docutils literal notranslate"><span class="pre">MEMPRSNT</span></code> value to <code class="docutils literal notranslate"><span class="pre">False</span></code> or <code class="docutils literal notranslate"><span class="pre">0</span></code> for our bad exposure:</p>
@@ -890,14 +893,14 @@ This file has an exposure time of 0.0 seconds - something has gone wrong. In thi
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=5</i>
-<table id="table139650420246128" class="table-striped table-bordered table-condensed">
+<table id="table140017407336672" class="table-striped table-bordered table-condensed">
 <thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
 <thead><tr><th>bytes14</th><th>bytes14</th><th>bool</th></tr></thead>
-<tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>1</td></tr>
-<tr><td>LDIF02NSQ</td><td>EXP-FP</td><td>1</td></tr>
-<tr><td>LDIF02NUQ</td><td>EXP-FP</td><td>1</td></tr>
-<tr><td>LDIF02NWQ</td><td>EXP-FP</td><td>1</td></tr>
-<tr><td>LDIF02010</td><td>PROD-FP</td><td>1</td></tr>
+<tr><td>LDIF01TYQ</td><td>EXP-FP</td><td>0</td></tr>
+<tr><td>LDIF01U0Q</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF01U2Q</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF01U4Q</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF01010</td><td>PROD-FP</td><td>1</td></tr>
 </table></div></div></div>
 </div>
 <p><a id = addAF></a></p>
@@ -930,14 +933,12 @@ This file has an exposure time of 0.0 seconds - something has gone wrong. In thi
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Association LDIF01010 has EXP-FP exposure LDIF01TYQ with exptime 0.0 seconds at cenwave 1280 Å and FP-POS 1.
-^^^ The one above this has the FP-POS we are looking for (LDIF01TYQ)^^^
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Association LDIF02010 has EXP-FP exposure LDIF02NMQ with exptime 1653.0 seconds at cenwave 1280 Å and FP-POS 1.
+^^^ The one above this has the FP-POS we are looking for (LDIF02NMQ)^^^
 
-Association LDIF01010 has EXP-FP exposure LDIF01U0Q with exptime 1404.0 seconds at cenwave 1280 Å and FP-POS 2.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Association LDIF01010 has EXP-FP exposure LDIF01U2Q with exptime 1404.0 seconds at cenwave 1280 Å and FP-POS 3.
-Association LDIF01010 has EXP-FP exposure LDIF01U4Q with exptime 2923.0 seconds at cenwave 1280 Å and FP-POS 4.
+Association LDIF02010 has EXP-FP exposure LDIF02NSQ with exptime 1334.0 seconds at cenwave 1280 Å and FP-POS 2.
+Association LDIF02010 has EXP-FP exposure LDIF02NUQ with exptime 1334.0 seconds at cenwave 1280 Å and FP-POS 3.
+Association LDIF02010 has EXP-FP exposure LDIF02NWQ with exptime 2783.0 seconds at cenwave 1280 Å and FP-POS 4.
 </pre></div>
 </div>
 </div>
@@ -965,15 +966,15 @@ Association LDIF01010 has EXP-FP exposure LDIF01U4Q with exptime 2923.0 seconds 
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=6</i>
-<table id="table139651281192608" class="table-striped table-bordered table-condensed">
+<table id="table140018272875616" class="table-striped table-bordered table-condensed">
 <thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
 <thead><tr><th>bytes14</th><th>bytes14</th><th>bool</th></tr></thead>
+<tr><td>LDIF01TYQ</td><td>EXP-FP</td><td>0</td></tr>
+<tr><td>LDIF01U0Q</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF01U2Q</td><td>EXP-FP</td><td>1</td></tr>
+<tr><td>LDIF01U4Q</td><td>EXP-FP</td><td>1</td></tr>
 <tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>1</td></tr>
-<tr><td>LDIF02NSQ</td><td>EXP-FP</td><td>1</td></tr>
-<tr><td>LDIF02NUQ</td><td>EXP-FP</td><td>1</td></tr>
-<tr><td>LDIF02NWQ</td><td>EXP-FP</td><td>1</td></tr>
-<tr><td>LDIF01TYQ</td><td>EXP-FP</td><td>1</td></tr>
-<tr><td>LDIF02010</td><td>PROD-FP</td><td>1</td></tr>
+<tr><td>LDIF01010</td><td>PROD-FP</td><td>1</td></tr>
 </table></div></div></div>
 </div>
 <p><font size="4 "><b>Excellent.</b> In the next section we will create a new association file from scratch.</font></p>
@@ -1062,7 +1063,7 @@ Association LDIF01010 has EXP-FP exposure LDIF01U4Q with exptime 2923.0 seconds 
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=5</i>
-<table id="table139650424576064" class="table-striped table-bordered table-condensed">
+<table id="table140017407330672" class="table-striped table-bordered table-condensed">
 <thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
 <thead><tr><th>bytes40</th><th>bytes14</th><th>bool</th></tr></thead>
 <tr><td>LDIF02NMQ</td><td>EXP-FP</td><td>True</td></tr>
@@ -1139,7 +1140,7 @@ TFORM3  = &#39;L       &#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Filename: data/ldif02010_asn.fits
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Filename: data/ldif01010_asn.fits
 No.    Name      Ver    Type      Cards   Dimensions   Format
   0  PRIMARY       1 PrimaryHDU      43   ()      
   1  ASN           1 BinTableHDU     24   6R x 3C   [14A, 14A, L]   
@@ -1174,16 +1175,12 @@ No.    Name      Ver    Type      Cards   Dimensions   Format
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Editing DATE in Extension 0
 Editing FILENAME in Extension 0
 Editing ROOTNAME in Extension 0
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Editing ROOTNAME in Extension 1
+Editing ROOTNAME in Extension 1
 Editing ASN_ID in Extension 0
 Editing ASN_TAB in Extension 0
 Editing ASN_PROD in Extension 0
 Editing EXTVER in Extension 1
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Editing EXPNAME in Extension 1
+Editing EXPNAME in Extension 1
 </pre></div>
 </div>
 </div>

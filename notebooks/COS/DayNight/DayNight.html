@@ -163,6 +163,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../DrizzlePac/align_to_catalogs/align_to_catalogs.html">
+   Aligning HST images to an absolute reference catalog
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../DrizzlePac/align_multiple_visits/align_multiple_visits.html">
    Optimizing Image Alignment for Multiple HST Visits
   </a>
@@ -946,7 +951,7 @@ Writing to /home/runner/work/hst_notebooks/hst_notebooks/notebooks/COS/DayNight/
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=2</i>
-<table id="table139832259114128" class="table-striped table-bordered table-condensed">
+<table id="table139887064098096" class="table-striped table-bordered table-condensed">
 <thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
 <thead><tr><th>bytes40</th><th>bytes14</th><th>bool</th></tr></thead>
 <tr><td>intermediate/filtered_corrtag_a.fits</td><td>EXP-FP</td><td>True</td></tr>
@@ -999,7 +1004,7 @@ Writing to /home/runner/work/hst_notebooks/hst_notebooks/notebooks/COS/DayNight/
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><div><i>Table length=2</i>
-<table id="table139832259106784" class="table-striped table-bordered table-condensed">
+<table id="table139886027729088" class="table-striped table-bordered table-condensed">
 <thead><tr><th>MEMNAME</th><th>MEMTYPE</th><th>MEMPRSNT</th></tr></thead>
 <thead><tr><th>bytes40</th><th>bytes14</th><th>bool</th></tr></thead>
 <tr><td>./data/lbry01i6q_corrtag_a.fits</td><td>EXP-FP</td><td>True</td></tr>
@@ -1076,7 +1081,38 @@ In the next two cells, we will setup an environment of reference files, download
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: AstropyDeprecationWarning: The following keywords are now recognized as special column-related attributes and should be set via the Column objects: TCDLTn, TCRPXn, TCRVLn, TCTYPn, TCUNIn. In future, these values will be dropped from manually specified headers automatically and replaced with values generated based on the Column objects. [astropy.io.fits.hdu.table]
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">RuntimeError</span><span class="g g-Whitespace">                              </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># First, run with the &quot;filtered&quot; data with only time-tag datapoints allowed by the filter</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">calcos</span><span class="o">.</span><span class="n">calcos</span><span class="p">(</span><span class="s1">&#39;./filtered_asn.fits&#39;</span><span class="p">,</span> <span class="n">outdir</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">outputdir</span> <span class="o">/</span> <span class="s2">&quot;filtered_data_outs&quot;</span><span class="p">),</span> <span class="n">verbosity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/calcos/calcos.py:424,</span> in <span class="ni">calcos</span><span class="nt">(asntable, outdir, verbosity, find_target, create_csum_image, raw_csum_coords, only_csum, binx, biny, compress_csum, compression_parameters, shift_file, save_temp_files, stimfile, livetimefile, burstfile)</span>
+<span class="g g-Whitespace">    </span><span class="mi">409</span> <span class="c1"># some of the command-line arguments</span>
+<span class="g g-Whitespace">    </span><span class="mi">410</span> <span class="n">cl_args</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;find_target&quot;</span><span class="p">:</span> <span class="n">find_target</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">411</span>            <span class="s2">&quot;create_csum_image&quot;</span><span class="p">:</span> <span class="n">create_csum_image</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">412</span>            <span class="s2">&quot;raw_csum_coords&quot;</span><span class="p">:</span> <span class="n">raw_csum_coords</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">421</span>            <span class="s2">&quot;livetimefile&quot;</span><span class="p">:</span> <span class="n">livetimefile</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">422</span>            <span class="s2">&quot;burstfile&quot;</span><span class="p">:</span> <span class="n">burstfile</span><span class="p">}</span>
+<span class="ne">--&gt; </span><span class="mi">424</span> <span class="n">assoc</span> <span class="o">=</span> <span class="n">Association</span><span class="p">(</span><span class="n">asntable</span><span class="p">,</span> <span class="n">outdir</span><span class="p">,</span> <span class="n">cl_args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">425</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">assoc</span><span class="o">.</span><span class="n">obs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">426</span>     <span class="k">return</span> <span class="n">NO_DATA_TO_CALIBRATE</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/calcos/calcos.py:794,</span> in <span class="ni">Association.__init__</span><span class="nt">(self, asntable, outdir, cl_args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">792</span> <span class="bp">self</span><span class="o">.</span><span class="n">compareRefFiles</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">793</span> <span class="bp">self</span><span class="o">.</span><span class="n">compareSwitches</span><span class="p">()</span>
+<span class="ne">--&gt; </span><span class="mi">794</span> <span class="bp">self</span><span class="o">.</span><span class="n">missingRefFiles</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">795</span> <span class="bp">self</span><span class="o">.</span><span class="n">checkGeoSwitches</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">796</span> <span class="bp">self</span><span class="o">.</span><span class="n">globalSwitches</span><span class="p">()</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/calcos/calcos.py:1610,</span> in <span class="ni">Association.missingRefFiles</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1606</span>         <span class="n">cosutil</span><span class="o">.</span><span class="n">printMsg</span><span class="p">(</span><span class="n">bad_version</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+<span class="g g-Whitespace">   </span><span class="mi">1608</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">missing</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">wrong_filetype</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">or</span> \
+<span class="g g-Whitespace">   </span><span class="mi">1609</span>    <span class="nb">len</span><span class="p">(</span><span class="n">bad_version</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1610</span>     <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">()</span>
+
+<span class="ne">RuntimeError</span>: 
 </pre></div>
 </div>
 </div>
@@ -1086,6 +1122,42 @@ In the next two cells, we will setup an environment of reference files, download
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span> cap --no-stderr
 <span class="c1"># Now, run CalCOS with the initial &quot;full&quot; data - with all time-tag datapoints</span>
 <span class="n">calcos</span><span class="o">.</span><span class="n">calcos</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;./</span><span class="si">{</span><span class="n">filename_root</span><span class="si">}</span><span class="s1">_asn.fits&#39;</span><span class="p">,</span> <span class="n">outdir</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">outputdir</span> <span class="o">/</span> <span class="s2">&quot;full_data_outs&quot;</span><span class="p">),</span> <span class="n">verbosity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">RuntimeError</span><span class="g g-Whitespace">                              </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Now, run CalCOS with the initial &quot;full&quot; data - with all time-tag datapoints</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">calcos</span><span class="o">.</span><span class="n">calcos</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;./</span><span class="si">{</span><span class="n">filename_root</span><span class="si">}</span><span class="s1">_asn.fits&#39;</span><span class="p">,</span> <span class="n">outdir</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">outputdir</span> <span class="o">/</span> <span class="s2">&quot;full_data_outs&quot;</span><span class="p">),</span> <span class="n">verbosity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/calcos/calcos.py:424,</span> in <span class="ni">calcos</span><span class="nt">(asntable, outdir, verbosity, find_target, create_csum_image, raw_csum_coords, only_csum, binx, biny, compress_csum, compression_parameters, shift_file, save_temp_files, stimfile, livetimefile, burstfile)</span>
+<span class="g g-Whitespace">    </span><span class="mi">409</span> <span class="c1"># some of the command-line arguments</span>
+<span class="g g-Whitespace">    </span><span class="mi">410</span> <span class="n">cl_args</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;find_target&quot;</span><span class="p">:</span> <span class="n">find_target</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">411</span>            <span class="s2">&quot;create_csum_image&quot;</span><span class="p">:</span> <span class="n">create_csum_image</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">412</span>            <span class="s2">&quot;raw_csum_coords&quot;</span><span class="p">:</span> <span class="n">raw_csum_coords</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">421</span>            <span class="s2">&quot;livetimefile&quot;</span><span class="p">:</span> <span class="n">livetimefile</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">422</span>            <span class="s2">&quot;burstfile&quot;</span><span class="p">:</span> <span class="n">burstfile</span><span class="p">}</span>
+<span class="ne">--&gt; </span><span class="mi">424</span> <span class="n">assoc</span> <span class="o">=</span> <span class="n">Association</span><span class="p">(</span><span class="n">asntable</span><span class="p">,</span> <span class="n">outdir</span><span class="p">,</span> <span class="n">cl_args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">425</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">assoc</span><span class="o">.</span><span class="n">obs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">426</span>     <span class="k">return</span> <span class="n">NO_DATA_TO_CALIBRATE</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/calcos/calcos.py:794,</span> in <span class="ni">Association.__init__</span><span class="nt">(self, asntable, outdir, cl_args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">792</span> <span class="bp">self</span><span class="o">.</span><span class="n">compareRefFiles</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">793</span> <span class="bp">self</span><span class="o">.</span><span class="n">compareSwitches</span><span class="p">()</span>
+<span class="ne">--&gt; </span><span class="mi">794</span> <span class="bp">self</span><span class="o">.</span><span class="n">missingRefFiles</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">795</span> <span class="bp">self</span><span class="o">.</span><span class="n">checkGeoSwitches</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">796</span> <span class="bp">self</span><span class="o">.</span><span class="n">globalSwitches</span><span class="p">()</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/calcos/calcos.py:1610,</span> in <span class="ni">Association.missingRefFiles</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1606</span>         <span class="n">cosutil</span><span class="o">.</span><span class="n">printMsg</span><span class="p">(</span><span class="n">bad_version</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+<span class="g g-Whitespace">   </span><span class="mi">1608</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">missing</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">wrong_filetype</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">or</span> \
+<span class="g g-Whitespace">   </span><span class="mi">1609</span>    <span class="nb">len</span><span class="p">(</span><span class="n">bad_version</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1610</span>     <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">()</span>
+
+<span class="ne">RuntimeError</span>: 
 </pre></div>
 </div>
 </div>
@@ -1119,8 +1191,54 @@ In the next two cells, we will setup an environment of reference files, download
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: UnitsWarning: &#39;erg /s /cm**2 /angstrom&#39; contains multiple slashes, which is discouraged by the FITS standard [astropy.units.format.generic]
-WARNING: UnitsWarning: &#39;count /s /pixel&#39; contains multiple slashes, which is discouraged by the FITS standard [astropy.units.format.generic]
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Read in the wvln, flux, flux error of the *UNfiltered* spectrum file</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">unfilt_tab</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;./output/full_data_outs/&quot;</span><span class="o">+</span><span class="n">filename_root</span><span class="o">+</span><span class="s2">&quot;_x1dsum.fits&quot;</span><span class="p">)[</span><span class="s1">&#39;WAVELENGTH&#39;</span><span class="p">,</span><span class="s1">&#39;FLUX&#39;</span><span class="p">,</span> <span class="s1">&#39;ERROR&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Read in the wvln, flux, flux error of the *filtered* spectrum file</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">filt_tab</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;./output/filtered_data_outs/filtered_x1dsum.fits&quot;</span><span class="p">)[</span><span class="s1">&#39;WAVELENGTH&#39;</span><span class="p">,</span><span class="s1">&#39;FLUX&#39;</span><span class="p">,</span> <span class="s1">&#39;ERROR&#39;</span><span class="p">]</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/astropy/table/connect.py:62,</span> in <span class="ni">TableRead.__call__</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span> <span class="n">units</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;units&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span> <span class="n">descriptions</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;descriptions&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">62</span> <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span> <span class="c1"># For some readers (e.g., ascii.ecsv), the returned `out` class is not</span>
+<span class="g g-Whitespace">     </span><span class="mi">65</span> <span class="c1"># guaranteed to be the same as the desired output `cls`.  If so,</span>
+<span class="g g-Whitespace">     </span><span class="mi">66</span> <span class="c1"># try coercing to desired class without copying (io.registry.read</span>
+<span class="g g-Whitespace">     </span><span class="mi">67</span> <span class="c1"># would normally do a copy).  The normal case here is swapping</span>
+<span class="g g-Whitespace">     </span><span class="mi">68</span> <span class="c1"># Table &lt;=&gt; QTable.</span>
+<span class="g g-Whitespace">     </span><span class="mi">69</span> <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">out</span><span class="o">.</span><span class="vm">__class__</span><span class="p">:</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/astropy/io/registry/core.py:203,</span> in <span class="ni">UnifiedInputRegistry.read</span><span class="nt">(self, cls, format, cache, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">199</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">200</span>     <span class="n">ctx</span> <span class="o">=</span> <span class="n">get_readable_fileobj</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">201</span>         <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;binary&quot;</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="n">cache</span>
+<span class="g g-Whitespace">    </span><span class="mi">202</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">203</span>     <span class="n">fileobj</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="fm">__enter__</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">204</span> <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="k">raise</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/contextlib.py:135,</span> in <span class="ni">_GeneratorContextManager.__enter__</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span> <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwds</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span>
+<span class="g g-Whitespace">    </span><span class="mi">134</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">135</span>     <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">136</span> <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">137</span>     <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;generator didn&#39;t yield&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/astropy/utils/data.py:353,</span> in <span class="ni">get_readable_fileobj</span><span class="nt">(name_or_obj, encoding, cache, show_progress, remote_timeout, sources, http_headers, use_fsspec, fsspec_kwargs, close_files)</span>
+<span class="g g-Whitespace">    </span><span class="mi">344</span> <span class="k">if</span> <span class="n">is_url</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">345</span>     <span class="n">name_or_obj</span> <span class="o">=</span> <span class="n">download_file</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">346</span>         <span class="n">name_or_obj</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">347</span>         <span class="n">cache</span><span class="o">=</span><span class="n">cache</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">351</span>         <span class="n">http_headers</span><span class="o">=</span><span class="n">http_headers</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">352</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">353</span> <span class="n">fileobj</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">FileIO</span><span class="p">(</span><span class="n">name_or_obj</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">354</span> <span class="k">if</span> <span class="n">is_url</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">cache</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">355</span>     <span class="n">delete_fds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fileobj</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./output/full_data_outs/lbry01i6q_x1dsum.fits&#39;
 </pre></div>
 </div>
 </div>
@@ -1163,9 +1281,6 @@ WARNING: UnitsWarning: &#39;count /s /pixel&#39; contains multiple slashes, whic
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/DayNight_35_0.png" src="../../../_images/DayNight_35_0.png" />
-</div>
 </div>
 <p><strong>We can see that the filtered spectrum largely follows the unfiltered spectrum; however, we significantly reduce the Lyman-alpha light from airglow around 1215 Å.</strong></p>
 <p>Because we filter out many of the datapoints used to calculate the spectrum, we can see a significant reduction in precision in flux space (visible as a <strong>banding</strong> in the y-axis). This can come about because with few datapoints, the bands represent wavelengths which received (0,1,2…n) discrete photons. The banding can sometimes be more pronounced at longer, redder wavelengths.</p>
@@ -1188,9 +1303,6 @@ WARNING: UnitsWarning: &#39;count /s /pixel&#39; contains multiple slashes, whic
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">plotsdir</span> <span class="o">/</span> <span class="s1">&#39;ebar_compare_spectra_sunalt.png&#39;</span><span class="p">),</span> <span class="n">dpi</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/DayNight_37_0.png" src="../../../_images/DayNight_37_0.png" />
 </div>
 </div>
 <p><strong>With substantially fewer datapoints, our filtered dataset has larger errors.</strong></p>

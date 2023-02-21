@@ -17,21 +17,13 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-os.environ['CRDS_SERVER_URL'] = 'https://hst-crds.stsci.edu'
-os.environ['CRDS_PATH'] = os.path.abspath(os.path.join('.', 'reference_files'))
-
-subprocess.check_output('crds bestrefs --files ua0605*_c0m.fits --sync-references=1 --update-bestrefs', shell=True, stderr=subprocess.DEVNULL)
-
-os.environ['uref'] = os.path.abspath(os.path.join('.', 'reference_files', 'references', 'hst', 'wfpc2')) + os.path.sep
+subprocess.check_output('crds bestrefs --files ib2j02n5q_flc.fits --sync-references=1 --update-bestrefs', shell=True, stderr=subprocess.DEVNULL)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mCalledProcessError[0m                        Traceback (most recent call last)
-Cell [0;32mIn[3], line 4[0m
-[1;32m      1[0m os[38;5;241m.[39menviron[[38;5;124m'[39m[38;5;124mCRDS_SERVER_URL[39m[38;5;124m'[39m] [38;5;241m=[39m [38;5;124m'[39m[38;5;124mhttps://hst-crds.stsci.edu[39m[38;5;124m'[39m
-[1;32m      2[0m os[38;5;241m.[39menviron[[38;5;124m'[39m[38;5;124mCRDS_PATH[39m[38;5;124m'[39m] [38;5;241m=[39m os[38;5;241m.[39mpath[38;5;241m.[39mabspath(os[38;5;241m.[39mpath[38;5;241m.[39mjoin([38;5;124m'[39m[38;5;124m.[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mreference_files[39m[38;5;124m'[39m))
-[0;32m----> 4[0m [43msubprocess[49m[38;5;241;43m.[39;49m[43mcheck_output[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mcrds bestrefs --files ua0605*_c0m.fits --sync-references=1 --update-bestrefs[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43mshell[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[43mstderr[49m[38;5;241;43m=[39;49m[43msubprocess[49m[38;5;241;43m.[39;49m[43mDEVNULL[49m[43m)[49m
-[1;32m      6[0m os[38;5;241m.[39menviron[[38;5;124m'[39m[38;5;124muref[39m[38;5;124m'[39m] [38;5;241m=[39m os[38;5;241m.[39mpath[38;5;241m.[39mabspath(os[38;5;241m.[39mpath[38;5;241m.[39mjoin([38;5;124m'[39m[38;5;124m.[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mreference_files[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mreferences[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mhst[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mwfpc2[39m[38;5;124m'[39m)) [38;5;241m+[39m os[38;5;241m.[39mpath[38;5;241m.[39msep
+Cell [0;32mIn[5], line 1[0m
+[0;32m----> 1[0m [43msubprocess[49m[38;5;241;43m.[39;49m[43mcheck_output[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mcrds bestrefs --files ib2j02n5q_flc.fits --sync-references=1 --update-bestrefs[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43mshell[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[43mstderr[49m[38;5;241;43m=[39;49m[43msubprocess[49m[38;5;241;43m.[39;49m[43mDEVNULL[49m[43m)[49m
 
 File [0;32m/usr/share/miniconda/lib/python3.10/subprocess.py:421[0m, in [0;36mcheck_output[0;34m(timeout, *popenargs, **kwargs)[0m
 [1;32m    418[0m         empty [38;5;241m=[39m [38;5;124mb[39m[38;5;124m'[39m[38;5;124m'[39m
@@ -46,6 +38,6 @@ File [0;32m/usr/share/miniconda/lib/python3.10/subprocess.py:526[0m, in [0;36
 [1;32m    527[0m                                  output[38;5;241m=[39mstdout, stderr[38;5;241m=[39mstderr)
 [1;32m    528[0m [38;5;28;01mreturn[39;00m CompletedProcess(process[38;5;241m.[39margs, retcode, stdout, stderr)
 
-[0;31mCalledProcessError[0m: Command 'crds bestrefs --files ua0605*_c0m.fits --sync-references=1 --update-bestrefs' returned non-zero exit status 127.
-CalledProcessError: Command 'crds bestrefs --files ua0605*_c0m.fits --sync-references=1 --update-bestrefs' returned non-zero exit status 127.
+[0;31mCalledProcessError[0m: Command 'crds bestrefs --files ib2j02n5q_flc.fits --sync-references=1 --update-bestrefs' returned non-zero exit status 127.
+CalledProcessError: Command 'crds bestrefs --files ib2j02n5q_flc.fits --sync-references=1 --update-bestrefs' returned non-zero exit status 127.
 

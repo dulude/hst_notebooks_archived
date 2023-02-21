@@ -163,6 +163,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../align_to_catalogs/align_to_catalogs.html">
+   Aligning HST images to an absolute reference catalog
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../align_multiple_visits/align_multiple_visits.html">
    Optimizing Image Alignment for Multiple HST Visits
   </a>
@@ -478,16 +483,15 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">11</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">import</span> <span class="nn">pyregion</span>
-<span class="ne">---&gt; </span><span class="mi">11</span> <span class="kn">import</span> <span class="nn">acstools</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="kn">from</span> <span class="nn">acstools.satdet</span> <span class="kn">import</span> <span class="n">detsat</span><span class="p">,</span> <span class="n">make_mask</span><span class="p">,</span> <span class="n">update_dq</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">from</span> <span class="nn">drizzlepac.astrodrizzle</span> <span class="kn">import</span> <span class="n">AstroDrizzle</span> <span class="k">as</span> <span class="n">adriz</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;acstools&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following task in the stsci.skypac package can be run with TEAL:
+                                    skymatch                                    
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following tasks in the drizzlepac package can be run with TEAL:
+    astrodrizzle       config_testbed      imagefindpars           mapreg       
+       photeq            pixreplace           pixtopix            pixtosky      
+  refimagefindpars       resetbits          runastrodriz          skytopix      
+     tweakback            tweakreg           updatenpol
 </pre></div>
 </div>
 </div>
@@ -509,38 +513,176 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/Users/dulude/anaconda2/envs/py_3_8_10/lib/python3.8/site-packages/astroquery/mast/discovery_portal.py:410: InputWarning: Filter obstype does not exist. This filter will be skipped.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astroquery/mast/discovery_portal.py:410: InputWarning: Filter obstype does not exist. This filter will be skipped.
   warnings.warn(&quot;Filter {} does not exist. This filter will be skipped.&quot;.format(colname), InputWarning)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7_drc.jpg to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7/hst_13498_b7_acs_wfc_f814w_jc8mb7_drc.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7sq_drc.jpg to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7sq/hst_13498_b7_acs_wfc_f814w_jc8mb7sq_drc.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7sx_drc.jpg to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7sx/hst_13498_b7_acs_wfc_f814w_jc8mb7sx_drc.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7t5_drc.jpg to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7t5/hst_13498_b7_acs_wfc_f814w_jc8mb7t5_drc.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7tc_drc.jpg to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7tc/hst_13498_b7_acs_wfc_f814w_jc8mb7tc_drc.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_total_jc8mb7_drc.jpg to ./mastDownload/HST/hst_13498_b7_acs_wfc_total_jc8mb7/hst_13498_b7_acs_wfc_total_jc8mb7_drc.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7020_drc.jpg to ./mastDownload/HST/jc8mb7020/jc8mb7020_drc.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7020_drz.jpg to ./mastDownload/HST/jc8mb7020/jc8mb7020_drz.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7sqq_raw.jpg to ./mastDownload/HST/jc8mb7sqq/jc8mb7sqq_raw.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7sqq_flc.jpg to ./mastDownload/HST/jc8mb7sqq/jc8mb7sqq_flc.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7sqq_flt.jpg to ./mastDownload/HST/jc8mb7sqq/jc8mb7sqq_flt.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7sxq_raw.jpg to ./mastDownload/HST/jc8mb7sxq/jc8mb7sxq_raw.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7sxq_flc.jpg to ./mastDownload/HST/jc8mb7sxq/jc8mb7sxq_flc.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7sxq_flt.jpg to ./mastDownload/HST/jc8mb7sxq/jc8mb7sxq_flt.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7t5q_raw.jpg to ./mastDownload/HST/jc8mb7t5q/jc8mb7t5q_raw.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7t5q_flc.jpg to ./mastDownload/HST/jc8mb7t5q/jc8mb7t5q_flc.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7t5q_flt.jpg to ./mastDownload/HST/jc8mb7t5q/jc8mb7t5q_flt.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7tcq_raw.jpg to ./mastDownload/HST/jc8mb7tcq/jc8mb7tcq_raw.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7tcq_flc.jpg to ./mastDownload/HST/jc8mb7tcq/jc8mb7tcq_flc.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7tcq_flt.jpg to ./mastDownload/HST/jc8mb7tcq/jc8mb7tcq_flt.jpg ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7sq_flc.fits to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7sq/hst_13498_b7_acs_wfc_f814w_jc8mb7sq_flc.fits ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7sx_flc.fits to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7sx/hst_13498_b7_acs_wfc_f814w_jc8mb7sx_flc.fits ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7t5_flc.fits to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7t5/hst_13498_b7_acs_wfc_f814w_jc8mb7t5_flc.fits ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7tc_flc.fits to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7tc/hst_13498_b7_acs_wfc_f814w_jc8mb7tc_flc.fits ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7sqq_flc.fits to ./mastDownload/HST/jc8mb7sqq/jc8mb7sqq_flc.fits ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7sxq_flc.fits to ./mastDownload/HST/jc8mb7sxq/jc8mb7sxq_flc.fits ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7t5q_flc.fits to ./mastDownload/HST/jc8mb7t5q/jc8mb7t5q_flc.fits ... [Done]
-Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7tcq_flc.fits to ./mastDownload/HST/jc8mb7tcq/jc8mb7tcq_flc.fits ... [Done]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7_drc.jpg to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7/hst_13498_b7_acs_wfc_f814w_jc8mb7_drc.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7sq_drc.jpg to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7sq/hst_13498_b7_acs_wfc_f814w_jc8mb7sq_drc.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7sx_drc.jpg to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7sx/hst_13498_b7_acs_wfc_f814w_jc8mb7sx_drc.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7t5_drc.jpg to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7t5/hst_13498_b7_acs_wfc_f814w_jc8mb7t5_drc.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7tc_drc.jpg to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7tc/hst_13498_b7_acs_wfc_f814w_jc8mb7tc_drc.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_total_jc8mb7_drc.jpg to ./mastDownload/HST/hst_13498_b7_acs_wfc_total_jc8mb7/hst_13498_b7_acs_wfc_total_jc8mb7_drc.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7020_drc.jpg to ./mastDownload/HST/jc8mb7020/jc8mb7020_drc.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7020_drz.jpg to ./mastDownload/HST/jc8mb7020/jc8mb7020_drz.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7sqq_raw.jpg to ./mastDownload/HST/jc8mb7sqq/jc8mb7sqq_raw.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7sqq_flc.jpg to ./mastDownload/HST/jc8mb7sqq/jc8mb7sqq_flc.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7sqq_flt.jpg to ./mastDownload/HST/jc8mb7sqq/jc8mb7sqq_flt.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7sxq_raw.jpg to ./mastDownload/HST/jc8mb7sxq/jc8mb7sxq_raw.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7sxq_flc.jpg to ./mastDownload/HST/jc8mb7sxq/jc8mb7sxq_flc.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7sxq_flt.jpg to ./mastDownload/HST/jc8mb7sxq/jc8mb7sxq_flt.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7t5q_raw.jpg to ./mastDownload/HST/jc8mb7t5q/jc8mb7t5q_raw.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7t5q_flc.jpg to ./mastDownload/HST/jc8mb7t5q/jc8mb7t5q_flc.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7t5q_flt.jpg to ./mastDownload/HST/jc8mb7t5q/jc8mb7t5q_flt.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7tcq_raw.jpg to ./mastDownload/HST/jc8mb7tcq/jc8mb7tcq_raw.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7tcq_flc.jpg to ./mastDownload/HST/jc8mb7tcq/jc8mb7tcq_flc.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7tcq_flt.jpg to ./mastDownload/HST/jc8mb7tcq/jc8mb7tcq_flt.jpg ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7sq_flc.fits to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7sq/hst_13498_b7_acs_wfc_f814w_jc8mb7sq_flc.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7sx_flc.fits to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7sx/hst_13498_b7_acs_wfc_f814w_jc8mb7sx_flc.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7t5_flc.fits to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7t5/hst_13498_b7_acs_wfc_f814w_jc8mb7t5_flc.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_13498_b7_acs_wfc_f814w_jc8mb7tc_flc.fits to ./mastDownload/HST/hst_13498_b7_acs_wfc_f814w_jc8mb7tc/hst_13498_b7_acs_wfc_f814w_jc8mb7tc_flc.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7sqq_flc.fits to ./mastDownload/HST/jc8mb7sqq/jc8mb7sqq_flc.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7sxq_flc.fits to ./mastDownload/HST/jc8mb7sxq/jc8mb7sxq_flc.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7t5q_flc.fits to ./mastDownload/HST/jc8mb7t5q/jc8mb7t5q_flc.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/jc8mb7tcq_flc.fits to ./mastDownload/HST/jc8mb7tcq/jc8mb7tcq_flc.fits ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
 </pre></div>
 </div>
 </div>
@@ -585,7 +727,7 @@ Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/produ
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fabe9049850&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f664ecb7d90&gt;
 </pre></div>
 </div>
 <img alt="../../../_images/mask_satellite_10_1.png" src="../../../_images/mask_satellite_10_1.png" />
@@ -607,16 +749,17 @@ Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/produ
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/Users/dulude/anaconda2/envs/py_3_8_10/lib/python3.8/site-packages/acstools/satdet.py:216: FutureWarning: in_place argument is deprecated and will be removed in version 1.0. To avoid this warning, please do not use the in_place argument. Please see remove_small_objects documentation for more details. Please use out argument instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/acstools/satdet.py:216: FutureWarning: in_place argument is deprecated and will be removed in version 1.0. To avoid this warning, please do not use the in_place argument. Please see remove_small_objects documentation for more details. Please use out argument instead.
   morph.remove_small_objects(edge, min_size=small_edge, connectivity=8,
-
-WARNING:py.warnings:/Users/dulude/anaconda2/envs/py_3_8_10/lib/python3.8/site-packages/acstools/satdet.py:287: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/acstools/satdet.py:287: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
   ang, num = stats.mode(round_angle)
 </pre></div>
 </div>
-<img alt="../../../_images/mask_satellite_12_1.png" src="../../../_images/mask_satellite_12_1.png" />
 <img alt="../../../_images/mask_satellite_12_2.png" src="../../../_images/mask_satellite_12_2.png" />
 <img alt="../../../_images/mask_satellite_12_3.png" src="../../../_images/mask_satellite_12_3.png" />
+<img alt="../../../_images/mask_satellite_12_4.png" src="../../../_images/mask_satellite_12_4.png" />
 </div>
 </div>
 <p>The diagnostic plots can be used to verify that the satellite was properly detected. Changing parameters to adjust this task is beyond the scope of this notebook, but please consult the package documentation indicated above for instructions on how to do this.</p>
@@ -634,21 +777,27 @@ WARNING:py.warnings:/Users/dulude/anaconda2/envs/py_3_8_10/lib/python3.8/site-pa
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rotation: -17.48053740452633
-No good profile found for counter=28. Start moving left from starting point.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No good profile found for counter=28. Start moving left from starting point.
 z=[] is less than 1, subr shape=(150, 200), we are done
-Run time: 2.36147403717041 s
-DQ flag value is 16384
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Run time: 2.7953038215637207 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DQ flag value is 16384
 Input... flagged NPIX=235137
 Existing flagged NPIX=0
 Newly... flagged NPIX=235137
 jc8mb7tcq_flc.fits[6] updated
 </pre></div>
 </div>
-<img alt="../../../_images/mask_satellite_14_1.png" src="../../../_images/mask_satellite_14_1.png" />
-<img alt="../../../_images/mask_satellite_14_2.png" src="../../../_images/mask_satellite_14_2.png" />
-<img alt="../../../_images/mask_satellite_14_3.png" src="../../../_images/mask_satellite_14_3.png" />
 <img alt="../../../_images/mask_satellite_14_4.png" src="../../../_images/mask_satellite_14_4.png" />
 <img alt="../../../_images/mask_satellite_14_5.png" src="../../../_images/mask_satellite_14_5.png" />
+<img alt="../../../_images/mask_satellite_14_6.png" src="../../../_images/mask_satellite_14_6.png" />
+<img alt="../../../_images/mask_satellite_14_7.png" src="../../../_images/mask_satellite_14_7.png" />
+<img alt="../../../_images/mask_satellite_14_8.png" src="../../../_images/mask_satellite_14_8.png" />
 </div>
 </div>
 <p>With the satellite masked, the images can be drizzled again. For brevity, only the top chip (SCI,2) of the image stack will be drizzled together to make a combined product. This is controlled in <code class="docutils literal notranslate"><span class="pre">AstroDrizzle</span></code> via the <code class="docutils literal notranslate"><span class="pre">group</span></code> parameter.</p>
@@ -671,25 +820,28 @@ jc8mb7tcq_flc.fits[6] updated
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No trailer file created...
 AstroDrizzle log file: final.tra
-AstroDrizzle Version 3.5.0 started at: 13:59:38.733 (20/10/2022)
+AstroDrizzle Version 3.5.1 started at: 17:11:00.992 (21/02/2023)
 
-==== Processing Step  Initialization  started at  13:59:38.733 (20/10/2022)
-
-##############################################################################
+==== Processing Step  Initialization  started at  17:11:00.992 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>##############################################################################
 #                                                                            #
 # “minmed” is highly recommended for three images,                           #
 #  and is good for four to six images,                                       #
 #  but should be avoided for ten or more images.                             #
 #                                                                            #
 ##############################################################################
-WCS Keywords
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WCS Keywords
 
 Number of WCS axes: 2
 CTYPE : &#39;RA---TAN&#39;  &#39;DEC--TAN&#39;  
-CRVAL : 109.37334876656041  37.74909579613787  
+CRVAL : 109.37334876656043  37.74909579613786  
 CRPIX : 2060.5  1128.0  
-CD1_1 CD1_2  : -2.409178474225977e-06  -1.3678343965817917e-05  
-CD2_1 CD2_2  : -1.3678343965817917e-05  2.409178474225977e-06  
+CD1_1 CD1_2  : -2.4091784742259776e-06  -1.3678343965817917e-05  
+CD2_1 CD2_2  : -1.3678343965817917e-05  2.4091784742259776e-06  
 NAXIS : 4121  2256
 ********************************************************************************
 *
@@ -699,13 +851,19 @@ NAXIS : 4121  2256
 *  Cores available:         1
 *
 ********************************************************************************
-==== Processing Step Initialization finished at 13:59:43.304 (20/10/2022)
-==== Processing Step  Static Mask  started at  13:59:43.304 (20/10/2022)
-
-==== Processing Step Static Mask finished at 13:59:45.135 (20/10/2022)
-==== Processing Step  Subtract Sky  started at  13:59:45.135 (20/10/2022)
-
-***** skymatch started on 2022-10-20 13:59:45.947426
+==== Processing Step Initialization finished at 17:11:04.459 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Static Mask  started at  17:11:04.460 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Static Mask finished at 17:11:06.353 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Subtract Sky  started at  17:11:06.35 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>***** skymatch started on 2023-02-21 17:11:06.924377
       Version 1.0.9
 
 &#39;skymatch&#39; task will apply computed sky differences to input image file(s).
@@ -805,116 +963,174 @@ NOTE: Computed sky values WILL NOT be subtracted from image data (&#39;subtracts
 
 
 -----  Computing sky values requested image extensions (detector chips):  -----
-
-   *   Image:   &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7sq_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 45.05258294600474 (brightness units)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   *   Image:   &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7sq_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 45.05258294600474 (brightness units)
        Sky change (data units):
       - EXT = &#39;SCI&#39;,2   delta(MDRIZSKY) = 133.468   NEW MDRIZSKY = 133.468
-   *   Image:   &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7sx_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 44.16889591439688 (brightness units)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   *   Image:   &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7sx_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 44.16889591439688 (brightness units)
        Sky change (data units):
       - EXT = &#39;SCI&#39;,2   delta(MDRIZSKY) = 141.893   NEW MDRIZSKY = 141.893
-   *   Image:   &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7t5_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 44.574929322714 (brightness units)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   *   Image:   &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7t5_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 44.574929322714 (brightness units)
        Sky change (data units):
       - EXT = &#39;SCI&#39;,2   delta(MDRIZSKY) = 143.197   NEW MDRIZSKY = 143.197
-   *   Image:   &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7tc_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 42.94789830070525 (brightness units)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   *   Image:   &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7tc_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 42.94789830070525 (brightness units)
        Sky change (data units):
       - EXT = &#39;SCI&#39;,2   delta(MDRIZSKY) = 137.97   NEW MDRIZSKY = 137.97
-   *   Image:   &#39;jc8mb7sqq_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 45.05258294600474 (brightness units)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   *   Image:   &#39;jc8mb7sqq_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 45.05258294600474 (brightness units)
        Sky change (data units):
       - EXT = &#39;SCI&#39;,2   delta(MDRIZSKY) = 133.468   NEW MDRIZSKY = 133.468
-   *   Image:   &#39;jc8mb7sxq_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 44.16889591439688 (brightness units)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   *   Image:   &#39;jc8mb7sxq_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 44.16889591439688 (brightness units)
        Sky change (data units):
       - EXT = &#39;SCI&#39;,2   delta(MDRIZSKY) = 141.893   NEW MDRIZSKY = 141.893
-   *   Image:   &#39;jc8mb7t5q_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 44.574929322714 (brightness units)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   *   Image:   &#39;jc8mb7t5q_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 44.574929322714 (brightness units)
        Sky change (data units):
       - EXT = &#39;SCI&#39;,2   delta(MDRIZSKY) = 143.197   NEW MDRIZSKY = 143.197
-   *   Image:   &#39;jc8mb7tcq_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 42.91513405885213 (brightness units)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   *   Image:   &#39;jc8mb7tcq_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 42.91513405885213 (brightness units)
        Sky change (data units):
       - EXT = &#39;SCI&#39;,2   delta(MDRIZSKY) = 137.865   NEW MDRIZSKY = 137.865
-***** skymatch ended on 2022-10-20 13:59:49.099543
-TOTAL RUN TIME: 0:00:03.152117
-==== Processing Step Subtract Sky finished at 13:59:49.774 (20/10/2022)
-==== Processing Step  Separate Drizzle  started at  13:59:49.775 (20/10/2022)
-
-WCS Keywords
+***** skymatch ended on 2023-02-21 17:11:10.362809
+TOTAL RUN TIME: 0:00:03.438432
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Subtract Sky finished at 17:11:10.672 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Separate Drizzle  started at  17:11:10.674 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WCS Keywords
 
 Number of WCS axes: 2
 CTYPE : &#39;RA---TAN&#39;  &#39;DEC--TAN&#39;  
-CRVAL : 109.37334876656041  37.74909579613787  
+CRVAL : 109.37334876656043  37.74909579613786  
 CRPIX : 2060.5  1128.0  
-CD1_1 CD1_2  : -2.409178474225977e-06  -1.3678343965817917e-05  
-CD2_1 CD2_2  : -1.3678343965817917e-05  2.409178474225977e-06  
+CD1_1 CD1_2  : -2.4091784742259776e-06  -1.3678343965817917e-05  
+CD2_1 CD2_2  : -1.3678343965817917e-05  2.4091784742259776e-06  
 NAXIS : 4121  2256
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/Users/dulude/anaconda2/envs/py_3_8_10/lib/python3.8/site-packages/astropy/io/fits/card.py:1008: VerifyWarning: Card is too long, comment will be truncated.
-  warnings.warn(&#39;Card is too long, comment will be truncated.&#39;,
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
+  warnings.warn(
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7sq_single_sci.fits
 Deleted all instances of WCS with key A in extensions [0]
-Deleted all instances of WCS with key B in extensions [0]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Deleted all instances of WCS with key B in extensions [0]
 Deleted all instances of WCS with key C in extensions [0]
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7sq_single_sci.fits
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7sq_single_wht.fits
--Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7sx_single_sci.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7sx_single_sci.fits
 Deleted all instances of WCS with key A in extensions [0]
 Deleted all instances of WCS with key B in extensions [0]
 Deleted all instances of WCS with key C in extensions [0]
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7sx_single_sci.fits
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7sx_single_wht.fits
--Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7t5_single_sci.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7t5_single_sci.fits
 Deleted all instances of WCS with key A in extensions [0]
 Deleted all instances of WCS with key B in extensions [0]
 Deleted all instances of WCS with key C in extensions [0]
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7t5_single_sci.fits
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7t5_single_wht.fits
--Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7tc_single_sci.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7tc_single_sci.fits
 Deleted all instances of WCS with key A in extensions [0]
 Deleted all instances of WCS with key B in extensions [0]
 Deleted all instances of WCS with key C in extensions [0]
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7tc_single_sci.fits
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7tc_single_wht.fits
--Generating simple FITS output: jc8mb7sqq_single_sci.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: jc8mb7sqq_single_sci.fits
 Deleted all instances of WCS with key A in extensions [0]
 Deleted all instances of WCS with key B in extensions [0]
 Writing out image to disk: jc8mb7sqq_single_sci.fits
 Writing out image to disk: jc8mb7sqq_single_wht.fits
--Generating simple FITS output: jc8mb7sxq_single_sci.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: jc8mb7sxq_single_sci.fits
 Deleted all instances of WCS with key A in extensions [0]
 Deleted all instances of WCS with key B in extensions [0]
 Writing out image to disk: jc8mb7sxq_single_sci.fits
 Writing out image to disk: jc8mb7sxq_single_wht.fits
--Generating simple FITS output: jc8mb7t5q_single_sci.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: jc8mb7t5q_single_sci.fits
 Deleted all instances of WCS with key A in extensions [0]
 Deleted all instances of WCS with key B in extensions [0]
 Writing out image to disk: jc8mb7t5q_single_sci.fits
 Writing out image to disk: jc8mb7t5q_single_wht.fits
--Generating simple FITS output: jc8mb7tcq_single_sci.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: jc8mb7tcq_single_sci.fits
 Deleted all instances of WCS with key A in extensions [0]
 Deleted all instances of WCS with key B in extensions [0]
 Writing out image to disk: jc8mb7tcq_single_sci.fits
 Writing out image to disk: jc8mb7tcq_single_wht.fits
-==== Processing Step Separate Drizzle finished at 14:00:01.217 (20/10/2022)
-==== Processing Step  Create Median  started at  14:00:01.218 (20/10/2022)
-
-reference sky value for image &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7sq_flc.fits&#39; is 133.46827697753906
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Separate Drizzle finished at 17:11:20.915 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Create Median  started at  17:11:20.916 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>reference sky value for image &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7sq_flc.fits&#39; is 133.46827697753906
 reference sky value for image &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7sx_flc.fits&#39; is 141.892578125
-reference sky value for image &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7t5_flc.fits&#39; is 143.19696044921875
-reference sky value for image &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7tc_flc.fits&#39; is 137.97012329101562
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>reference sky value for image &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7t5_flc.fits&#39; is 143.19696044921875
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>reference sky value for image &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7tc_flc.fits&#39; is 137.97012329101562
 reference sky value for image &#39;jc8mb7sqq_flc.fits&#39; is 133.46827697753906
-reference sky value for image &#39;jc8mb7sxq_flc.fits&#39; is 141.892578125
-reference sky value for image &#39;jc8mb7t5q_flc.fits&#39; is 143.19696044921875
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>reference sky value for image &#39;jc8mb7sxq_flc.fits&#39; is 141.892578125
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>reference sky value for image &#39;jc8mb7t5q_flc.fits&#39; is 143.19696044921875
 reference sky value for image &#39;jc8mb7tcq_flc.fits&#39; is 137.8648681640625
-Saving output median image to: &#39;automatic_med.fits&#39;
-==== Processing Step Create Median finished at 14:00:22.916 (20/10/2022)
-==== Processing Step  Blot  started at  14:00:22.917 (20/10/2022)
-
-    Blot: creating blotted image:  hst_13498_b7_acs_wfc_f814w_jc8mb7sq_flc.fits[sci,2]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/stsci/image/combine.py:22: RuntimeWarning: invalid value encountered in cast
+  _combine(arrays, out, nlow, nhigh, badmasks, funcstr)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saving output median image to: &#39;automatic_med.fits&#39;
+==== Processing Step Create Median finished at 17:11:26.413 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Blot  started at  17:11:26.414 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    Blot: creating blotted image:  hst_13498_b7_acs_wfc_f814w_jc8mb7sq_flc.fits[sci,2]
 Using default C-based coordinate transformation...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/Users/dulude/anaconda2/envs/py_3_8_10/lib/python3.8/site-packages/astropy/io/fits/card.py:1008: VerifyWarning: Card is too long, comment will be truncated.
-  warnings.warn(&#39;Card is too long, comment will be truncated.&#39;,
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
+  warnings.warn(
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7sq_sci2_blt.fits
@@ -923,8 +1139,8 @@ Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7sq_sci2_blt.fits
 Using default C-based coordinate transformation...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/Users/dulude/anaconda2/envs/py_3_8_10/lib/python3.8/site-packages/astropy/io/fits/card.py:1008: VerifyWarning: Card is too long, comment will be truncated.
-  warnings.warn(&#39;Card is too long, comment will be truncated.&#39;,
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
+  warnings.warn(
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7sx_sci2_blt.fits
@@ -933,8 +1149,8 @@ Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7sx_sci2_blt.fits
 Using default C-based coordinate transformation...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/Users/dulude/anaconda2/envs/py_3_8_10/lib/python3.8/site-packages/astropy/io/fits/card.py:1008: VerifyWarning: Card is too long, comment will be truncated.
-  warnings.warn(&#39;Card is too long, comment will be truncated.&#39;,
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
+  warnings.warn(
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7t5_sci2_blt.fits
@@ -943,55 +1159,83 @@ Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7t5_sci2_blt.fits
 Using default C-based coordinate transformation...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/Users/dulude/anaconda2/envs/py_3_8_10/lib/python3.8/site-packages/astropy/io/fits/card.py:1008: VerifyWarning: Card is too long, comment will be truncated.
-  warnings.warn(&#39;Card is too long, comment will be truncated.&#39;,
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
+  warnings.warn(
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7tc_sci2_blt.fits
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7tc_sci2_blt.fits
     Blot: creating blotted image:  jc8mb7sqq_flc.fits[sci,2]
 Using default C-based coordinate transformation...
--Generating simple FITS output: jc8mb7sqq_sci2_blt.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: jc8mb7sqq_sci2_blt.fits
 Writing out image to disk: jc8mb7sqq_sci2_blt.fits
     Blot: creating blotted image:  jc8mb7sxq_flc.fits[sci,2]
 Using default C-based coordinate transformation...
--Generating simple FITS output: jc8mb7sxq_sci2_blt.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: jc8mb7sxq_sci2_blt.fits
 Writing out image to disk: jc8mb7sxq_sci2_blt.fits
     Blot: creating blotted image:  jc8mb7t5q_flc.fits[sci,2]
 Using default C-based coordinate transformation...
--Generating simple FITS output: jc8mb7t5q_sci2_blt.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: jc8mb7t5q_sci2_blt.fits
 Writing out image to disk: jc8mb7t5q_sci2_blt.fits
     Blot: creating blotted image:  jc8mb7tcq_flc.fits[sci,2]
 Using default C-based coordinate transformation...
--Generating simple FITS output: jc8mb7tcq_sci2_blt.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: jc8mb7tcq_sci2_blt.fits
 Writing out image to disk: jc8mb7tcq_sci2_blt.fits
-==== Processing Step Blot finished at 14:00:35.325 (20/10/2022)
-==== Processing Step  Driz_CR  started at  14:00:35.326 (20/10/2022)
-
-Creating output: hst_13498_b7_acs_wfc_f814w_jc8mb7sq_sci2_crmask.fits
-Creating output: hst_13498_b7_acs_wfc_f814w_jc8mb7sx_sci2_crmask.fits
-Creating output: hst_13498_b7_acs_wfc_f814w_jc8mb7t5_sci2_crmask.fits
-Creating output: hst_13498_b7_acs_wfc_f814w_jc8mb7tc_sci2_crmask.fits
-Creating output: jc8mb7sqq_sci2_crmask.fits
-Creating output: jc8mb7sxq_sci2_crmask.fits
-Creating output: jc8mb7t5q_sci2_crmask.fits
-Creating output: jc8mb7tcq_sci2_crmask.fits
-==== Processing Step Driz_CR finished at 14:00:44.861 (20/10/2022)
-==== Processing Step  Final Drizzle  started at  14:00:44.862 (20/10/2022)
-
-WCS Keywords
+==== Processing Step Blot finished at 17:11:40.182 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Driz_CR  started at  17:11:40.18 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_13498_b7_acs_wfc_f814w_jc8mb7sq_sci2_crmask.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_13498_b7_acs_wfc_f814w_jc8mb7sx_sci2_crmask.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_13498_b7_acs_wfc_f814w_jc8mb7t5_sci2_crmask.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_13498_b7_acs_wfc_f814w_jc8mb7tc_sci2_crmask.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: jc8mb7sqq_sci2_crmask.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: jc8mb7sxq_sci2_crmask.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: jc8mb7t5q_sci2_crmask.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: jc8mb7tcq_sci2_crmask.fits
+==== Processing Step Driz_CR finished at 17:11:52.7 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Final Drizzle  started at  17:11:52.73 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WCS Keywords
 
 Number of WCS axes: 2
 CTYPE : &#39;RA---TAN&#39;  &#39;DEC--TAN&#39;  
-CRVAL : 109.37334876656041  37.74909579613787  
+CRVAL : 109.37334876656043  37.74909579613786  
 CRPIX : 2060.5  1128.0  
-CD1_1 CD1_2  : -2.409178474225977e-06  -1.3678343965817917e-05  
-CD2_1 CD2_2  : -1.3678343965817917e-05  2.409178474225977e-06  
+CD1_1 CD1_2  : -2.4091784742259776e-06  -1.3678343965817917e-05  
+CD2_1 CD2_2  : -1.3678343965817917e-05  2.4091784742259776e-06  
 NAXIS : 4121  2256
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/Users/dulude/anaconda2/envs/py_3_8_10/lib/python3.8/site-packages/astropy/io/fits/card.py:1008: VerifyWarning: Card is too long, comment will be truncated.
-  warnings.warn(&#39;Card is too long, comment will be truncated.&#39;,
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
+  warnings.warn(
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating multi-extension output file:  automatic_drc.fits
@@ -999,28 +1243,31 @@ Deleted all instances of WCS with key A in extensions [1]
 Deleted all instances of WCS with key B in extensions [1]
 Deleted all instances of WCS with key C in extensions [1]
 Writing out to disk: automatic_drc.fits
-==== Processing Step Final Drizzle finished at 14:01:04.629 (20/10/2022)
-
-AstroDrizzle Version 3.5.0 is finished processing at 14:01:04.630 (20/10/2022).
-
-
-
-   --------------------          --------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Final Drizzle finished at 17:12:15.062 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AstroDrizzle Version 3.5.1 is finished processing at 17:12:15.062 (21/02/2023).
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   --------------------          --------------------
                    Step          Elapsed time
    --------------------          --------------------
 
-         Initialization          4.5709 sec.
-            Static Mask          1.8302 sec.
-           Subtract Sky          4.6388 sec.
-       Separate Drizzle          11.4422 sec.
-          Create Median          21.6984 sec.
-                   Blot          12.4088 sec.
-                Driz_CR          9.5351 sec.
-          Final Drizzle          19.7673 sec.
+         Initialization          3.4666 sec.
+            Static Mask          1.8934 sec.
+           Subtract Sky          4.3174 sec.
+       Separate Drizzle          10.2407 sec.
+          Create Median          5.4971 sec.
+                   Blot          13.7685 sec.
+                Driz_CR          12.5481 sec.
+          Final Drizzle          22.3296 sec.
    ====================          ====================
-                  Total          85.8917 sec.
-
-No trailer file saved...
+                  Total          74.0614 sec.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No trailer file saved...
 </pre></div>
 </div>
 </div>
@@ -1038,7 +1285,7 @@ No trailer file saved...
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fac5a293340&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f664c4dd780&gt;
 </pre></div>
 </div>
 <img alt="../../../_images/mask_satellite_18_1.png" src="../../../_images/mask_satellite_18_1.png" />
@@ -1116,25 +1363,28 @@ No trailer file saved...
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No trailer file created...
 AstroDrizzle log file: final.tra
-AstroDrizzle Version 3.5.0 started at: 14:01:08.097 (20/10/2022)
+AstroDrizzle Version 3.5.1 started at: 17:12:18.762 (21/02/2023)
 
-==== Processing Step  Initialization  started at  14:01:08.097 (20/10/2022)
-
-##############################################################################
+==== Processing Step  Initialization  started at  17:12:18.762 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>##############################################################################
 #                                                                            #
 # “minmed” is highly recommended for three images,                           #
 #  and is good for four to six images,                                       #
 #  but should be avoided for ten or more images.                             #
 #                                                                            #
 ##############################################################################
-WCS Keywords
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WCS Keywords
 
 Number of WCS axes: 2
 CTYPE : &#39;RA---TAN&#39;  &#39;DEC--TAN&#39;  
-CRVAL : 109.37334876656041  37.74909579613787  
+CRVAL : 109.37334876656043  37.74909579613786  
 CRPIX : 2060.5  1128.0  
-CD1_1 CD1_2  : -2.409178474225977e-06  -1.3678343965817917e-05  
-CD2_1 CD2_2  : -1.3678343965817917e-05  2.409178474225977e-06  
+CD1_1 CD1_2  : -2.4091784742259776e-06  -1.3678343965817917e-05  
+CD2_1 CD2_2  : -1.3678343965817917e-05  2.4091784742259776e-06  
 NAXIS : 4121  2256
 ********************************************************************************
 *
@@ -1144,13 +1394,19 @@ NAXIS : 4121  2256
 *  Cores available:         1
 *
 ********************************************************************************
-==== Processing Step Initialization finished at 14:01:12.593 (20/10/2022)
-==== Processing Step  Static Mask  started at  14:01:12.593 (20/10/2022)
-
-==== Processing Step Static Mask finished at 14:01:14.220 (20/10/2022)
-==== Processing Step  Subtract Sky  started at  14:01:14.221 (20/10/2022)
-
-***** skymatch started on 2022-10-20 14:01:14.931470
+==== Processing Step Initialization finished at 17:12:22.167 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Static Mask  started at  17:12:22.168 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Static Mask finished at 17:12:24.057 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Subtract Sky  started at  17:12:24.058 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>***** skymatch started on 2023-02-21 17:12:24.624681
       Version 1.0.9
 
 &#39;skymatch&#39; task will apply computed sky differences to input image file(s).
@@ -1250,49 +1506,69 @@ NOTE: Computed sky values WILL NOT be subtracted from image data (&#39;subtracts
 
 
 -----  Computing sky values requested image extensions (detector chips):  -----
-
-   *   Image:   &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7sq_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 45.05258294600474 (brightness units)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   *   Image:   &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7sq_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 45.05258294600474 (brightness units)
        Sky change (data units):
       - EXT = &#39;SCI&#39;,2   delta(MDRIZSKY) = 133.468   NEW MDRIZSKY = 133.468
-   *   Image:   &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7sx_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 44.16889591439688 (brightness units)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   *   Image:   &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7sx_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 44.16889591439688 (brightness units)
        Sky change (data units):
       - EXT = &#39;SCI&#39;,2   delta(MDRIZSKY) = 141.893   NEW MDRIZSKY = 141.893
-   *   Image:   &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7t5_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 44.574929322714 (brightness units)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   *   Image:   &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7t5_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 44.574929322714 (brightness units)
        Sky change (data units):
       - EXT = &#39;SCI&#39;,2   delta(MDRIZSKY) = 143.197   NEW MDRIZSKY = 143.197
-   *   Image:   &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7tc_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 42.94789830070525 (brightness units)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   *   Image:   &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7tc_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 42.94789830070525 (brightness units)
        Sky change (data units):
       - EXT = &#39;SCI&#39;,2   delta(MDRIZSKY) = 137.97   NEW MDRIZSKY = 137.97
-   *   Image:   &#39;jc8mb7sqq_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 45.05258294600474 (brightness units)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   *   Image:   &#39;jc8mb7sqq_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 45.05258294600474 (brightness units)
        Sky change (data units):
       - EXT = &#39;SCI&#39;,2   delta(MDRIZSKY) = 133.468   NEW MDRIZSKY = 133.468
-   *   Image:   &#39;jc8mb7sxq_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 44.16889591439688 (brightness units)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   *   Image:   &#39;jc8mb7sxq_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 44.16889591439688 (brightness units)
        Sky change (data units):
       - EXT = &#39;SCI&#39;,2   delta(MDRIZSKY) = 141.893   NEW MDRIZSKY = 141.893
-   *   Image:   &#39;jc8mb7t5q_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 44.57246416737596 (brightness units)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   *   Image:   &#39;jc8mb7t5q_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 44.57246416737596 (brightness units)
        Sky change (data units):
       - EXT = &#39;SCI&#39;,2   delta(MDRIZSKY) = 143.189   NEW MDRIZSKY = 143.189
-   *   Image:   &#39;jc8mb7tcq_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 42.91513405885213 (brightness units)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   *   Image:   &#39;jc8mb7tcq_flc.fits[&#39;SCI&#39;,2]&#39;  --  SKY = 42.91513405885213 (brightness units)
        Sky change (data units):
       - EXT = &#39;SCI&#39;,2   delta(MDRIZSKY) = 137.865   NEW MDRIZSKY = 137.865
-***** skymatch ended on 2022-10-20 14:01:17.978561
-TOTAL RUN TIME: 0:00:03.047091
-==== Processing Step Subtract Sky finished at 14:01:18.544 (20/10/2022)
-==== Processing Step  Separate Drizzle  started at  14:01:18.545 (20/10/2022)
-
-WCS Keywords
+***** skymatch ended on 2023-02-21 17:12:27.922900
+TOTAL RUN TIME: 0:00:03.298219
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Subtract Sky finished at 17:12:28.372 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Separate Drizzle  started at  17:12:28.37 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WCS Keywords
 
 Number of WCS axes: 2
 CTYPE : &#39;RA---TAN&#39;  &#39;DEC--TAN&#39;  
-CRVAL : 109.37334876656041  37.74909579613787  
+CRVAL : 109.37334876656043  37.74909579613786  
 CRPIX : 2060.5  1128.0  
-CD1_1 CD1_2  : -2.409178474225977e-06  -1.3678343965817917e-05  
-CD2_1 CD2_2  : -1.3678343965817917e-05  2.409178474225977e-06  
+CD1_1 CD1_2  : -2.4091784742259776e-06  -1.3678343965817917e-05  
+CD2_1 CD2_2  : -1.3678343965817917e-05  2.4091784742259776e-06  
 NAXIS : 4121  2256
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/Users/dulude/anaconda2/envs/py_3_8_10/lib/python3.8/site-packages/astropy/io/fits/card.py:1008: VerifyWarning: Card is too long, comment will be truncated.
-  warnings.warn(&#39;Card is too long, comment will be truncated.&#39;,
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
+  warnings.warn(
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7sq_single_sci.fits
@@ -1301,65 +1577,103 @@ Deleted all instances of WCS with key B in extensions [0]
 Deleted all instances of WCS with key C in extensions [0]
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7sq_single_sci.fits
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7sq_single_wht.fits
--Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7sx_single_sci.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7sx_single_sci.fits
 Deleted all instances of WCS with key A in extensions [0]
 Deleted all instances of WCS with key B in extensions [0]
 Deleted all instances of WCS with key C in extensions [0]
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7sx_single_sci.fits
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7sx_single_wht.fits
--Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7t5_single_sci.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7t5_single_sci.fits
 Deleted all instances of WCS with key A in extensions [0]
 Deleted all instances of WCS with key B in extensions [0]
 Deleted all instances of WCS with key C in extensions [0]
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7t5_single_sci.fits
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7t5_single_wht.fits
--Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7tc_single_sci.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7tc_single_sci.fits
 Deleted all instances of WCS with key A in extensions [0]
 Deleted all instances of WCS with key B in extensions [0]
 Deleted all instances of WCS with key C in extensions [0]
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7tc_single_sci.fits
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7tc_single_wht.fits
--Generating simple FITS output: jc8mb7sqq_single_sci.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: jc8mb7sqq_single_sci.fits
 Deleted all instances of WCS with key A in extensions [0]
 Deleted all instances of WCS with key B in extensions [0]
 Writing out image to disk: jc8mb7sqq_single_sci.fits
 Writing out image to disk: jc8mb7sqq_single_wht.fits
--Generating simple FITS output: jc8mb7sxq_single_sci.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: jc8mb7sxq_single_sci.fits
 Deleted all instances of WCS with key A in extensions [0]
 Deleted all instances of WCS with key B in extensions [0]
 Writing out image to disk: jc8mb7sxq_single_sci.fits
 Writing out image to disk: jc8mb7sxq_single_wht.fits
--Generating simple FITS output: jc8mb7t5q_single_sci.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: jc8mb7t5q_single_sci.fits
 Deleted all instances of WCS with key A in extensions [0]
 Deleted all instances of WCS with key B in extensions [0]
-Writing out image to disk: jc8mb7t5q_single_sci.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing out image to disk: jc8mb7t5q_single_sci.fits
 Writing out image to disk: jc8mb7t5q_single_wht.fits
--Generating simple FITS output: jc8mb7tcq_single_sci.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: jc8mb7tcq_single_sci.fits
 Deleted all instances of WCS with key A in extensions [0]
 Deleted all instances of WCS with key B in extensions [0]
 Writing out image to disk: jc8mb7tcq_single_sci.fits
 Writing out image to disk: jc8mb7tcq_single_wht.fits
-==== Processing Step Separate Drizzle finished at 14:01:29.474 (20/10/2022)
-==== Processing Step  Create Median  started at  14:01:29.474 (20/10/2022)
-
-reference sky value for image &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7sq_flc.fits&#39; is 133.46827697753906
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Separate Drizzle finished at 17:12:38.356 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Create Median  started at  17:12:38.357 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>reference sky value for image &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7sq_flc.fits&#39; is 133.46827697753906
 reference sky value for image &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7sx_flc.fits&#39; is 141.892578125
-reference sky value for image &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7t5_flc.fits&#39; is 143.19696044921875
-reference sky value for image &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7tc_flc.fits&#39; is 137.97012329101562
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>reference sky value for image &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7t5_flc.fits&#39; is 143.19696044921875
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>reference sky value for image &#39;hst_13498_b7_acs_wfc_f814w_jc8mb7tc_flc.fits&#39; is 137.97012329101562
 reference sky value for image &#39;jc8mb7sqq_flc.fits&#39; is 133.46827697753906
-reference sky value for image &#39;jc8mb7sxq_flc.fits&#39; is 141.892578125
-reference sky value for image &#39;jc8mb7t5q_flc.fits&#39; is 143.1890411376953
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>reference sky value for image &#39;jc8mb7sxq_flc.fits&#39; is 141.892578125
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>reference sky value for image &#39;jc8mb7t5q_flc.fits&#39; is 143.1890411376953
 reference sky value for image &#39;jc8mb7tcq_flc.fits&#39; is 137.8648681640625
-Saving output median image to: &#39;manual_med.fits&#39;
-==== Processing Step Create Median finished at 14:01:51.065 (20/10/2022)
-==== Processing Step  Blot  started at  14:01:51.066 (20/10/2022)
-
-    Blot: creating blotted image:  hst_13498_b7_acs_wfc_f814w_jc8mb7sq_flc.fits[sci,2]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/stsci/image/combine.py:22: RuntimeWarning: invalid value encountered in cast
+  _combine(arrays, out, nlow, nhigh, badmasks, funcstr)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saving output median image to: &#39;manual_med.fits&#39;
+==== Processing Step Create Median finished at 17:12:43.741 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Blot  started at  17:12:43.74 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    Blot: creating blotted image:  hst_13498_b7_acs_wfc_f814w_jc8mb7sq_flc.fits[sci,2]
 Using default C-based coordinate transformation...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/Users/dulude/anaconda2/envs/py_3_8_10/lib/python3.8/site-packages/astropy/io/fits/card.py:1008: VerifyWarning: Card is too long, comment will be truncated.
-  warnings.warn(&#39;Card is too long, comment will be truncated.&#39;,
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
+  warnings.warn(
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7sq_sci2_blt.fits
@@ -1368,8 +1682,8 @@ Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7sq_sci2_blt.fits
 Using default C-based coordinate transformation...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/Users/dulude/anaconda2/envs/py_3_8_10/lib/python3.8/site-packages/astropy/io/fits/card.py:1008: VerifyWarning: Card is too long, comment will be truncated.
-  warnings.warn(&#39;Card is too long, comment will be truncated.&#39;,
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
+  warnings.warn(
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7sx_sci2_blt.fits
@@ -1378,8 +1692,8 @@ Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7sx_sci2_blt.fits
 Using default C-based coordinate transformation...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/Users/dulude/anaconda2/envs/py_3_8_10/lib/python3.8/site-packages/astropy/io/fits/card.py:1008: VerifyWarning: Card is too long, comment will be truncated.
-  warnings.warn(&#39;Card is too long, comment will be truncated.&#39;,
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
+  warnings.warn(
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7t5_sci2_blt.fits
@@ -1388,55 +1702,83 @@ Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7t5_sci2_blt.fits
 Using default C-based coordinate transformation...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/Users/dulude/anaconda2/envs/py_3_8_10/lib/python3.8/site-packages/astropy/io/fits/card.py:1008: VerifyWarning: Card is too long, comment will be truncated.
-  warnings.warn(&#39;Card is too long, comment will be truncated.&#39;,
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
+  warnings.warn(
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: hst_13498_b7_acs_wfc_f814w_jc8mb7tc_sci2_blt.fits
 Writing out image to disk: hst_13498_b7_acs_wfc_f814w_jc8mb7tc_sci2_blt.fits
     Blot: creating blotted image:  jc8mb7sqq_flc.fits[sci,2]
 Using default C-based coordinate transformation...
--Generating simple FITS output: jc8mb7sqq_sci2_blt.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: jc8mb7sqq_sci2_blt.fits
 Writing out image to disk: jc8mb7sqq_sci2_blt.fits
     Blot: creating blotted image:  jc8mb7sxq_flc.fits[sci,2]
 Using default C-based coordinate transformation...
--Generating simple FITS output: jc8mb7sxq_sci2_blt.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: jc8mb7sxq_sci2_blt.fits
 Writing out image to disk: jc8mb7sxq_sci2_blt.fits
     Blot: creating blotted image:  jc8mb7t5q_flc.fits[sci,2]
 Using default C-based coordinate transformation...
--Generating simple FITS output: jc8mb7t5q_sci2_blt.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: jc8mb7t5q_sci2_blt.fits
 Writing out image to disk: jc8mb7t5q_sci2_blt.fits
     Blot: creating blotted image:  jc8mb7tcq_flc.fits[sci,2]
 Using default C-based coordinate transformation...
--Generating simple FITS output: jc8mb7tcq_sci2_blt.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating simple FITS output: jc8mb7tcq_sci2_blt.fits
 Writing out image to disk: jc8mb7tcq_sci2_blt.fits
-==== Processing Step Blot finished at 14:02:02.374 (20/10/2022)
-==== Processing Step  Driz_CR  started at  14:02:02.375 (20/10/2022)
-
-Creating output: hst_13498_b7_acs_wfc_f814w_jc8mb7sq_sci2_crmask.fits
-Creating output: hst_13498_b7_acs_wfc_f814w_jc8mb7sx_sci2_crmask.fits
-Creating output: hst_13498_b7_acs_wfc_f814w_jc8mb7t5_sci2_crmask.fits
-Creating output: hst_13498_b7_acs_wfc_f814w_jc8mb7tc_sci2_crmask.fits
-Creating output: jc8mb7sqq_sci2_crmask.fits
-Creating output: jc8mb7sxq_sci2_crmask.fits
-Creating output: jc8mb7t5q_sci2_crmask.fits
-Creating output: jc8mb7tcq_sci2_crmask.fits
-==== Processing Step Driz_CR finished at 14:02:11.715 (20/10/2022)
-==== Processing Step  Final Drizzle  started at  14:02:11.716 (20/10/2022)
-
-WCS Keywords
+==== Processing Step Blot finished at 17:12:57.519 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Driz_CR  started at  17:12:57.520 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_13498_b7_acs_wfc_f814w_jc8mb7sq_sci2_crmask.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_13498_b7_acs_wfc_f814w_jc8mb7sx_sci2_crmask.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_13498_b7_acs_wfc_f814w_jc8mb7t5_sci2_crmask.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: hst_13498_b7_acs_wfc_f814w_jc8mb7tc_sci2_crmask.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: jc8mb7sqq_sci2_crmask.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: jc8mb7sxq_sci2_crmask.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: jc8mb7t5q_sci2_crmask.fits
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output: jc8mb7tcq_sci2_crmask.fits
+==== Processing Step Driz_CR finished at 17:13:09.985 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step  Final Drizzle  started at  17:13:09.986 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WCS Keywords
 
 Number of WCS axes: 2
 CTYPE : &#39;RA---TAN&#39;  &#39;DEC--TAN&#39;  
-CRVAL : 109.37334876656041  37.74909579613787  
+CRVAL : 109.37334876656043  37.74909579613786  
 CRPIX : 2060.5  1128.0  
-CD1_1 CD1_2  : -2.409178474225977e-06  -1.3678343965817917e-05  
-CD2_1 CD2_2  : -1.3678343965817917e-05  2.409178474225977e-06  
+CD1_1 CD1_2  : -2.4091784742259776e-06  -1.3678343965817917e-05  
+CD2_1 CD2_2  : -1.3678343965817917e-05  2.4091784742259776e-06  
 NAXIS : 4121  2256
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/Users/dulude/anaconda2/envs/py_3_8_10/lib/python3.8/site-packages/astropy/io/fits/card.py:1008: VerifyWarning: Card is too long, comment will be truncated.
-  warnings.warn(&#39;Card is too long, comment will be truncated.&#39;,
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:py.warnings:/usr/share/miniconda/lib/python3.10/site-packages/astropy/io/fits/card.py:1064: VerifyWarning: Card is too long, comment will be truncated.
+  warnings.warn(
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Generating multi-extension output file:  manual_drc.fits
@@ -1444,28 +1786,31 @@ Deleted all instances of WCS with key A in extensions [1]
 Deleted all instances of WCS with key B in extensions [1]
 Deleted all instances of WCS with key C in extensions [1]
 Writing out to disk: manual_drc.fits
-==== Processing Step Final Drizzle finished at 14:02:35.256 (20/10/2022)
-
-AstroDrizzle Version 3.5.0 is finished processing at 14:02:35.257 (20/10/2022).
-
-
-
-   --------------------          --------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Processing Step Final Drizzle finished at 17:13:32.3 (21/02/2023)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AstroDrizzle Version 3.5.1 is finished processing at 17:13:32.34 (21/02/2023).
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   --------------------          --------------------
                    Step          Elapsed time
    --------------------          --------------------
 
-         Initialization          4.4954 sec.
-            Static Mask          1.6268 sec.
-           Subtract Sky          4.3239 sec.
-       Separate Drizzle          10.9284 sec.
-          Create Median          21.5908 sec.
-                   Blot          11.3083 sec.
-                Driz_CR          9.3407 sec.
-          Final Drizzle          23.5405 sec.
+         Initialization          3.4050 sec.
+            Static Mask          1.8895 sec.
+           Subtract Sky          4.3139 sec.
+       Separate Drizzle          9.9833 sec.
+          Create Median          5.3834 sec.
+                   Blot          13.7776 sec.
+                Driz_CR          12.4648 sec.
+          Final Drizzle          22.3595 sec.
    ====================          ====================
-                  Total          87.1548 sec.
-
-No trailer file saved...
+                  Total          73.5771 sec.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No trailer file saved...
 </pre></div>
 </div>
 </div>
@@ -1483,7 +1828,7 @@ No trailer file saved...
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7fac5a4e6e20&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f662ca20c10&gt;
 </pre></div>
 </div>
 <img alt="../../../_images/mask_satellite_25_1.png" src="../../../_images/mask_satellite_25_1.png" />
