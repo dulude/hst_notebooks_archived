@@ -1,2 +1,5 @@
-astroquery >= 0.3.7
-drizzlepac >=2.2.4
+astropy==5.2.1
+astroquery==0.4.6
+drizzlepac==3.5.1
+matplotlib==3.7.0
+numpy==1.24.2
