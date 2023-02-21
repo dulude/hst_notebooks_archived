@@ -1,0 +1,6 @@
+astropy==5.1
+astroquery==0.4.6
+calcos==3.4.4
+costools==1.2.5
+matplotlib==3.6.0
+numpy==1.23.4
