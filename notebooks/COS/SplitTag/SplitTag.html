@@ -710,56 +710,82 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/lc1va0yeq_corrtag_a.fits to ./mastDownload/HST/lc1va0yeq/lc1va0yeq_corrtag_a.fits ...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/lc1va0yjq_corrtag_a.fits to ./mastDownload/HST/lc1va0yjq/lc1va0yjq_corrtag_a.fits ...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/lc1va0zcq_corrtag_a.fits to ./mastDownload/HST/lc1va0zcq/lc1va0zcq_corrtag_a.fits ...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/lc1va0zgq_corrtag_a.fits to ./mastDownload/HST/lc1va0zgq/lc1va0zgq_corrtag_a.fits ...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/lc1va0yeq_x1d.fits to ./mastDownload/HST/lc1va0yeq/lc1va0yeq_x1d.fits ...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/lc1va0yjq_x1d.fits to ./mastDownload/HST/lc1va0yjq/lc1va0yjq_x1d.fits ...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/lc1va0zcq_x1d.fits to ./mastDownload/HST/lc1va0zcq/lc1va0zcq_x1d.fits ...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading URL https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/lc1va0zgq_x1d.fits to ./mastDownload/HST/lc1va0zgq/lc1va0zgq_x1d.fits ...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [Done]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#####
-Found 4 corrtag exposure files from the COS FUV detector (segment A only)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">HTTPError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Find all MAST data on this obs id:</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">pl</span> <span class="o">=</span> <span class="n">Observations</span><span class="o">.</span><span class="n">get_product_list</span><span class="p">(</span><span class="n">Observations</span><span class="o">.</span><span class="n">query_criteria</span><span class="p">(</span><span class="n">obs_id</span><span class="o">=</span><span class="s1">&#39;lc1va0010&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Filter and download the Corrtag TIME-TAG files:</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">pl_filt</span> <span class="o">=</span> <span class="n">Observations</span><span class="o">.</span><span class="n">filter_products</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">pl</span><span class="p">,</span> <span class="n">productSubGroupDescription</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;CORRTAG_A&#39;</span><span class="p">,</span> <span class="s1">&#39;CORRTAG_B&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="p">)</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/astroquery/utils/class_or_instance.py:25,</span> in <span class="ni">class_or_instance.__get__.&lt;locals&gt;.f</span><span class="nt">(*args, **kwds)</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="k">if</span> <span class="n">obj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">25</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fn</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fn</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/astroquery/utils/process_asyncs.py:26,</span> in <span class="ni">async_to_sync.&lt;locals&gt;.create_method.&lt;locals&gt;.newmethod</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="nd">@class_or_instance</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="k">def</span> <span class="nf">newmethod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="n">verbose</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;verbose&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">26</span>     <span class="n">response</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">async_method_name</span><span class="p">)(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span>     <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;get_query_payload&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;field_help&#39;</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span>         <span class="k">return</span> <span class="n">response</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/astroquery/utils/class_or_instance.py:25,</span> in <span class="ni">class_or_instance.__get__.&lt;locals&gt;.f</span><span class="nt">(*args, **kwds)</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="k">if</span> <span class="n">obj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">25</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fn</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fn</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/astroquery/mast/observations.py:451,</span> in <span class="ni">ObservationsClass.get_product_list_async</span><span class="nt">(self, observations)</span>
+<span class="g g-Whitespace">    </span><span class="mi">448</span> <span class="n">service</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_caom_products</span>
+<span class="g g-Whitespace">    </span><span class="mi">449</span> <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;obsid&#39;</span><span class="p">:</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">observations</span><span class="p">)}</span>
+<span class="ne">--&gt; </span><span class="mi">451</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_portal_api_connection</span><span class="o">.</span><span class="n">service_request_async</span><span class="p">(</span><span class="n">service</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/astroquery/utils/class_or_instance.py:25,</span> in <span class="ni">class_or_instance.__get__.&lt;locals&gt;.f</span><span class="nt">(*args, **kwds)</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="k">if</span> <span class="n">obj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">25</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fn</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fn</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/astroquery/mast/discovery_portal.py:337,</span> in <span class="ni">PortalAPI.service_request_async</span><span class="nt">(self, service, params, pagesize, page, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">335</span> <span class="k">if</span> <span class="n">service</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_column_configs</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+<span class="g g-Whitespace">    </span><span class="mi">336</span>     <span class="n">fetch_name</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;fetch_name&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">337</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_get_col_config</span><span class="p">(</span><span class="n">service</span><span class="p">,</span> <span class="n">fetch_name</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">338</span> <span class="bp">self</span><span class="o">.</span><span class="n">_current_service</span> <span class="o">=</span> <span class="n">service</span>
+<span class="g g-Whitespace">    </span><span class="mi">340</span> <span class="c1"># setting up pagination</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/astroquery/mast/discovery_portal.py:234,</span> in <span class="ni">PortalAPI._get_col_config</span><span class="nt">(self, service, fetch_name)</span>
+<span class="g g-Whitespace">    </span><span class="mi">228</span>     <span class="n">fetch_name</span> <span class="o">=</span> <span class="n">service</span>
+<span class="g g-Whitespace">    </span><span class="mi">230</span> <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_session</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;User-Agent&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">    </span><span class="mi">231</span>            <span class="s2">&quot;Content-type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">232</span>            <span class="s2">&quot;Accept&quot;</span><span class="p">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">}</span>
+<span class="ne">--&gt; </span><span class="mi">234</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">COLUMNS_CONFIG_URL</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">235</span>                          <span class="n">data</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;colConfigId=&quot;</span><span class="o">+</span><span class="n">fetch_name</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">237</span> <span class="bp">self</span><span class="o">.</span><span class="n">_column_configs</span><span class="p">[</span><span class="n">service</span><span class="p">]</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">239</span> <span class="n">more</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># for some catalogs this is not enough information</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/astroquery/mast/discovery_portal.py:190,</span> in <span class="ni">PortalAPI._request</span><span class="nt">(self, method, url, params, data, headers, files, stream, auth, retrieve_all)</span>
+<span class="g g-Whitespace">    </span><span class="mi">187</span>     <span class="k">raise</span> <span class="ne">TimeoutError</span><span class="p">(</span><span class="s2">&quot;Timeout limit of </span><span class="si">{}</span><span class="s2"> exceeded.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">TIMEOUT</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">189</span> <span class="c1"># Raising error based on HTTP status if necessary</span>
+<span class="ne">--&gt; </span><span class="mi">190</span> <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">192</span> <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">194</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">:</span>  <span class="c1"># kind of hacky, but col_config service returns nothing if there is an error</span>
+
+<span class="nn">File /usr/share/miniconda/lib/python3.10/site-packages/requests/models.py:1021,</span> in <span class="ni">Response.raise_for_status</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1016</span>     <span class="n">http_error_msg</span> <span class="o">=</span> <span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1017</span>         <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2"> Server Error: </span><span class="si">{</span><span class="n">reason</span><span class="si">}</span><span class="s2"> for url: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1018</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1020</span> <span class="k">if</span> <span class="n">http_error_msg</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1021</span>     <span class="k">raise</span> <span class="n">HTTPError</span><span class="p">(</span><span class="n">http_error_msg</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+
+<span class="ne">HTTPError</span>: 503 Server Error: Service Unavailable for url: https://mast.stsci.edu/portal/Mashup/Mashup.asmx/columnsconfig
 </pre></div>
 </div>
 </div>
@@ -818,9 +844,6 @@ Found 4 corrtag exposure files from the COS FUV detector (segment A only)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/SplitTag_9_0.png" src="../../../_images/SplitTag_9_0.png" />
-</div>
 </div>
 <p>We can see an apparent transit in the exposure <code class="docutils literal notranslate"><span class="pre">lc1va0zgq</span></code>, occurring from about 450 - 850 seconds into the exposure. We highlight this in figure 1.2 below.</p>
 <p>Exposure <code class="docutils literal notranslate"><span class="pre">lc1va0yeq</span></code> also seems to contain at least the latter part of a transit, but for now we’ll focus on <code class="docutils literal notranslate"><span class="pre">lc1va0zgq</span></code>.</p>
@@ -862,12 +885,6 @@ Found 4 corrtag exposure files from the COS FUV detector (segment A only)
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">plots_dir</span> <span class="o">/</span> <span class="s1">&#39;examine_transit.png&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The length of the exposure is ~1337 s
-</pre></div>
-</div>
-<img alt="../../../_images/SplitTag_11_1.png" src="../../../_images/SplitTag_11_1.png" />
 </div>
 </div>
 <p><strong>We now wish to actually split the file into three sub-exposures with the counts gathered during these three windows of time.</strong></p>
@@ -932,27 +949,6 @@ Found 4 corrtag exposure files from the COS FUV detector (segment A only)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating and writing split files...
-&gt; File 1 contains counts from time: 0 - 550 seconds
-&gt; File 2 contains counts from time: 550 - 850 seconds
-&gt; File 3 contains counts from time: 850 - 1337.2159423828125 seconds
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: AstropyDeprecationWarning: The following keywords are now recognized as special column-related attributes and should be set via the Column objects: TCDLTn, TCRPXn, TCRVLn, TCTYPn, TCUNIn. In future, these values will be dropped from manually specified headers automatically and replaced with values generated based on the Column objects. [astropy.io.fits.hdu.table]
-WARNING: AstropyDeprecationWarning: The following keywords are now recognized as special column-related attributes and should be set via the Column objects: TCRPXn, TCRVLn, TCTYPn, TCUNIn. In future, these values will be dropped from manually specified headers automatically and replaced with values generated based on the Column objects. [astropy.io.fits.hdu.table]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>./output/spec_intervals/lc1va0zgq_1_corrtag_a.fits written
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>./output/spec_intervals/lc1va0zgq_2_corrtag_a.fits written
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>./output/spec_intervals/lc1va0zgq_3_corrtag_a.fits written
-</pre></div>
-</div>
-</div>
 </div>
 <p><strong>Excellent! We’ve now created 3 sub-exposure files.</strong></p>
 <p>Above we split an input exposure at a series of specified times.
@@ -1012,9 +1008,6 @@ The <code class="docutils literal notranslate"><span class="pre">splittag</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/SplitTag_18_0.png" src="../../../_images/SplitTag_18_0.png" />
-</div>
 </div>
 <p><a id=tealST></a>
 While not implemented within the Jupyter Notebook framework, you can also run <code class="docutils literal notranslate"><span class="pre">splittag</span></code> from a TEAL graphical user interface (GUI) on a local computer (see Fig 2.2).</p>
@@ -1071,29 +1064,6 @@ The cell attempts to set your <code class="docutils literal notranslate"><span c
 <span class="s2"> It&#39;s </span><span class="si">{</span><span class="n">found_lref</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;lref&#39;</span><span class="p">]),</span> <span class="sa">f</span><span class="s2">&quot;The path to your lref directory is invalid (</span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;lref&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">)&quot;</span> 
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>It doesn&#39;t look like that&#39;s a valid path. Deleting it.
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">17</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="n">found_lref</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lref&#39;</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You already have an lref path in your environment variables -</span><span class="se">\</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span><span class="s2">  It&#39;s </span><span class="si">{</span><span class="n">found_lref</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">17</span> <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;lref&#39;</span><span class="p">]),</span> <span class="sa">f</span><span class="s2">&quot;The path to your lref directory is invalid (</span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;lref&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">)&quot;</span> 
-
-<span class="nn">File /usr/share/miniconda/lib/python3.10/os.py:680,</span> in <span class="ni">_Environ.__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">    </span><span class="mi">677</span>     <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">encodekey</span><span class="p">(</span><span class="n">key</span><span class="p">)]</span>
-<span class="g g-Whitespace">    </span><span class="mi">678</span> <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">679</span>     <span class="c1"># raise KeyError with the original key value</span>
-<span class="ne">--&gt; </span><span class="mi">680</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">681</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">decodevalue</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-
-<span class="ne">KeyError</span>: &#39;lref&#39;
 </pre></div>
 </div>
 </div>
